@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+/* START HERO */
+body {
+  background-color: #fac4af54;
+}
+
+.lead {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+}
+
+.lead-easier {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 750;
+  color: #522A00;
+}
+
+.lead-eat {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  color: #FF7E33;
+}
+
+.shadow {
+  height: 110%;
+  width: 60%;
+}
