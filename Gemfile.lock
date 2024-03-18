@@ -106,6 +106,8 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     debug_inspector (1.2.0)
+    dockerfile-rails (1.6.7)
+      rails (>= 3.0.0)
     drb (2.2.1)
     erubi (1.12.0)
     faker (3.2.3)
@@ -149,6 +151,8 @@ GEM
     net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.0)
+    nokogiri (1.16.3-aarch64-linux)
+      racc (~> 1.4)
     nokogiri (1.16.3-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.3-x86_64-linux)
@@ -245,6 +249,7 @@ GEM
     zeitwerk (2.6.13)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin-23
   x86_64-linux
 
@@ -254,6 +259,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dockerfile-rails (>= 1.6)
   faker
   importmap-rails
   jbuilder
