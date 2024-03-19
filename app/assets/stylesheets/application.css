@@ -25,7 +25,6 @@ h1 {
 /* START HERO */
 .lead {
   font-size: 40px;
-  
   color: #522A00;
 }
 
@@ -88,7 +87,6 @@ h1 {
 }
 
 .h1-team {
-
   color: #522A00;
   margin-top: 5%;
 }
@@ -435,11 +433,8 @@ a {
 /* END PAGE CONTACT US */
 
 
-
-/* FORMULAIRE LOGIN SIGN UP */ 
-
+/* START FORM LOGIN */ 
 .coontainer {
-  
   background: transparent;
   border-radius: 20px;
   padding: 30px 40px;
@@ -466,8 +461,6 @@ a {
   padding: 15px 20px;
   border-bottom: 1px solid #FF7E33;
   margin-top: 15px;
-  
-  
 }
 
 .form .input::-moz-placeholder {
@@ -480,7 +473,6 @@ a {
 
 .form .input:focus {
   outline: none;
-  
 }
 
 .form .forgot-password {
@@ -508,7 +500,6 @@ a {
 
 .form .login-button:hover {
   transform: scale(1.03);
- 
 }
 
 .agreement {
@@ -523,10 +514,10 @@ a {
   font-family: "Raleway", sans-serif;
   color: #522A00;
 }
+/* END FORM LOGIN */ 
 
-/* SIGN UP */
 
-
+/* START FORM SIGN UP */
 .ffield {
   width: 100%;
   background: transparent;
@@ -534,7 +525,6 @@ a {
   padding: 15px 20px;
   border-bottom: 1px solid #FF7E33;
   margin-top: 15px;
-
 }
 
 .ffield input {
@@ -554,22 +544,18 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
-
 .coontainer h2 {
   text-align: center;
   font-family: "Raleway", sans-serif;
   color: #522A00;
   font-size: 30px;
 }
+/* END FORM SIGN UP */
 
 
-/* END FORMULAIRES */ 
-
-/* BOUTON DYSLEXIE */ 
-
+/* START BOUTON DYSLEXIE */ 
 #toggle-opendys:hover {
   opacity: 0.2; 
   transform: translateY(-0.1em);
 }
-
-/* fin bouton dyx */
+/* END BOUTON DYSLEXIE */

@@ -1,8 +1,7 @@
-<br>
-<br>
-<br>
 <div class="coontainer">
-  <div class="heading">LOG IN</div>
+  <div class="heading">
+    LOG IN
+  </div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form">
       <%= f.email_field :email, class: "input", placeholder: "E-mail", required: true %>
@@ -11,17 +10,7 @@
       <%= f.submit "LOG IN", class: "login-button" %>
     </div>
   <% end %>
-  <br>
-  <br>
-  <br>
- <br>
+
 </div>
-<br>
-<br>
+
 <center><%= render "devise/shared/links" %></center>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
