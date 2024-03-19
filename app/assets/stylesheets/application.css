@@ -81,3 +81,46 @@ body {
   justify-content: center;
 }
 /* END HERO */
+
+
+/* START PAGE TEAM */
+.container-team {
+  width: 100%; 
+  text-align: center;
+}
+
+.h1-team {
+  font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
+}
+
+.rounded-image {
+  display: inline-block; 
+}
+
+.rounded-image:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.rounded-image img {
+  border-radius: 50%;
+  margin: auto;
+}
+
+.row-team {
+  display: flex;
+  margin-top: 15%;
+}
+
+.p-team {
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+  margin-top: 5%;
+}
+
+.p-team:hover {
+  color :#FF7E33
+}
+
+/* END PAGE TEAM */
