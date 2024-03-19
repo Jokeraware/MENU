@@ -1,5 +1,3 @@
-
-
 body {
   background-color: #fac4af21;
   font-family: "Raleway", sans-serif;
@@ -9,6 +7,7 @@ a {
   color: #FF7E33;
   text-decoration: none;
 }
+
 
 /* START HERO */
 .lead {
@@ -132,7 +131,6 @@ a {
 /* END PAGE TEAM */
 
 
-
 /* START NAVBAR */
 .logo-img {
   height: 200px;
@@ -152,8 +150,8 @@ a {
   background-color: initial !important;
   color: inherit !important;
  }
-
 /* END NAVBAR */
+
 
 /* START PAGE CONCEPT */
 .h1-concept {
@@ -262,9 +260,7 @@ a {
 /* END PAGE CONCEPT */
 
 
-
-/* FOOTER */
-
+/* START FOOTER */
 .middle-logo {
   display: flex;
   flex-direction: column;
@@ -292,93 +288,139 @@ a {
 .social-icons {
   display: flex;
   justify-content: center;
+  color: #FF7E33;
 }
 
 .copyright-thp {
   font-size: small;
   color: #522A00;
 }
-
 /* END FOOTER */
 
 
-/* Contact US */
-
+/* START PAGE CONTACT US */
 .box_orange{
-  background-color: #ffc0cb5a;
-  border: 2px solid orange;
+  border: 2px solid #FF7E33;
   border-radius: 15px;
   display: flex;
   width: 80%;
-  margin: auto;
+  margin: 10%;
   gap: 28%;
 }
 
 .box_input {
-  background-color: #ffc0cb5a;
-  width: 30%;
+  width: 40%;
   padding: 20px;
-  border: 2px solid blue;
+  border: 2px solid #AFDBF5;
   border-radius: 15px;
   margin: 20px;
 }
 
-
-.input_email, .input_phone, .firstname, .lastname, .input_textarea {
-  width: 100%;
-  padding: 25px;
-  font-size: 20px;
-  border: none;
-  background-color: #ffc0cb00;
-  border-bottom: 2px solid orange;
-
-  box-sizing: border-box;
+.h1-contact {
+  font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
+  margin-bottom: 10%;
 }
 
-.input_email, .input_phone, .firstname, .lastname, .input_textarea:focus {
+.p-contact {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+}
+
+.form-label {
+  color: #fac4af;
+}
+
+.form-label:hover {
+  color: #FF7E33;
+}
+
+.fa-building {
+  color: #FF7E33;
+}
+
+.fa-phone {
+  color: #FF7E33;
+}
+
+.fa-envelope {
+  color: #FF7E33;
+}
+
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 200px;
+}
+
+.input-container input[type="text"] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fac4af;
+  padding: 5px 0;
+  background-color: transparent;
   outline: none;
 }
 
-.input_container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fac4af;
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-.name-container {
-  display: flex;
-  flex: 1;
-  gap: 10px;
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #FF7E33;
 }
 
-.input_email{
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
   width: 100%;
+  background-color: #FF7E33;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
+.form-control {
   font-size: 20px;
+  width: 100%;
+  border: 2px solid #fac4af;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
 }
 
-.SEND {
-  display: flex;
-  justify-content: end;
-}
-
-.btn_input{
-  background-color: blue;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 22px;
-  border-radius: 5px;
-  margin-bottom: 20px; 
-  cursor: pointer;
+.form-control:hover {
+  border-color: #FF7E33;
 }
 
 .left_bloc{
+  margin-top: 10%;
   margin-left: 7%;
 }
 
-.left_bloc, p{
-  font-size: large;
+.btn-contact {
+  background-color: #AFDBF5;
+  border-color: #AFDBF5;
+  color: white; 
+  font-size: 15px;
+  padding: 10px 30px; 
+  border-radius: 15px;
+  margin-left: 30%;
 }
-
-/* END Contact US */
+/* END PAGE CONTACT US */
