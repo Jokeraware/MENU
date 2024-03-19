@@ -92,6 +92,7 @@ body {
 .h1-team {
   font-family: "Expletus Sans", sans-serif;
   color: #522A00;
+  margin-top: 5%;
 }
 
 .rounded-image {
@@ -111,6 +112,9 @@ body {
 .row-team {
   display: flex;
   margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 15%;
 }
 
 .p-team {
@@ -119,8 +123,20 @@ body {
   margin-top: 5%;
 }
 
-.p-team:hover {
-  color :#FF7E33
+.fa-instagram {
+  color: #FF7E33;
+}
+
+.fa-facebook {
+  color: #FF7E33;
+}
+
+.fa-whatsapp {
+  color: #FF7E33;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* END PAGE TEAM */
