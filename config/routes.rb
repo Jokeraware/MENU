@@ -2,11 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   root 'static_pages#home'
 
-  get 'static_pages/home'
-  get 'static_pages/concept'
-  get 'static_pages/team'
-  get 'static_pages/contact'
-  get 'home/footer'
+  get '/home', to: 'static_pages#home'
+  get '/concept', to: 'static_pages#concept'
+  get '/team', to: 'static_pages#team'
+  get '/contact', to: 'static_pages#contact'
+
+
+
 
 
 
