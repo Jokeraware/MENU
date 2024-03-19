@@ -68,14 +68,69 @@ body {
 /* END HERO */
 
 
+/* START PAGE TEAM */
+.container-team {
+  width: 100%; 
+  text-align: center;
+}
 
-/* NAVBAR */
+.h1-team {
+  font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
+  margin-top: 5%;
+}
+
+.rounded-image {
+  display: inline-block; 
+}
+
+.rounded-image:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.rounded-image img {
+  border-radius: 50%;
+  margin: auto;
+}
+
+.row-team {
+  display: flex;
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 15%;
+}
+
+.p-team {
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+  margin-top: 5%;
+}
+
+.fa-instagram {
+  color: #FF7E33;
+}
+
+.fa-facebook {
+  color: #FF7E33;
+}
+
+.fa-whatsapp {
+  color: #FF7E33;
+}
+
+a {
+  text-decoration: none;
+}
+/* END PAGE TEAM */
 
 
+
+/* START NAVBAR */
 .logo-img {
   height: 200px; 
 }
-
 
 .navbar-text-lg {
   font-size: 30px; 
@@ -87,4 +142,6 @@ body {
   background-color: initial !important;
   color: inherit !important;
  }
+
+/* END NAVBAR */
 
