@@ -554,4 +554,10 @@ a {
 
 /* END FORMULAIRES */ 
 
+/* BOUTON DYSLEXIE */ 
 
+
+#toggle-opendys:hover {
+  opacity: 0.2; 
+  
+}
