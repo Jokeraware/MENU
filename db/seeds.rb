@@ -9,11 +9,18 @@
 #   end
 
 User.destroy_all
+City.destroy_all
+Restaurant.destroy_all
 
-5.times do
+restau_paris = ["Le Pantruche", "Basis", "Acà", "La Rêverie", "Lasserre"]
+restau_marseille = ["La Tête de Chou", "La Fontaine", "Ourea", "La Cantine", "Gingembre"]
+restau_toulouse = ["Susanoo", "Tommy's City Diner", "Aux Pieds sous la Table", "Kong Bap", "Bloomy Bistronomie Végétale"]
+all_cities = ["Marseille", "Toulouse", "Paris"]
+
+20.times do
     first_name = Faker::Name.first_name
     last_name = Faker::Name.last_name
-    city = Faker::Address.city
+    city = all_cities.sample
     email = "#{first_name}.#{last_name}@yopmail.com"
     
     User.create(
@@ -24,3 +31,25 @@ User.destroy_all
       password: 'password')
   end
   puts "5 users have been created"
+
+all_cities.each do |city|
+  City.create(city_name: city)
+end
+
+restau_paris.each do |restau|
+  Restaurant.create(restaurant_name: "restau", city_name: "Paris")
+end
+puts "5 restau have been created"
+
+
+
+
+
+
+
+
+
+
+
+
+

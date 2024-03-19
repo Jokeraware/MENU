@@ -392,7 +392,9 @@ a {
 }
 
 .input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline {
+.input-container input[type="text"]:valid ~ .underline,
+.input-container input[type="email"]:focus ~ .underline,
+.input-container input[type="email"]:valid ~ .underline {
   transform: scaleX(1);
 }
 
@@ -422,6 +424,15 @@ a {
   padding: 10px 30px; 
   border-radius: 15px;
   margin-left: 30%;
+}
+
+#input-b {
+  border : none;
+  background-color: transparent;
+}
+
+#input-b:focus {
+  outline: none;
 }
 /* END PAGE CONTACT US */
 
