@@ -1,4 +1,4 @@
-body {
+body{
   background-color: #fac4af21;
   font-family: "Raleway", sans-serif;
 }
@@ -12,33 +12,33 @@ a {
 /* START HERO */
 .lead {
   font-size: 40px;
-  font-family: "Raleway", sans-serif;
+
   color: #522A00;
 }
 
 .lead-easier {
   font-size: 40px;
-  font-family: "Raleway", sans-serif;
+
   font-weight: 750;
   color: #522A00;
 }
 
 .lead-eat {
   font-size: 40px;
-  font-family: "Raleway", sans-serif;
+
   color: #FF7E33;
 }
 
 .lead-cities {
   font-size: 40px;
-  font-family: "Raleway", sans-serif;
+
   font-weight: 750;
   color: #522A00;
 }
 
 .lead-come {
   font-size: 40px;
-  font-family: "Raleway", sans-serif;
+
   color: #FF7E33;
 }
 
@@ -65,7 +65,7 @@ a {
 
 .expe {
   font-size: 40px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Expletus Sans", sans-serif;
   color: #522A00;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ a {
 }
 
 .p-team {
-  font-family: "Raleway", sans-serif;
+
   color: #522A00;
   margin-top: 5%;
 }
@@ -140,7 +140,7 @@ a {
 
 .navbar-text-lg {
   font-size: 30px; 
-  font-family: "Raleway", sans-serif;
+
   color: #522A00;
   position: relative;
   top: 60px;
@@ -166,7 +166,7 @@ a {
 
 .lead-concept {
   font-size: 20px;
-  font-family: "Raleway", sans-serif;
+
   color: #522A00;
   margin-bottom: 10%;
 }
@@ -208,7 +208,7 @@ a {
 
 .card-front-concept {
   background-color: #FF7E33;
-  font-family: "Raleway", sans-serif;
+
   color: #fff;
   display: flex;
   align-items: center;
@@ -221,7 +221,7 @@ a {
 
 .card-front-concept1 {
   background-color: #fac4af;
-  font-family: "Raleway", sans-serif;
+
   color: #fff;
   display: flex;
   align-items: center;
@@ -234,7 +234,7 @@ a {
 
 .card-back-concept {
   background-color: #fac4af;
-  font-family: "Raleway", sans-serif;
+
   color: #fff;
   display: flex;
   align-items: center;
@@ -247,7 +247,7 @@ a {
 
 .card-back-concept1 {
   background-color: #FF7E33;
-  font-family: "Raleway", sans-serif;
+
   color: #fff;
   display: flex;
   align-items: center;
@@ -324,7 +324,7 @@ a {
 
 .p-contact {
   font-size: 20px;
-  font-family: "Raleway", sans-serif;
+
   color: #522A00;
 }
 
@@ -425,3 +425,11 @@ a {
 }
 /* END PAGE CONTACT US */
 
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url('/assets/OpenDyslexicAlta-Regular.otf') ;
+} 
+
+body.dyslexic {
+  font-family: 'OpenDyslexic';
+}
