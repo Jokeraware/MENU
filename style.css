@@ -29,10 +29,15 @@
     box-sizing: border-box;
 }
 
+.input_email, .input_phone, .firstname, .lastname, .input_textarea:focus {
+    outline: none;
+}
+
 .input_container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    
 }
 
 .name-container {
