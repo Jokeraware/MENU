@@ -129,13 +129,17 @@ a {
 
 /* START NAVBAR */
 .logo-img {
-  height: 200px; 
+  height: 200px;
+  position: relative;
+  right: 50px;
 }
 
 .navbar-text-lg {
   font-size: 30px; 
   font-family: "Raleway", sans-serif;
   color: #522A00;
+  position: relative;
+  top: 60px;
 }
 
 .navnav:hover {
@@ -144,4 +148,106 @@ a {
  }
 
 /* END NAVBAR */
+
+/* START PAGE CONCEPT */
+.h1-concept {
+  font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
+  margin-top: 5%;
+}
+
+.lead-concept {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+  margin-bottom: 10%;
+}
+
+.row-concept {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10%;
+}
+
+.card-concept {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.card-inner-concept {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card-concept:hover .card-inner-concept {
+  transform: rotateY(180deg);
+}
+
+.card-front-concept,
+.card-back-concept,
+.card-front-concept1,
+.card-back-concept1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front-concept {
+  background-color: #FF7E33;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #FF7E33;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-front-concept1 {
+  background-color: #fac4af;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #fac4af;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-back-concept {
+  background-color: #fac4af;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #fac4af;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
+
+.card-back-concept1 {
+  background-color: #FF7E33;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #FF7E33;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
+/* END PAGE CONCEPT */
 
