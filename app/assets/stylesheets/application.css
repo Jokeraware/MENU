@@ -130,13 +130,17 @@ a {
 /* START NAVBAR */
 .logo-img {
   height: 200px; 
+  position: relative;
+  right: 50px;
 }
 
 .navbar-text-lg {
   font-size: 30px; 
   font-family: "Raleway", sans-serif;
   color: #522A00;
-}
+  position: relative;
+  top: 60px; 
+  }
 
 .navnav:hover {
   background-color: initial !important;
