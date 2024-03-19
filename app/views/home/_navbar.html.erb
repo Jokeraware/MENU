@@ -6,11 +6,11 @@
    
     <ul class="nav">
       <li class="nav-item">
-        <%= link_to image_tag("LOGO_2.png", alt: "Logo", class: "navnav navbar-brand img-fluid logo-img"), {action: 'home', controller: 'static_pages'}, class: "nav-link" %>
+        <%= link_to image_tag("LOGO_2.png", alt: "Logo", class: "navnav navbar-brand img-fluid logo-img"), root_path, class: "nav-link" %>
       </li>
     </ul>
     <ul class="nav">
-      <li class="nav-item"><%= link_to "LOG IN", "#", class: "navnav nav-link navbar-text navbar-text-lg" %></li>
+      <li class="nav-item"><%= link_to "LOG IN", new_user_session_path , class: "navnav nav-link navbar-text navbar-text-lg" %></li>
     </ul>
   </header>
 </div>
