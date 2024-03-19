@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "3.2.2"
 gem 'table_print'
 gem 'faker'
+gem 'devise'
 
 group :development do
   gem "better_errors"
