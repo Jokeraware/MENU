@@ -17,6 +17,12 @@
 
 body {
   background-color: #fac4af21;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  color: #FF7E33;
+  text-decoration: none;
 }
 
 /* START HERO */
@@ -81,3 +87,26 @@ body {
   justify-content: center;
 }
 /* END HERO */
+
+
+/* FOOTER */
+
+.middle-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-middle {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-footer {
+  
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+}
