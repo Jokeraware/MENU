@@ -556,8 +556,9 @@ a {
 
 /* BOUTON DYSLEXIE */ 
 
-
 #toggle-opendys:hover {
   opacity: 0.2; 
-  
+  transform: translateY(-0.1em);
 }
+
+/* fin bouton dyx */
