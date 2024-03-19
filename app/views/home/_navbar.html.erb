@@ -9,8 +9,14 @@
         <%= link_to image_tag("LOGO_2.png", alt: "Logo", class: "navnav navbar-brand img-fluid logo-img"), root_path, class: "nav-link" %>
       </li>
     </ul>
-    <ul class="nav">
+
+  <ul class="nav">
+    <% if user_signed_in? %>
+      <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, data: {turbo_method: :delete} %>
+    <% else %>
       <li class="nav-item"><%= link_to "LOG IN", new_user_session_path , class: "navnav nav-link navbar-text navbar-text-lg" %></li>
-    </ul>
+    <% end %>
+  </ul>
+    
   </header>
 </div>
