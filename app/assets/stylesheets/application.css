@@ -136,13 +136,17 @@ a {
 /* START NAVBAR */
 .logo-img {
   height: 200px; 
+  position: relative;
+  right: 50px;
 }
 
 .navbar-text-lg {
   font-size: 30px; 
   font-family: "Raleway", sans-serif;
   color: #522A00;
-}
+  position: relative;
+  top: 60px; 
+  }
 
 .navnav:hover {
   background-color: initial !important;
@@ -171,3 +175,83 @@ a {
   justify-content: center;
 }
 
+/* Contact US */
+
+.box_orange{
+  background-color: #ffc0cb5a;
+  border: 2px solid orange;
+  border-radius: 15px;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  gap: 28%;
+}
+
+.box_input {
+  background-color: #ffc0cb5a;
+  width: 30%;
+  padding: 20px;
+  border: 2px solid blue;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+
+.input_email, .input_phone, .firstname, .lastname, .input_textarea {
+  width: 100%;
+  padding: 25px;
+  font-size: 20px;
+  border: none;
+  background-color: #ffc0cb00;
+  border-bottom: 2px solid orange;
+
+  box-sizing: border-box;
+}
+
+.input_email, .input_phone, .firstname, .lastname, .input_textarea:focus {
+  outline: none;
+}
+
+.input_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+}
+
+.name-container {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.input_email{
+  width: 100%;
+  font-size: 20px;
+}
+
+.SEND {
+  display: flex;
+  justify-content: end;
+}
+
+.btn_input{
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 22px;
+  border-radius: 5px;
+  margin-bottom: 20px; 
+  cursor: pointer;
+}
+
+.left_bloc{
+  margin-left: 7%;
+}
+
+.left_bloc, p{
+  font-size: large;
+}
+
+/* END Contact US */
