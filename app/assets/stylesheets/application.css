@@ -74,6 +74,8 @@ body {
 
 .logo-img {
   height: 200px; 
+  position: relative;
+  right: 50px;
 }
 
 
