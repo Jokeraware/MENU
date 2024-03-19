@@ -4,6 +4,7 @@ ruby "3.2.2"
 gem 'table_print'
 gem 'faker'
 gem 'devise'
+gem 'dotenv'
 
 group :development do
   gem "better_errors"
