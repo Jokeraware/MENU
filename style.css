@@ -20,12 +20,12 @@
 
 .input_email, .input_phone, .firstname, .lastname, .input_textarea {
     width: 100%;
+    padding: 25px;
     font-size: 20px;
     border: none;
     background-color: #ffc0cb00;
     border-bottom: 2px solid orange;
-    margin-top: 30px;
-    margin-bottom: 30px;
+
     box-sizing: border-box;
 }
 
