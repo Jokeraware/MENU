@@ -81,10 +81,13 @@ body {
   font-size: 30px; 
   font-family: "Raleway", sans-serif;
   color: #522A00;
-}
+  position: relative;
+  top: 60px; 
+  }
 
 .navnav:hover {
   background-color: initial !important;
   color: inherit !important;
  }
+
 
