@@ -14,11 +14,12 @@
  *= require_self
  */
 
-/* START HERO */
+
 body {
-  background-color: #fac4af54;
+  background-color: #fac4af21;
 }
 
+/* START HERO */
 .lead {
   font-size: 40px;
   font-family: "Raleway", sans-serif;
@@ -38,7 +39,45 @@ body {
   color: #FF7E33;
 }
 
+.lead-cities {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 750;
+  color: #522A00;
+}
+
+.lead-come {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  color: #FF7E33;
+}
+
 .shadow {
-  height: 110%;
+  height: 105%;
   width: 60%;
 }
+
+.cities {
+  margin-top: 15%;
+}
+
+.text-hero {
+  margin-top: 10%;
+}
+
+.text-cities {
+  margin-top: 12%;
+}
+
+.avis {
+  margin-top: 15%;
+}
+
+.expe {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+  display: flex;
+  justify-content: center;
+}
+/* END HERO */
