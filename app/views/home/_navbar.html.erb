@@ -11,6 +11,33 @@
     </ul>
 
     <div class="dropdown">
+      <% if admin_signed_in? %>
+        <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          ADMIN PROFILE
+        </a>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "LOG IN ADMIN", new_admin_session_path , class: "navnav navbar-text navbar-text-lg" %>
+        </li>
+      <% end %>
+          
+      <ul class="dropdown-menu">
+        <% if admin_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "MY PROFILE", admin_session_index_path(current_user), class: "navnav-out navbar-text" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "EDIT INFOS", edit_admin_registration_path, class: "navnav-out navbar-text" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "LOG OUT", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+            </li>
+          <% end %>
+      </ul>
+    </div>
+
+
+    <div class="dropdown">
       <% if user_signed_in? %>
         <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           PROFILE
@@ -27,7 +54,7 @@
               <%= link_to "MY PROFILE", user_path(current_user), class: "navnav-out navbar-text" %>
             </li>
             <li class="nav-item">
-              <%= link_to "EDIT PROFILE", edit_user_registration_path, class: "navnav-out navbar-text" %>
+              <%= link_to "EDIT INFOS", edit_user_registration_path, class: "navnav-out navbar-text" %>
             </li>
             <li class="nav-item">
               <%= link_to "LOG OUT", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>

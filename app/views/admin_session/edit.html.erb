@@ -1,0 +1,17 @@
+<h1> EDIT YOUR PROFILE </h1>
+
+<div class="container">
+  <table class="table">
+   <td class="form-group">
+          <%= form_with(model: user, local: true, method: :put) do |form| %>
+            <%= form.email_field :email, class:"form-control", placeholder:"Email" %>
+             <br>
+             <br>
+
+            <div class="text-center">
+              <%= form.submit "Modifier", class: "btnn btnn-primary" %>
+            </div>
+          <% end %>
+        </td>
+     </table>
+</div>

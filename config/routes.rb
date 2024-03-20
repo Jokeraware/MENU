@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   resources :restaurants
-  resources :admins
+  resources :admin_session
   resources :users
 
   get '/home', to: 'static_pages#home'
