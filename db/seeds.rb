@@ -1,8 +1,6 @@
 require 'faker'
 
-City.destroy_all
-Restaurant.destroy_all
-User.destroy_all
+
 
 all_cities = ["Marseille", "Toulouse", "Paris"]
 
@@ -11,7 +9,7 @@ all_cities = ["Marseille", "Toulouse", "Paris"]
     last_name = Faker::Name.last_name
     city = Faker::Address.city
     email = "#{first_name}.#{last_name}@yopmail.com"
-    
+
     User.create(
       first_name: first_name,
       last_name: last_name,
@@ -25,7 +23,7 @@ all_cities.each do |city|
   City.create(city_name: city)
 end
 
-24.times do 
+6.times do 
   Restaurant.create(
     restaurant_name: Faker::Restaurant.name,
     city: City.all.sample
