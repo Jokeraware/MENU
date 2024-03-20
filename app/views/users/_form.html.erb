@@ -1,0 +1,25 @@
+<div class="container">
+<div class="input-container ">
+    <%= form_with(model: user, local: true, method: :put) do |form| %>
+      <%= form.text_field :first_name, class: "form-control", id: "first_name", readonly: true %>
+      <label for="first_name" class="label">First name</label>
+      <div class="underline"></div>
+    <% end %>
+  </div>
+
+  <div class="input-container ">
+    <%= form_with(model: user, local: true, method: :put) do |form| %>
+      <%= form.text_field :last_name, class: "form-control", id: "last_name", readonly: true %>
+      <label for="last_name" class="label">Last name</label>
+      <div class="underline"></div>
+    <% end %>
+  </div>
+
+  <div class="input-container ">
+    <%= form_with(model: user, local: true, method: :put) do |form| %>
+      <%= form.email_field :email, class: "form-control", id: "email", readonly: true %>
+      <label for="email" class="label">Email</label>
+      <div class="underline"></div>
+    <% end %>
+  </div>
+</div>
