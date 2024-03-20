@@ -1,2 +1,33 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<br>
+<br>
+<center><h1>WHERE DO YOU WANNA EAT TODAY ?</h1></center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row-resto">
+  <% @restaurant.each do |restaurant| %>
+    <div class="col-index-resto">
+      <div class="card-resto">
+        <div class="first-content">
+          <%= link_to restaurant do %>
+            <%= image_tag "Aca.jpeg", class: "card-resto-img-top", alt: "Restaurant Image" %>
+          <% end %>
+          <h2 class="resto-title"><%= @restaurant.name %></h2> 
+        </div>
+        <div class="second-content">
+          <%= link_to restaurant do %>
+            <%= image_tag "Aca2.jpeg", class: "card-restoo-img-top", alt: "Restaurant Image" %>
+          <% end %>
+      </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<br>
+<br>
+<br>
+  
