@@ -686,6 +686,7 @@ a {
   height: 300px; 
   overflow: hidden; 
   border-radius: 25%;
+  border: 2px solid #AFDBF5;
 }
 
 .card-restoo-img-top {
