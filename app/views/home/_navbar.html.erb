@@ -24,7 +24,7 @@
       <ul class="dropdown-menu">
         <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to "MY PROFILE", class: "navnav-out navbar-text" %>
+              <%= link_to "MY PROFILE", user_path(current_user), class: "navnav-out navbar-text" %>
             </li>
             <li class="nav-item">
               <%= link_to "EDIT PROFILE", edit_user_registration_path, class: "navnav-out navbar-text" %>

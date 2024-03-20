@@ -19,6 +19,7 @@ body.opendys, h1.opendys {
 
 h1 {
   font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
 }
 
 
@@ -385,6 +386,12 @@ a {
   outline: none;
 }
 
+.input-container.active .label {
+  top: -20px;
+  font-size: 16px;
+  color: #FF7E33;
+}
+
 .input-container .label {
   position: absolute;
   top: 0;
@@ -620,3 +627,21 @@ a {
   transform: translateY(-0.1em);
 }
 /* END BOUTON DYSLEXIE */
+
+
+/* START PAGE PROFIL USER */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-edit {
+  border: solid #FF7E33 1px;
+  color: #522A00;
+}
+
+.btn-edit:hover {
+  background-color: #FF7E33;
+}
+/* END PAGE PROFIL USER */

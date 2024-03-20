@@ -1,0 +1,30 @@
+<div class="profile-page">
+  <h1>Welcome to your profile <% current_user.first_name %> </h1>
+
+<br>
+
+  <%= link_to 'Edit profile', edit_user_path, class:"btn btn-edit" %>
+
+  <div class="input-container <%= 'active' if @user.first_name.present? %>">
+    <input type="text" id="input" required="" readonly value="<%= @user.first_name %>">
+    <label for="input" class="label">First name</label>
+    <div class="underline"></div>
+  </div>
+
+  <div class="input-container <%= 'active' if @user.last_name.present? %>" >
+    <input type="text" id="input" required="" readonly value="<%= @user.last_name %>">
+    <label for="input" class="label">Last name</label>
+    <div class="underline"></div>
+  </div>
+
+  <div class="input-container <%= 'active' if @user.email.present? %>">
+    <input type="text" id="input" required="" readonly value="<%= @user.email %>">
+    <label for="input" class="label">Email</label>
+    <div class="underline"></div>
+  </div>
+
+  <h1>Your reservations</h1>
+  <h1>Your favorites restaurants</h1>
+  
+</div>
+
