@@ -1,7 +1,7 @@
 <div class="container">
   <header class="d-flex justify-content-between py-3">
     <ul class="nav">
-      <li class="nav-item"><%= link_to "RESTAURANTS", "#", class: "navnav nav-link navbar-text navbar-text-lg" %></li>
+      <li class="nav-item"><%= link_to "RESTAURANTS", restaurants_path, class: "navnav nav-link navbar-text navbar-text-lg" %></li>
     </ul>
    
     <ul class="nav">
@@ -10,18 +10,19 @@
       </li>
     </ul>
 
-  <ul class="nav">
-    <% if user_signed_in? %>
-      <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, data: {turbo_method: :delete} %>
-    <% else %>
-      <li class="nav-item"><%= link_to "LOG IN", new_user_session_path , class: "navnav nav-link navbar-text navbar-text-lg" %></li>
-    <% end %>
-    <li>
-    <%= link_to image_tag("DYS.png", alt: "Activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "activerOpenDyslexic();" %>
-     </li>
+    <ul class="nav">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "LOG OUT", destroy_user_session_path, class: "navnav-out nav-link navbar-text navbar-text-lg-out", method: :delete, data: {turbo_method: :delete} %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "LOG IN", new_user_session_path , class: "navnav nav-link navbar-text navbar-text-lg" %>
+        </li>
+      <% end %>
+        <li>
+          <%= link_to image_tag("DYS.png", alt: "Activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "activerOpenDyslexic();" %>
+        </li>
     </ul>
-
-
-    
   </header>
 </div>

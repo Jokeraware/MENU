@@ -1,27 +1,15 @@
-<br>
-<br>
-<br>
 <div class="coontainer">
-  <div class="heading">LOG IN</div>
+  <div class="heading">
+    LOG IN
+  </div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form">
-      <%= f.email_field :email, class: "input", placeholder: "E-mail", required: true %>
+      <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>
       <%= f.password_field :password, class: "input", placeholder: "Password", required: true %>
-      <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
+      <span class="forgot-password"> <%= link_to 'Forgot Password ?', new_user_password_path %> </span>
       <%= f.submit "LOG IN", class: "login-button" %>
     </div>
+    <p class="p-log"> Don't have an account ? &nbsp <%= link_to 'SIGN UP', new_user_registration_path %> </p>
   <% end %>
-  <br>
-  <br>
-  <br>
- <br>
 </div>
-<br>
-<br>
-<center><%= render "devise/shared/links" %></center>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
