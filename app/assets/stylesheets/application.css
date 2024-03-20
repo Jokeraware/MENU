@@ -1,6 +1,7 @@
 body {
   background-color: #fac4af21;
   font-family: "Raleway", sans-serif;
+  width: 100%;
 }
 
 a {
@@ -19,6 +20,7 @@ body.opendys, h1.opendys {
 
 h1 {
   font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
 }
 
 
@@ -166,6 +168,19 @@ a {
   background-color: initial !important;
   color: #B92736;
 }
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: #fac4af21;
+  border-color: #522A00;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+}
+/* Fin dropdown menu */
+
 /* END NAVBAR */
 
 
@@ -301,10 +316,17 @@ a {
   color: #FF7E33;
 }
 
+.copyright-p{
+  padding: 0;
+  width: 100%;
+}
+
 .copyright-thp {
   font-size: small;
   color: #522A00;
 }
+
+
 /* END FOOTER */
 
 
@@ -370,6 +392,12 @@ a {
   padding: 5px 0;
   background-color: transparent;
   outline: none;
+}
+
+.input-container.active .label {
+  top: -20px;
+  font-size: 16px;
+  color: #FF7E33;
 }
 
 .input-container .label {
@@ -607,3 +635,120 @@ a {
   transform: translateY(-0.1em);
 }
 /* END BOUTON DYSLEXIE */
+
+
+
+/* Cartes Restaurants */
+
+
+.card-resto:hover {
+  border-radius: 25px;
+  cursor: pointer;
+  transform: scale(1.0);
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  background:transparent;
+}
+
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.card-resto:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+
+.card-resto:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+}
+.row-resto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin-left: 50px; 
+}
+
+.col-index-resto {
+  flex: 0 0 30%; 
+  margin-bottom: 50px; 
+}
+
+
+
+.card-resto-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1.3px); 
+}
+.card-resto {
+  position: relative;
+  width: 100%;
+  max-width: 300px; 
+  height: 300px; 
+  overflow: hidden; 
+  border-radius: 25%;
+  border: 2px solid #AFDBF5;
+}
+
+.card-restoo-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.resto-title {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+  z-index: 1;
+}
+
+/* Fin cartes Restaurants */
+
+
+/* START PAGE PROFIL USER */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-edit {
+  border: solid #FF7E33 1px;
+  color: #522A00;
+}
+
+.btn-edit:hover {
+  background-color: #FF7E33;
+}
+/* END PAGE PROFIL USER */
