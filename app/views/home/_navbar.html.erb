@@ -3,7 +3,11 @@
     <ul class="nav">
       <li class="nav-item"><%= link_to "RESTAURANTS", restaurants_path, class: "navnav nav-link navbar-text navbar-text-lg" %></li>
     </ul>
-   
+
+    <% if admin_signed_in? %>
+      <%= link_to "ADMIN LOG OUT", admin_logout_path, class: "navnav-out navbar-text navbar-text-lg", method: :delete, data: { turbo_method: :delete } %>
+    <% end %>
+
     <ul class="nav">
       <li class="nav-item">
         <%= link_to image_tag("LOGO_2.png", alt: "Logo", class: "navnav navbar-brand img-fluid logo-img"), root_path, class: "nav-link" %>
@@ -20,23 +24,22 @@
           <%= link_to "LOG IN", new_user_session_path , class: "navnav navbar-text navbar-text-lg" %>
         </li>
       <% end %>
-            
+      
       <ul class="dropdown-menu">
         <% if user_signed_in? %>
-            <li class="nav-item">
-              <%= link_to "MY PROFILE", user_path(current_user), class: "navnav-out navbar-text" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "EDIT PROFILE", edit_user_registration_path, class: "navnav-out navbar-text" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "LOG OUT", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
-            </li>
-          <% end %>
+          <li class="nav-item">
+            <%= link_to "MY PROFILE", user_path(current_user), class: "navnav-out navbar-text" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "EDIT PROFILE", edit_user_registration_path, class: "navnav-out navbar-text" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "LOG OUT", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+          </li>
+        <% end %>
       </ul>
     </div>
 
     <%= link_to image_tag("DYS.png", alt: "Activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "activerOpenDyslexic();" %>
-
   </header>
 </div>

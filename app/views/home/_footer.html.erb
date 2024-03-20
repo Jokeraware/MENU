@@ -8,9 +8,15 @@
 
       <br>
 
-      <h4>
-        <%= link_to 'RESTAURATEURS ?', new_admin_registration_path, class: "cta-middle" %>
-      </h4>
+      <% if current_admin %>
+        <h4>
+          <%= link_to 'LOG OUT', admin_logout_path, method: :delete, class: "cta-middle", data: { turbo_method: :delete } %>
+        </h4>
+      <% else %>
+        <h4>
+          <%= link_to 'RESTAURATEURS ?', new_admin_registration_path, class: "cta-middle" %>
+        </h4>
+      <% end %>
     </div>
 
     <br>

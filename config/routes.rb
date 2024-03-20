@@ -1,28 +1,19 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :users
-  root 'static_pages#home'
-
-  resources :restaurants
+  devise_for :admins, controllers: { sessions: 'admins/sessions' }
   resources :admins
+
+  devise_for :users
   resources :users
+  resources :restaurants
+
+  root 'static_pages#home'
 
   get '/home', to: 'static_pages#home'
   get '/concept', to: 'static_pages#concept'
   get '/team', to: 'static_pages#team'
   get '/contact', to: 'static_pages#contact'
 
-  resources :users
+  delete '/admin_logout', to: 'admins/sessions#destroy', as: :admin_logout
 
-
-
-
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end
