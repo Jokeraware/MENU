@@ -166,6 +166,19 @@ a {
   background-color: initial !important;
   color: #B92736;
 }
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: #fac4af21;
+  border-color: #522A00;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+}
+/* Fin dropdown menu */
+
 /* END NAVBAR */
 
 
