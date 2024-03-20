@@ -6,24 +6,32 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="ffield">
-
-      <%= f.email_field :email, class: "input", placeholder: "E-mail", required: true %>
+      <%= f.text_field :first_name, class: "input", placeholder: "First name", required: true %>
     </div>
 
     <div class="ffield">
-    
+      <%= f.text_field :last_name, class: "input", placeholder: "Last name", required: true %>
+    </div>
+
+    <div class="ffield">
+      <%= f.text_field :city, class: "input", placeholder: "City", required: true %>
+    </div>
+
+    <div class="ffield">
+      <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>
+    </div>
+
+    <div class="ffield">
       <%= f.password_field :password, class: "input", placeholder: "New Password", autocomplete: "new-password" %>
     </div>
 
     <div class="ffield">
-    
       <%= f.password_field :password_confirmation, class: "input", placeholder: "Confirm Password", autocomplete: "new-password" %>
     </div>
 
     <div class="acctions">
       <%= f.submit "SIGN UP" %>
     </div>
+    <span class="p-log"> Or &nbsp <%= link_to 'LOG IN', new_user_session_path %> </span>
   <% end %>
 </div>
-
-<center><%= render "devise/shared/links" %></center>

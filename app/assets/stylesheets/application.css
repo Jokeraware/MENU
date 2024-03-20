@@ -140,7 +140,7 @@ a {
 .logo-img {
   height: 200px;
   position: relative;
-  right: 50px;
+  right: 10px;
 }
 
 .navbar-text-lg {
@@ -150,10 +150,22 @@ a {
   top: 60px;
 }
 
+.navbar-text-lg-out {
+  font-size: 30px; 
+  color: #B92736;
+  position: relative;
+  top: 60px;
+}
+
 .navnav:hover {
   background-color: initial !important;
   color: inherit !important;
  }
+
+.navnav-out:hover {
+  background-color: initial !important;
+  color: #B92736;
+}
 /* END NAVBAR */
 
 
@@ -466,11 +478,11 @@ a {
 }
 
 .form .input::-moz-placeholder {
-  color: rgb(170, 170, 170);
+  color: #fac4af;
 }
 
 .form .input::placeholder {
-  color: rgb(170, 170, 170);
+  color: #fac4af;
 }
 
 .form .input:focus {
@@ -489,15 +501,23 @@ a {
   text-decoration: none;
 }
 
+.p-log {
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  color: #522A00;
+}
+
 .form .login-button {
   display: block;
-  width: 100%;
-  background: #AFDBF5;
+  width: 40%;
+  background-color: #AFDBF5;
   color: white;
-  padding-block: 15px;
+  padding: 10px 30px; 
   margin: 20px auto;
-  border: none;
+  border-color: #AFDBF5;
   transition: all 0.2s ease-in-out;
+  border-radius: 10%;
 }
 
 .form .login-button:hover {
@@ -512,7 +532,7 @@ a {
 
 .agreement a {
   text-decoration: none;
-   font-size: 9px;
+  font-size: 9px;
   font-family: "Raleway", sans-serif;
   color: #522A00;
 }
@@ -532,18 +552,23 @@ a {
 .ffield input {
   border: none; 
   outline: none; 
-  background-color: transparent; 
+  background-color: transparent;
+}
+
+.input-sign {
+  color: #fac4af;
 }
 
 .acctions input[type="submit"] {
   display: block;
-  width: 100%;
-  background: #AFDBF5;
+  width: 40%;
+  background-color: #AFDBF5;
   color: white;
-  padding-block: 15px;
+  padding: 10px 30px; 
   margin: 20px auto;
-  border: none;
+  border-color: #AFDBF5;
   transition: all 0.2s ease-in-out;
+  border-radius: 10%;
 }
 
 .coontainer h2 {
@@ -552,7 +577,28 @@ a {
   color: #522A00;
   font-size: 30px;
 }
+
+.link-log {
+  display: flex;
+  justify-content: center;
+}
 /* END FORM SIGN UP */
+
+
+/* START FORM PASSWORD */
+.actions-pass input[type="submit"] {
+  display: block;
+  width: 60%;
+  background-color: #AFDBF5;
+  color: white;
+  font-size: 60%;
+  padding: 10px 10px; 
+  margin: 20px auto;
+  border-color: #AFDBF5;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5%;
+}
+/* END FORM PASSWORD */
 
 
 /* START BOUTON DYSLEXIE */ 

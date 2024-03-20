@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'static_pages#home'
 
+  resources :restaurants
+
   get '/home', to: 'static_pages#home'
   get '/concept', to: 'static_pages#concept'
   get '/team', to: 'static_pages#team'
