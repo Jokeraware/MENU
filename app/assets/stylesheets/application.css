@@ -1,6 +1,7 @@
 body {
   background-color: #fac4af21;
   font-family: "Raleway", sans-serif;
+  width: 100%;
 }
 
 a {
@@ -19,6 +20,7 @@ body.opendys, h1.opendys {
 
 h1 {
   font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
 }
 
 
@@ -166,6 +168,19 @@ a {
   background-color: initial !important;
   color: #B92736;
 }
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: #fac4af21;
+  border-color: #522A00;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+}
+/* Fin dropdown menu */
+
 /* END NAVBAR */
 
 
@@ -301,10 +316,17 @@ a {
   color: #FF7E33;
 }
 
+.copyright-p{
+  padding: 0;
+  width: 100%;
+}
+
 .copyright-thp {
   font-size: small;
   color: #522A00;
 }
+
+
 /* END FOOTER */
 
 
@@ -370,6 +392,12 @@ a {
   padding: 5px 0;
   background-color: transparent;
   outline: none;
+}
+
+.input-container.active .label {
+  top: -20px;
+  font-size: 16px;
+  color: #FF7E33;
 }
 
 .input-container .label {
@@ -706,3 +734,21 @@ a {
 }
 
 /* Fin cartes Restaurants */
+
+
+/* START PAGE PROFIL USER */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-edit {
+  border: solid #FF7E33 1px;
+  color: #522A00;
+}
+
+.btn-edit:hover {
+  background-color: #FF7E33;
+}
+/* END PAGE PROFIL USER */
