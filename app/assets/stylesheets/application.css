@@ -1,6 +1,7 @@
 body {
   background-color: #fac4af21;
   font-family: "Raleway", sans-serif;
+  width: 100%;
 }
 
 a {
@@ -315,10 +316,17 @@ a {
   color: #FF7E33;
 }
 
+.copyright-p{
+  padding: 0;
+  width: 100%;
+}
+
 .copyright-thp {
   font-size: small;
   color: #522A00;
 }
+
+
 /* END FOOTER */
 
 

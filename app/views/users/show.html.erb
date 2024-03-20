@@ -3,7 +3,7 @@
 
 <br>
 
-  <%= link_to 'Edit profile', edit_user_path, class:"btn btn-edit" %>
+  <%= link_to 'Edit profile', edit_user_registration_path, class:"btn btn-edit" %>
 
   <div class="input-container <%= 'active' if @user.first_name.present? %>">
     <input type="text" id="input" required="" readonly value="<%= @user.first_name %>">
