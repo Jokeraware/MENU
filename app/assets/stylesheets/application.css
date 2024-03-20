@@ -440,7 +440,9 @@ a {
   padding: 30px 40px;
   border: 2px solid #AFDBF5;
   width: 400px; 
-  margin: auto; 
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 .heading {
