@@ -32,6 +32,7 @@
     <div class="acctions">
       <%= f.submit "SIGN UP" %>
     </div>
-    <span class="p-log"> Or &nbsp <%= link_to 'LOG IN', new_user_session_path %> </span>
+    <span class="p-log"> <%= link_to 'LOG IN', new_admin_session_path %> &nbsp as restaurateur</span>
+    <span class="p-log"> <%= link_to 'LOG IN', new_user_session_path %> &nbsp as client</span>
   <% end %>
 </div>
