@@ -740,8 +740,6 @@ a {
 
 .box_profil{
   display: flex;
-  border: 2px solid #FF7E33;
-  border-radius: 15px;
   width: 80%;
   margin: 10%;
 
