@@ -1,2 +1,53 @@
-<h2><%= Faker::Restaurant.name %></h2> 
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<center><h2><%= @restaurant_name %></h2></center>
+<br>
+<br>
+<div class="card-show">
+<%= link_to "javascript:void(0)", class: "image-container" do %>
+    <%= image_tag "CardRest1.webp", class: "card-resto-img thumbnail", alt: "Restaurant Image" %>
+  <% end %>
+  
+</div>
+
+<button type="button" class="btn btn-primary btn-lg">Réservez une table !</button>
+
+
+<div class="card-describe">
+    <div class="infos">
+      <p class="date-time">
+        CHEZ ACÀ PIGALLE
+      </p>
+      <p class="description">
+       Bienvenue chez "Casa de Sabor" ! Plongez dans une expérience culinaire authentique où les saveurs du Mexique vous transportent instantanément. 
+       Dégustez nos délicieux tacos, enchiladas et fajitas, 
+       accompagnés de margaritas rafraîchissantes. Notre ambiance vibrante et nos plats savoureux vous promettent une soirée inoubliable.
+       Venez découvrir la vraie essence du Mexique chez nous !
+      </p>
+  </div>
+
+  <div class="author">
+    — L équipe du Restaurant
+  </div>
+ </div>
+
+ <script> 
+ document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.thumbnail');
+    images.forEach(function(image) {
+        image.addEventListener('click', function() {
+            image.classList.toggle('en-grand');
+        });
+    });
+});
+let isTransitioning = false;
+
+function toggleFullscreen(element) {
+  if (!isTransitioning) {
+    isTransitioning = true;
+    setTimeout(function() {
+      element.classList.toggle('en-grand');
+      isTransitioning = false;
+    }, 300); 
+  }
+}
+
+</script>

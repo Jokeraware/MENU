@@ -18,7 +18,7 @@ vous saurez tout le temps ce qui se prépare en cuisine!</a></center>
           <%= link_to restaurant do %>
             <%= image_tag "Aca.jpeg", class: "card-resto-img-top", alt: "Restaurant Image" %>
           <% end %>
-          <h2 class="resto-title"><%= Faker::Restaurant.name %></h2> 
+          <h2 class="resto-title"><%= @restaurant_name %></h2>
         </div>
         <div class="second-content">
           <%= link_to restaurant do %>
