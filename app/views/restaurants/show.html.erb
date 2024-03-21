@@ -1,14 +1,10 @@
-<center><h2><%= @restaurant_name %></h2></center>
-<br>
-<br>
+<h1 class="h1-resto"><%= @restaurant_name %></h1>
+
 <div class="card-show">
-<%= link_to "javascript:void(0)", class: "image-container" do %>
+  <%= link_to "javascript:void(0)", class: "image-container" do %>
     <%= image_tag "CardRest1.webp", class: "card-resto-img thumbnail", alt: "Restaurant Image" %>
   <% end %>
-  
 </div>
-
-<button type="button" class="btnnn btnnn-primary btnnn-lg">Réservez une table !</button>
 
 
 <div class="card-describe">
@@ -29,8 +25,10 @@
   </div>
  </div>
 
+ <button type="button" class="btnnn btnnn-primary btnnn-lg">BOOK TABLE</button>
 
- <div class="roww d-flex justify-content-center">
+
+ <div class="roww-comment d-flex justify-content-center">
   <div class="col-md-8 col-lg-6">
     <div class="card shadow-0 border" style="background-color: #f0f2f5;">
       <div class="card-body p-4">
@@ -117,25 +115,6 @@
     </div>
   </div>
 </div>
- <script> 
- document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.thumbnail');
-    images.forEach(function(image) {
-        image.addEventListener('click', function() {
-            image.classList.toggle('en-grand');
-        });
-    });
-});
-let isTransitioning = false;
 
-function toggleFullscreen(element) {
-  if (!isTransitioning) {
-    isTransitioning = true;
-    setTimeout(function() {
-      element.classList.toggle('en-grand');
-      isTransitioning = false;
-    }, 300); 
-  }
-}
 
-</script>
+ <script src="show_restau.js"></script>
