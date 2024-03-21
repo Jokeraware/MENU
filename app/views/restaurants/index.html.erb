@@ -1,15 +1,7 @@
-<br>
-<br>
-<center><h1>WHERE DO YOU WANNA EAT TODAY ?</h1></center>
-<br>
-<br>
-<center><h2>PARIS</h2></center>
-<br>
-<center><a>Venez découvrir les cartes du moment de tous vos restaurants préférés ! Grâce à Menu,
-vous saurez tout le temps ce qui se prépare en cuisine!</a></center>
-<br>
-<br>
-<br>
+
+<h1 class="h1-resto">WHERE DO YOU WANNA EAT TODAY ?</h1>
+<p class="p-resto"> Come and discover your favorites restaurants updated menus ! Thanks to Menu, you will know what is going on in the kitchen !</p>
+
 <div class="row-resto">
   <% @restaurant.each do |restaurant| %>
     <div class="col-index-resto">
@@ -24,14 +16,8 @@ vous saurez tout le temps ce qui se prépare en cuisine!</a></center>
           <%= link_to restaurant do %>
             <%= image_tag "Aca2.jpeg", class: "card-restoo-img-top", alt: "Restaurant Image" %>
           <% end %>
-      </div>
+        </div>
       </div>
     </div>
   <% end %>
 </div>
-
-
-<br>
-<br>
-<br>
-  

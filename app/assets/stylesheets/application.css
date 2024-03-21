@@ -26,29 +26,29 @@ h1 {
 
 /* START HERO */
 .lead {
-  font-size: 40px;
+  font-size: 250%;
   color: #522A00;
 }
 
 .lead-easier {
-  font-size: 40px;
+  font-size: 250%;
   font-weight: 750;
   color: #522A00;
 }
 
 .lead-eat {
-  font-size: 40px;
+  font-size: 250%;
   color: #FF7E33;
 }
 
 .lead-cities {
-  font-size: 40px;
+  font-size: 250%;
   font-weight: 750;
   color: #522A00;
 }
 
 .lead-come {
-  font-size: 40px;
+  font-size: 250%;
   color: #FF7E33;
 }
 
@@ -74,7 +74,7 @@ h1 {
 }
 
 .expe {
-  font-size: 40px;
+  font-size: 250%;
   color: #522A00;
   display: flex;
   justify-content: center;
@@ -131,32 +131,29 @@ h1 {
 .fa-whatsapp {
   color: #FF7E33;
 }
-
-a {
-  text-decoration: none;
-}
 /* END PAGE TEAM */
 
 
 /* START NAVBAR */
 .logo-img {
-  height: 200px;
+  height: 100%;
   position: relative;
-  right: 10px;
+  right: 5%;
+  bottom: 30%;
 }
 
 .navbar-text-lg {
-  font-size: 30px; 
+  font-size: 200%; 
   color: #522A00;
   position: relative;
-  top: 60px;
+  top: 8%;
 }
 
 .navbar-text-lg-out {
-  font-size: 30px; 
+  font-size: 200%; 
   color: #B92736;
   position: relative;
-  top: 60px;
+  top: 10px;
 }
 
 .navnav:hover {
@@ -169,7 +166,7 @@ a {
   color: #B92736;
 }
 
-/* Dropdown menu */
+/* Start dropdown menu */
 .dropdown-menu {
   background-color: #fac4af21;
   border-color: #522A00;
@@ -179,14 +176,12 @@ a {
   display: flex;
   justify-content: center;
 }
-/* Fin dropdown menu */
-
+/* End dropdown menu */
 /* END NAVBAR */
 
 
 /* START PAGE CONCEPT */
 .h1-concept {
-  color: #522A00;
   margin-top: 5%;
 }
 
@@ -195,7 +190,7 @@ a {
 }
 
 .lead-concept {
-  font-size: 20px;
+  font-size: 150%;
   color: #522A00;
   margin-bottom: 10%;
 }
@@ -243,7 +238,7 @@ a {
   border: 10px solid #FF7E33;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 150%;
   transform: rotateY(0deg);
 }
 
@@ -255,7 +250,7 @@ a {
   border: 10px solid #fac4af;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 150%;
   transform: rotateY(0deg);
 }
 
@@ -267,7 +262,7 @@ a {
   border: 10px solid #fac4af;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 150%;
   transform: rotateY(180deg);
 }
 
@@ -279,7 +274,7 @@ a {
   border: 10px solid #FF7E33;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 150%;
   transform: rotateY(180deg);
 }
 /* END PAGE CONCEPT */
@@ -325,8 +320,6 @@ a {
   font-size: small;
   color: #522A00;
 }
-
-
 /* END FOOTER */
 
 
@@ -342,19 +335,18 @@ a {
 
 .box_input {
   width: 40%;
-  padding: 20px;
+  padding: 2%;
   border: 2px solid #AFDBF5;
   border-radius: 15px;
-  margin: 20px;
+  margin: 2%;
 }
 
 .h1-contact {
-  color: #522A00;
   margin-bottom: 10%;
 }
 
 .p-contact {
-  font-size: 20px;
+  font-size: 130%;
   color: #522A00;
 }
 
@@ -380,23 +372,23 @@ a {
 
 .input-container {
   position: relative;
-  margin: 50px auto;
-  width: 200px;
+  margin: 15% auto;
+  width: 80%;
 }
 
 .input-container input[type="text"] {
-  font-size: 20px;
+  font-size: 100%;
   width: 100%;
   border: none;
   border-bottom: 2px solid #fac4af;
-  padding: 5px 0;
+  padding: 2% 0;
   background-color: transparent;
   outline: none;
 }
 
 .input-container.active .label {
-  top: -20px;
-  font-size: 16px;
+  top: -10%;
+  font-size: 100%;
   color: #FF7E33;
 }
 
@@ -411,8 +403,8 @@ a {
 
 .input-container input[type="text"]:focus ~ .label,
 .input-container input[type="text"]:valid ~ .label {
-  top: -20px;
-  font-size: 16px;
+  top: -50%;
+  font-size: 100%;
   color: #FF7E33;
 }
 
@@ -420,7 +412,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 2px;
+  height: 2%;
   width: 100%;
   background-color: #FF7E33;
   transform: scaleX(0);
@@ -435,10 +427,10 @@ a {
 }
 
 .form-control {
-  font-size: 20px;
+  font-size: 100%;
   width: 100%;
   border: 2px solid #fac4af;
-  padding: 5px 0;
+  padding: 2% 0;
   background-color: transparent;
   outline: none;
 }
@@ -448,7 +440,7 @@ a {
 }
 
 .left_bloc{
-  margin-top: 10%;
+  margin-top: 7%;
   margin-left: 7%;
 }
 
@@ -456,8 +448,8 @@ a {
   background-color: #AFDBF5;
   border-color: #AFDBF5;
   color: white; 
-  font-size: 15px;
-  padding: 10px 30px; 
+  font-size: 80%;
+  padding: 5% 15%; 
   border-radius: 15px;
   margin-left: 30%;
 }
@@ -659,7 +651,7 @@ a {
 }
 
 .card-resto:hover .first-content {
-  height: 0px;
+  height: 0%;
   opacity: 0;
 }
 
@@ -672,7 +664,6 @@ a {
   align-items: center;
   border-radius: 15px;
   transition: all 0.4s;
-  font-size: 0px;
   transform: rotate(90deg) scale(-1);
 }
 
@@ -687,12 +678,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; 
-  margin-left: 50px; 
+  margin-left: 8%;
+  margin-top: 10%;
 }
 
 .col-index-resto {
   flex: 0 0 30%; 
-  margin-bottom: 50px; 
+  margin-bottom: 5%; 
 }
 
 .card-resto-img-top {
@@ -708,7 +700,7 @@ a {
 .card-resto {
   position: relative;
   width: 100%;
-  max-width: 300px; 
+  max-width: 70%; 
   height: 300px; 
   overflow: hidden; 
   border-radius: 25%;
@@ -726,29 +718,38 @@ a {
 .resto-title {
   text-align: center;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
-  font-size: 30px;
+  color: #fff;
+  font-size: 200%;
   z-index: 1;
+}
+
+.h1-resto {
+  display: flex;
+  justify-content: center;
+}
+
+.p-resto {
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
 }
 /* END INDEX RESTAURANTS */
 
 
 /* START PAGE PROFIL USER */
-
 .box_profil{
   display: flex;
   width: 80%;
   margin: 10%;
-
 }
 
 .profile-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 80px;
-  max-width: 400px; 
-
+  padding: 10%;
+  max-width: 100%; 
 }
 
 .photo-profil {
@@ -756,7 +757,7 @@ a {
   height: 100px; 
   border-radius: 50%; 
   overflow: hidden;
-  margin: 10px auto; 
+  margin: 5% auto; 
   border: 2px solid #fff; 
 }
 
@@ -766,67 +767,81 @@ a {
   display: block; 
 }
 
+.input-container-profile input[type="text"] {
+  font-size: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fac4af;
+  padding: 2% 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container-profile.active .label-profile {
+  top: -50%;
+  font-size: 100%;
+  color: #FF7E33;
+}
+
 .profile-page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.input-container {
-  margin: 20px 0;
-}
-
 .btn-edit {
+  display: flex;
+  justify-content: center;
   border: solid #FF7E33 1px;
   color: #522A00;
-  padding: 5px 10px; 
-  margin-top: 10px; 
+  padding: 4% 5%; 
+  margin-top: 10%; 
 }
 
 .btn-edit:hover {
   background-color: #FF7E33;
+  color: #fff;
 }
 
 .box_favoris {
   margin-left: 30% ;
   width: 50%;
-  padding: 20px;
+  padding: 10%;
   border: 2px solid #000000;
 }
-
-
 /* END PAGE PROFIL USER */
 
-/* PAGE SHOW DU RESTO */ 
 
-/* La carte du Menu */
+/* PAGE SHOW DU RESTO */ 
+/* Menu */
 .card-show {
   cursor: pointer;
-  width: 450px;
-  height: 550px;
+  width: 30%;
   background: rgb(255, 255, 255);
   border-radius: 5px;
   border: 2px solid #AFDBF5;
   transition: all .2s;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  margin-left: 80px; 
-  
+  margin-left: 5%; 
+  margin-top: 5%;
  }
+
  .thumbnail {
-  width: 200px; 
+  width: 100%; 
   cursor: pointer;
 }
 
  .card-show:hover {
   box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
   transform: scale(1.1); 
- ; 
  }
+
  .card-show img {
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
  }
+
  .en-grand {
   position: fixed;
   top: 50%;
@@ -846,18 +861,15 @@ a {
   height: 100%;
   object-fit: contain;
 }
+/* End Menu */ 
 
-/* Fin Carte du Menu */ 
-
-
-/* La carte Descriptive du resto */
-
+/* Start description card */
  .card-describe {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 1);
-  padding: 20px;
+  padding: 1%;
   margin-left: 750px; 
   margin-bottom: 200px;
   margin-top: -500px; 
@@ -865,57 +877,168 @@ a {
   height: 320px; 
 }
 
-
 .infos {
   margin-top: 1rem;
 }
 
 .date-time {
   font-family: "Raleway", sans-serif;
-  color: #522A00;
-  font-size: 30px;
+  color: #FF7E33;
+  font-size: 200%;
 }
 
 .description {
   margin-top: 0.4rem;
   line-height: 1.625;
-  color: rgba(107, 114, 128, 1);
+  color: #522A00;
 }
 
 .author {
   margin-top: 1.3rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: rgba(107, 114, 128, 1);
+  color: #522A00;
 }
+/* End description card */
 
-/* Fin carte Descriptive du resto */
-
-/* Le bouton Réservation */ 
-
+/* Start Reservation button */ 
 .btnnn {
   display: inline-block;
   font-weight: 400;
   text-align: center;
   position: absolute;
-  bottom: -250px; /* Ajustez cette valeur selon votre préférence */
-  left: 10%; 
+  left: 14%; 
   border: 1px solid transparent;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
- 
 }
 
 .btnnn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #AFDBF5;
+  border-color: #AFDBF5;
 }
 
 .btnnn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #afdbf5c5;
+  border-color: #AFDBF5C5;
+}
+/* End Reservation button */ 
+
+/* Start comments */
+
+/* End comments */
+/* END SHOW DU RESTO */ 
+
+
+/* START EDIT FORM */
+.input-container-edit {
+  position: relative;
+  margin: 15% auto;
+  width: 80%;
+}
+
+.input-container-edit input[type="text"] {
+  font-size: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fac4af;
+  padding: 2% 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container-edit.active .label-edit {
+  top: -10%;
+  font-size: 100%;
+  color: #FF7E33;
+}
+
+.input-container-edit .label-edit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fac4af;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container-edit input[type="text"]:focus ~ .label-edit,
+.input-container-edit input[type="text"]:valid ~ .label-edit {
+  top: -50%;
+  font-size: 100%;
+  color: #FF7E33;
+}
+
+.input-container-edit .underline-edit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2%;
+  width: 100%;
+  background-color: #FF7E33;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container-edit input[type="text"]:focus ~ .underline-edit,
+.input-container-edit input[type="text"]:valid ~ .underline-edit {
+  transform: scaleX(1);
+}
+
+.form-control-edit {
+  font-size: 100%;
+  width: 100%;
+  border: 2px solid #fac4af;
+  padding: 2% 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.form-control-edit:hover {
+  border-color: #FF7E33;
+}
+
+.h3-edit {
+  display: flex;
+  justify-content: center;
+  color: #522A00;
+  font-family: "Expletus Sans", sans-serif;
+  margin-top: 10%;
+}
+
+.actions-edit {
+  display: flex;
+  justify-content: center;
+}
+
+.p-edit {
+  display: flex;
+  justify-content: center;
+  color: #522A00;
+}
+
+.btn-cancel {
+  display: flex;
+  justify-content: center;
+  border: none;
+  color: #fff;
+  background-color: #B92736;
+  padding: 5%; 
+  margin-top: 10%;
+}
+/* END EDIT FORM */
+
+
+
+
+
+.admin-prof {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
