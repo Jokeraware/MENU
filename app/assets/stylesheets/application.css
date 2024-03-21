@@ -14,12 +14,16 @@ a {
   src: url('/assets/OpenDyslexicAlta-Regular.otf');
 } 
 
-body.opendys, h1.opendys {
+body.opendys, h1.opendys, h2.opendys {
   font-family: 'OpenDyslexic';
 }
 
 h1 {
   font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
+}
+
+h2{
   color: #522A00;
 }
 
@@ -477,13 +481,6 @@ h1 {
   margin-bottom: 10%;
 }
 
-.heading {
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  color: #522A00;
-  font-size: 30px;
-  }
-
 .form {
   margin-top: 20px;
 }
@@ -553,7 +550,7 @@ h1 {
 .agreement a {
   text-decoration: none;
   font-size: 9px;
-  font-family: "Raleway", sans-serif;
+
   color: #522A00;
 }
 /* END FORM LOGIN */ 
@@ -591,12 +588,6 @@ h1 {
   border-radius: 10%;
 }
 
-.coontainer h2 {
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  color: #522A00;
-  font-size: 30px;
-}
 
 .link-log {
   display: flex;
@@ -717,7 +708,7 @@ h1 {
 }
 .resto-title {
   text-align: center;
-  font-family: "Raleway", sans-serif;
+
   color: #fff;
   font-size: 200%;
   z-index: 1;
@@ -731,7 +722,6 @@ h1 {
 .p-resto {
   display: flex;
   justify-content: center;
-  font-family: "Raleway", sans-serif;
   color: #522A00;
 }
 /* END INDEX RESTAURANTS */
@@ -882,7 +872,6 @@ h1 {
 }
 
 .date-time {
-  font-family: "Raleway", sans-serif;
   color: #FF7E33;
   font-size: 200%;
 }
