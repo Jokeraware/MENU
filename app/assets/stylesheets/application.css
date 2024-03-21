@@ -630,6 +630,11 @@ a {
 
 
 /* START BOUTON DYSLEXIE */ 
+.btn-opendys {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #toggle-opendys:hover {
   opacity: 0.2; 
   transform: translateY(-0.1em);
