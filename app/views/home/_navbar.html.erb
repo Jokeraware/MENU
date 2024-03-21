@@ -9,7 +9,7 @@
         <%= link_to image_tag("LOGO_2.png", alt: "Logo", class: "navnav navbar-brand img-fluid logo-img"), root_path, class: "nav-link" %>
       </li>
     </ul>
-
+    
    <% if user_signed_in? || admin_signed_in? %>
         <div class="btn-group">
           <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,7 +41,7 @@
               <% if current_admin %>
                 <%= link_to "LOG OUT", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
               <% elsif current_user %>
-                <%= link_to "LOG OUT", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+                <%= button_to "LOG OUT", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
               <% end %>
             </li>
           </ul>
@@ -68,7 +68,7 @@
           </li>
         </ul>
 
-   
+  
     
     
 
