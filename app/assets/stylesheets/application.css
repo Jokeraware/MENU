@@ -1034,11 +1034,22 @@ h1 {
 
 
 
-
-
 .admin-prof {
   display: flex;
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 5%;
+}
+
+
+
+
+.FormulaireAdmin { 
+  width: 50%; /* Largeur maximale */
+  padding: 10px; /* Espacement interne */
+  font-size: 16px; /* Taille de la police */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 5px; 
+  margin-bottom: 5%;
+  margin-left: 30%;
 }

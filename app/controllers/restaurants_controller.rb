@@ -9,8 +9,13 @@ class RestaurantsController < ApplicationController
     @restaurant_name = Faker::Restaurant.name
   end
   def new
-    @restaurant = Restaurant.new
+    if current_user @admin
+      @restaurant = Restaurant.new
+    else
+      redirect_to root_path, alert: "Vous n'avez pas les autorisations nécessaires pour accéder à cette page."
+    end
   end
+
 
 def create
   @restaurant = Restaurant.new(params[:id])

@@ -22,11 +22,19 @@
   <% end %>
 </div>
 
-
-<%= form_with(model: @restaurants, local: true) do |form| %>
- <%= form.label :name %>
-  <%= form.text_field :name %>
- 
-
-  <%= form.submit "Créer un nouveau restaurant" %>
+<% if current_admin && current_admin %>
+  <%= form_with(model: @restaurants, local: true) do |form| %>
+    <div class="FormulaireAdmin">
+    <div class="form-group-admn">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control" %>
+        </div>
+    <div class="form-group-admn">
+      <%= form.label :city %>
+      <%= form.text_field :city, class: "form-control" %>
+      <%= form.submit "Créer un nouveau restaurant", class: "btn-admn" %>
+    </div>
+    </div>
+    
+  <% end %>
 <% end %>
