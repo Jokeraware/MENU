@@ -799,3 +799,126 @@ a {
 
 
 /* END PAGE PROFIL USER */
+
+/* PAGE SHOW DU RESTO */ 
+
+/* La carte du Menu */
+.card-show {
+  cursor: pointer;
+  width: 450px;
+  height: 550px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 2px solid #AFDBF5;
+  transition: all .2s;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  margin-left: 80px; 
+  
+ }
+ .thumbnail {
+  width: 200px; 
+  cursor: pointer;
+}
+
+ .card-show:hover {
+  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
+  transform: scale(1.1); 
+ ; 
+ }
+ .card-show img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+ }
+ .en-grand {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%; 
+  max-height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.en-grand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Fin Carte du Menu */ 
+
+
+/* La carte Descriptive du resto */
+
+ .card-describe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 20px;
+  margin-left: 750px; 
+  margin-bottom: 200px;
+  margin-top: -500px; 
+  width: 600px; 
+  height: 320px; 
+}
+
+
+.infos {
+  margin-top: 1rem;
+}
+
+.date-time {
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+  font-size: 30px;
+}
+
+.description {
+  margin-top: 0.4rem;
+  line-height: 1.625;
+  color: rgba(107, 114, 128, 1);
+}
+
+.author {
+  margin-top: 1.3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgba(107, 114, 128, 1);
+}
+
+/* Fin carte Descriptive du resto */
+
+/* Le bouton Réservation */ 
+
+.btnnn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  bottom: -250px; /* Ajustez cette valeur selon votre préférence */
+  left: 10%; 
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+ 
+}
+
+.btnnn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btnnn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
