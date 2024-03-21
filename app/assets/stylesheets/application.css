@@ -737,20 +737,67 @@ a {
 
 
 /* START PAGE PROFIL USER */
+
+.box_profil{
+  display: flex;
+  width: 80%;
+  margin: 10%;
+
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 80px;
+  max-width: 400px; 
+
+}
+
+.photo-profil {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  overflow: hidden;
+  margin: 10px auto; 
+  border: 2px solid #fff; 
+}
+
+.photo-profil img {
+  width: 100%;
+  height: auto; 
+  display: block; 
+}
+
 .profile-page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.input-container {
+  margin: 20px 0;
+}
+
 .btn-edit {
   border: solid #FF7E33 1px;
   color: #522A00;
+  padding: 5px 10px; 
+  margin-top: 10px; 
 }
 
 .btn-edit:hover {
   background-color: #FF7E33;
 }
+
+.box_favoris {
+  margin-left: 30% ;
+  width: 50%;
+  padding: 20px;
+  border: 2px solid #000000;
+}
+
+
 /* END PAGE PROFIL USER */
 
 /* PAGE SHOW DU RESTO */ 
