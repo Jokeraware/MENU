@@ -20,6 +20,8 @@
     <p class="alert"><%= alert %></p>
 
     <%= render 'home/navbar' %>
+    <%= link_to image_tag("DYS.png", alt: "Activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "activerOpenDyslexic();" %>
+
 
     <%= yield %>
 

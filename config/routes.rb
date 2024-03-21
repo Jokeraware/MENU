@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
-  
-  resources :users, only: [:show] do
-    resources :avatars, only: [:create]
-  end
 
   devise_for :admins
   devise_for :users
   root 'static_pages#home'
 
   resources :restaurants
-  resources :users
+
+  resources :users do 
+    resources :avatars, only: [:create]
+  end
+  
   resources :admins, only: [:show, :index, :create, :edit, :destroy]
 
-  resources :users, only: [:show]
  
 
   get '/home', to: 'static_pages#home'
