@@ -5,6 +5,7 @@ gem 'table_print'
 gem 'faker'
 gem 'devise'
 gem 'dotenv'
+gem 'turbo-rails'
 
 group :development do
   gem "better_errors"

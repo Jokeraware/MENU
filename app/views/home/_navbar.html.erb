@@ -1,7 +1,7 @@
-<div class="container">
-  <header class="d-flex justify-content-between py-3">
-    <ul class="nav">
-      <li class="nav-item"><%= link_to "RESTAURANTS", restaurants_path, class: "navnav nav-link navbar-text navbar-text-lg" %></li>
+<div class="container navbar-container">
+  <div class="header-nav">
+    <ul class="nav nav-title">
+      <li class="nav-item "><%= link_to "RESTAURANTS", restaurants_path, class: "navnav nav-link navbar-text navbar-text-lg" %></li>
     </ul>
    
     <ul class="nav">
@@ -48,9 +48,7 @@
       </div>
 
       <% else %>
-      
-     
-   
+  
         <ul>
           <li class="nav-item">
             <a class=" dropdown-toggle navnav nav-link navbar-text navbar-text-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,29 +65,6 @@
             </ul>
           </li>
         </ul>
-
-   
-    
-    
-
-
       <% end %>
-
-
-
-
-
-
-
-     
-
-        
-   
-
-      
-  
-
-    <%= link_to image_tag("DYS.png", alt: "Activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "activerOpenDyslexic();" %>
-
   </header>
 </div>

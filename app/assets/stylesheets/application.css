@@ -14,12 +14,16 @@ a {
   src: url('/assets/OpenDyslexicAlta-Regular.otf');
 } 
 
-body.opendys, h1.opendys {
+body.opendys, h1.opendys, h2.opendys {
   font-family: 'OpenDyslexic';
 }
 
 h1 {
   font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
+}
+
+h2 {
   color: #522A00;
 }
 
@@ -135,6 +139,7 @@ h1 {
 
 
 /* START NAVBAR */
+
 .logo-img {
   height: 100%;
   position: relative;
@@ -154,6 +159,28 @@ h1 {
   color: #B92736;
   position: relative;
   top: 10px;
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.navnav {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem; 
+  color: #522A00;
+}
+
+.navnav-out {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem; 
+  color: #B92736;
 }
 
 .navnav:hover {
@@ -301,6 +328,19 @@ h1 {
   justify-content: center;
 }
 
+.links-to {
+  display: flex;
+  justify-content: center;
+  margin-right: 0;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 33%;
+}
+
 .foot-link {
   color: #522A00;
 }
@@ -313,9 +353,12 @@ h1 {
 
 .copyright-p{
   padding: 0;
-  width: 100%;
+  margin: 0;
 }
 
+.copyright-section {
+  padding: 0;
+}
 .copyright-thp {
   font-size: small;
   color: #522A00;
@@ -467,25 +510,16 @@ h1 {
 
 /* START FORM LOGIN */ 
 .coontainer {
-  background: transparent;
-  border-radius: 20px;
-  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 3%;
   border: 2px solid #AFDBF5;
-  width: 400px; 
+  width: 20%; 
   margin: auto;
   margin-top: 5%;
   margin-bottom: 10%;
-}
-
-.heading {
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  color: #522A00;
-  font-size: 30px;
-  }
-
-.form {
-  margin-top: 20px;
 }
 
 .form .input {
@@ -573,6 +607,8 @@ h1 {
   border: none; 
   outline: none; 
   background-color: transparent;
+  font-size: 1rem;
+  color: #522A00;
 }
 
 .input-sign {
@@ -589,13 +625,6 @@ h1 {
   border-color: #AFDBF5;
   transition: all 0.2s ease-in-out;
   border-radius: 10%;
-}
-
-.coontainer h2 {
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  color: #522A00;
-  font-size: 30px;
 }
 
 .link-log {
@@ -622,6 +651,11 @@ h1 {
 
 
 /* START BOUTON DYSLEXIE */ 
+.btn-opendys {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #toggle-opendys:hover {
   opacity: 0.2; 
   transform: translateY(-0.1em);
