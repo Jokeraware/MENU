@@ -1,0 +1,42 @@
+<h1 class="h1-resto">Welcome to your profile <%= current_user.first_name %></h1>
+
+<div class="box_profil">
+    <div class="profile-card">
+        <div class="photo-profil">
+            <%= image_tag "Anelise.avif" , alt: "Photo de profil" %>
+        </div>
+
+        <div class="input-container-profile <%= 'active' if @user.first_name.present? %>">
+            <label for="input" class="label-profile">First name</label>
+            <input type="text" id="input" required="" readonly value="<%= @user.first_name %>">
+            <div class="underline"></div>
+        </div>
+
+        <div class="input-container-profile <%= 'active' if @user.last_name.present? %>">
+            <label for="input" class="label-profile">Last name</label>
+            <input type="text" id="input" required="" readonly value="<%= @user.last_name %>">
+            <div class="underline"></div>
+        </div>
+
+        <div class="input-container-profile <%= 'active' if @user.city.present? %>">
+            <label for="input" class="label-profile">City</label>
+            <input type="text" id="input" required="" readonly value="<%= @user.city %>">
+            <div class="underline"></div>
+        </div>
+
+        <div class="input-container-profile <%= 'active' if @user.email.present? %>">
+            <label for="input" class="label-profile">Email</label>
+            <input type="text" id="input" required="" readonly value="<%= @user.email %>">
+            <div class="underline"></div>
+        </div>
+        <div class="btn-edit-container">
+            <%= link_to 'Edit profile' , edit_user_path, class:"btn btn-edit" %>
+        </div>
+    </div>
+       
+      <div class="box_favoris">
+        <h1>Restaurant Favoris</h1>
+      </div>
+</div>
+
+<h1 class="h1-resto">Your reservations</h1>

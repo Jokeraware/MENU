@@ -1,6 +1,7 @@
 body{
   background-color: #fac4af21;
   font-family: "Raleway", sans-serif;
+  width: 100%;
 }
 
 a {
@@ -8,37 +9,46 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url('/assets/OpenDyslexicAlta-Regular.otf');
+} 
+
+body.opendys, h1.opendys {
+  font-family: 'OpenDyslexic';
+}
+
+h1 {
+  font-family: "Expletus Sans", sans-serif;
+  color: #522A00;
+}
+
 
 /* START HERO */
 .lead {
-  font-size: 40px;
-
+  font-size: 250%;
   color: #522A00;
 }
 
 .lead-easier {
-  font-size: 40px;
-
+  font-size: 250%;
   font-weight: 750;
   color: #522A00;
 }
 
 .lead-eat {
-  font-size: 40px;
-
+  font-size: 250%;
   color: #FF7E33;
 }
 
 .lead-cities {
-  font-size: 40px;
-
+  font-size: 250%;
   font-weight: 750;
   color: #522A00;
 }
 
 .lead-come {
-  font-size: 40px;
-
+  font-size: 250%;
   color: #FF7E33;
 }
 
@@ -64,8 +74,7 @@ a {
 }
 
 .expe {
-  font-size: 40px;
-  font-family: "Expletus Sans", sans-serif;
+  font-size: 250%;
   color: #522A00;
   display: flex;
   justify-content: center;
@@ -80,7 +89,6 @@ a {
 }
 
 .h1-team {
-  font-family: "Expletus Sans", sans-serif;
   color: #522A00;
   margin-top: 5%;
 }
@@ -108,7 +116,6 @@ a {
 }
 
 .p-team {
-
   color: #522A00;
   margin-top: 5%;
 }
@@ -124,39 +131,57 @@ a {
 .fa-whatsapp {
   color: #FF7E33;
 }
-
-a {
-  text-decoration: none;
-}
 /* END PAGE TEAM */
 
 
 /* START NAVBAR */
 .logo-img {
-  height: 200px;
+  height: 100%;
   position: relative;
-  right: 50px;
+  right: 5%;
+  bottom: 30%;
 }
 
 .navbar-text-lg {
-  font-size: 30px; 
-
+  font-size: 200%; 
   color: #522A00;
   position: relative;
-  top: 60px;
+  top: 8%;
+}
+
+.navbar-text-lg-out {
+  font-size: 200%; 
+  color: #B92736;
+  position: relative;
+  top: 10px;
 }
 
 .navnav:hover {
   background-color: initial !important;
   color: inherit !important;
  }
+
+.navnav-out:hover {
+  background-color: initial !important;
+  color: #B92736;
+}
+
+/* Start dropdown menu */
+.dropdown-menu {
+  background-color: #fac4af21;
+  border-color: #522A00;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+}
+/* End dropdown menu */
 /* END NAVBAR */
 
 
 /* START PAGE CONCEPT */
 .h1-concept {
-  font-family: "Expletus Sans", sans-serif;
-  color: #522A00;
   margin-top: 5%;
 }
 
@@ -165,8 +190,7 @@ a {
 }
 
 .lead-concept {
-  font-size: 20px;
-
+  font-size: 150%;
   color: #522A00;
   margin-bottom: 10%;
 }
@@ -208,53 +232,49 @@ a {
 
 .card-front-concept {
   background-color: #FF7E33;
-
   color: #fff;
   display: flex;
   align-items: center;
   border: 10px solid #FF7E33;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 150%;
   transform: rotateY(0deg);
 }
 
 .card-front-concept1 {
   background-color: #fac4af;
-
   color: #fff;
   display: flex;
   align-items: center;
   border: 10px solid #fac4af;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 150%;
   transform: rotateY(0deg);
 }
 
 .card-back-concept {
   background-color: #fac4af;
-
   color: #fff;
   display: flex;
   align-items: center;
   border: 10px solid #fac4af;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 150%;
   transform: rotateY(180deg);
 }
 
 .card-back-concept1 {
   background-color: #FF7E33;
-
   color: #fff;
   display: flex;
   align-items: center;
   border: 10px solid #FF7E33;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 150%;
   transform: rotateY(180deg);
 }
 /* END PAGE CONCEPT */
@@ -291,6 +311,11 @@ a {
   color: #FF7E33;
 }
 
+.copyright-p{
+  padding: 0;
+  width: 100%;
+}
+
 .copyright-thp {
   font-size: small;
   color: #522A00;
@@ -310,21 +335,18 @@ a {
 
 .box_input {
   width: 40%;
-  padding: 20px;
+  padding: 2%;
   border: 2px solid #AFDBF5;
   border-radius: 15px;
-  margin: 20px;
+  margin: 2%;
 }
 
 .h1-contact {
-  font-family: "Expletus Sans", sans-serif;
-  color: #522A00;
   margin-bottom: 10%;
 }
 
 .p-contact {
-  font-size: 20px;
-
+  font-size: 130%;
   color: #522A00;
 }
 
@@ -350,18 +372,24 @@ a {
 
 .input-container {
   position: relative;
-  margin: 50px auto;
-  width: 200px;
+  margin: 15% auto;
+  width: 80%;
 }
 
 .input-container input[type="text"] {
-  font-size: 20px;
+  font-size: 100%;
   width: 100%;
   border: none;
   border-bottom: 2px solid #fac4af;
-  padding: 5px 0;
+  padding: 2% 0;
   background-color: transparent;
   outline: none;
+}
+
+.input-container.active .label {
+  top: -10%;
+  font-size: 100%;
+  color: #FF7E33;
 }
 
 .input-container .label {
@@ -375,8 +403,8 @@ a {
 
 .input-container input[type="text"]:focus ~ .label,
 .input-container input[type="text"]:valid ~ .label {
-  top: -20px;
-  font-size: 16px;
+  top: -50%;
+  font-size: 100%;
   color: #FF7E33;
 }
 
@@ -384,7 +412,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 2px;
+  height: 2%;
   width: 100%;
   background-color: #FF7E33;
   transform: scaleX(0);
@@ -392,15 +420,17 @@ a {
 }
 
 .input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline {
+.input-container input[type="text"]:valid ~ .underline,
+.input-container input[type="email"]:focus ~ .underline,
+.input-container input[type="email"]:valid ~ .underline {
   transform: scaleX(1);
 }
 
 .form-control {
-  font-size: 20px;
+  font-size: 100%;
   width: 100%;
   border: 2px solid #fac4af;
-  padding: 5px 0;
+  padding: 2% 0;
   background-color: transparent;
   outline: none;
 }
@@ -410,7 +440,7 @@ a {
 }
 
 .left_bloc{
-  margin-top: 10%;
+  margin-top: 7%;
   margin-left: 7%;
 }
 
@@ -418,17 +448,600 @@ a {
   background-color: #AFDBF5;
   border-color: #AFDBF5;
   color: white; 
-  font-size: 15px;
-  padding: 10px 30px; 
+  font-size: 80%;
+  padding: 5% 15%; 
   border-radius: 15px;
   margin-left: 30%;
 }
+
+#input-b {
+  border : none;
+  background-color: transparent;
+}
+
+#input-b:focus {
+  outline: none;
+}
 /* END PAGE CONTACT US */
 
-@font-face {
-  font-family: "OpenDyslexic";
-  src: url('/assets/OpenDyslexicAlta-Regular.otf') ;
-} 
+
+/* START FORM LOGIN */ 
+.coontainer {
+  background: transparent;
+  border-radius: 20px;
+  padding: 30px 40px;
+  border: 2px solid #AFDBF5;
+  width: 400px; 
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+  font-size: 30px;
+  }
+
+.form {
+  margin-top: 20px;
+}
+
+.form .input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid #FF7E33;
+  margin-top: 15px;
+}
+
+.form .input::-moz-placeholder {
+  color: #fac4af;
+}
+
+.form .input::placeholder {
+  color: #fac4af;
+}
+
+.form .input:focus {
+  outline: none;
+}
+
+.form .forgot-password {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.form .forgot-password a {
+  font-size: 11px;
+  color: #522A00;
+  text-decoration: none;
+}
+
+.p-log {
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  color: #522A00;
+}
+
+.form .login-button {
+  display: block;
+  width: 40%;
+  background-color: #AFDBF5;
+  color: white;
+  padding: 10px 30px; 
+  margin: 20px auto;
+  border-color: #AFDBF5;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10%;
+}
+
+.form .login-button:hover {
+  transform: scale(1.03);
+}
+
+.agreement {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.agreement a {
+  text-decoration: none;
+  font-size: 9px;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+}
+/* END FORM LOGIN */ 
+
+
+/* START FORM SIGN UP */
+.ffield {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid #FF7E33;
+  margin-top: 15px;
+}
+
+.ffield input {
+  border: none; 
+  outline: none; 
+  background-color: transparent;
+}
+
+.input-sign {
+  color: #fac4af;
+}
+
+.acctions input[type="submit"] {
+  display: block;
+  width: 40%;
+  background-color: #AFDBF5;
+  color: white;
+  padding: 10px 30px; 
+  margin: 20px auto;
+  border-color: #AFDBF5;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10%;
+}
+
+.coontainer h2 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+  font-size: 30px;
+}
+
+.link-log {
+  display: flex;
+  justify-content: center;
+}
+/* END FORM SIGN UP */
+
+
+/* START FORM PASSWORD */
+.actions-pass input[type="submit"] {
+  display: block;
+  width: 60%;
+  background-color: #AFDBF5;
+  color: white;
+  font-size: 60%;
+  padding: 10px 10px; 
+  margin: 20px auto;
+  border-color: #AFDBF5;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5%;
+}
+/* END FORM PASSWORD */
+
+
+/* START BOUTON DYSLEXIE */ 
+#toggle-opendys:hover {
+  opacity: 0.2; 
+  transform: translateY(-0.1em);
+}
+/* END BOUTON DYSLEXIE */
+
+
+
+/* START INDEX RESTAURANTS */
+.card-resto:hover {
+  border-radius: 25px;
+  cursor: pointer;
+  transform: scale(1.0);
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  background:transparent;
+}
+
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.card-resto:hover .first-content {
+  height: 0%;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  transform: rotate(90deg) scale(-1);
+}
+
+.card-resto:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+}
+
+.row-resto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin-left: 8%;
+  margin-top: 10%;
+}
+
+.col-index-resto {
+  flex: 0 0 30%; 
+  margin-bottom: 5%; 
+}
+
+.card-resto-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1.3px); 
+}
+
+.card-resto {
+  position: relative;
+  width: 100%;
+  max-width: 70%; 
+  height: 300px; 
+  overflow: hidden; 
+  border-radius: 25%;
+  border: 2px solid #AFDBF5;
+}
+
+.card-restoo-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.resto-title {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-size: 200%;
+  z-index: 1;
+}
+
+.h1-resto {
+  display: flex;
+  justify-content: center;
+}
+
+.p-resto {
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+}
+/* END INDEX RESTAURANTS */
+
+
+/* START PAGE PROFIL USER */
+.box_profil{
+  display: flex;
+  width: 80%;
+  margin: 10%;
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10%;
+  max-width: 100%; 
+}
+
+.photo-profil {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  overflow: hidden;
+  margin: 5% auto; 
+  border: 2px solid #fff; 
+}
+
+.photo-profil img {
+  width: 100%;
+  height: auto; 
+  display: block; 
+}
+
+.input-container-profile input[type="text"] {
+  font-size: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fac4af;
+  padding: 2% 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container-profile.active .label-profile {
+  top: -50%;
+  font-size: 100%;
+  color: #FF7E33;
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-edit {
+  display: flex;
+  justify-content: center;
+  border: solid #FF7E33 1px;
+  color: #522A00;
+  padding: 4% 5%; 
+  margin-top: 10%; 
+}
+
+.btn-edit:hover {
+  background-color: #FF7E33;
+  color: #fff;
+}
+
+.box_favoris {
+  margin-left: 30% ;
+  width: 50%;
+  padding: 10%;
+  border: 2px solid #000000;
+}
+/* END PAGE PROFIL USER */
+
+
+/* PAGE SHOW DU RESTO */ 
+/* Menu */
+.card-show {
+  cursor: pointer;
+  width: 30%;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 2px solid #AFDBF5;
+  transition: all .2s;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  margin-left: 5%; 
+  margin-top: 5%;
+ }
+
+ .thumbnail {
+  width: 100%; 
+  cursor: pointer;
+}
+
+ .card-show:hover {
+  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
+  transform: scale(1.1); 
+ }
+
+ .card-show img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+ }
+
+ .en-grand {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%; 
+  max-height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.en-grand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* End Menu */ 
+
+/* Start description card */
+ .card-describe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1%;
+  margin-left: 750px; 
+  margin-bottom: 200px;
+  margin-top: -500px; 
+  width: 600px; 
+  height: 320px; 
+}
+
+.infos {
+  margin-top: 1rem;
+}
+
+.date-time {
+  font-family: "Raleway", sans-serif;
+  color: #FF7E33;
+  font-size: 200%;
+}
+
+.description {
+  margin-top: 0.4rem;
+  line-height: 1.625;
+  color: #522A00;
+}
+
+.author {
+  margin-top: 1.3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #522A00;
+}
+/* End description card */
+
+/* Start Reservation button */ 
+.btnnn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  left: 14%; 
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.btnnn-primary {
+  color: #fff;
+  background-color: #AFDBF5;
+  border-color: #AFDBF5;
+}
+
+.btnnn-primary:hover {
+  color: #fff;
+  background-color: #afdbf5c5;
+  border-color: #AFDBF5C5;
+}
+/* End Reservation button */ 
+
+/* Start comments */
+
+/* End comments */
+/* END SHOW DU RESTO */ 
+
+
+/* START EDIT FORM */
+.input-container-edit {
+  position: relative;
+  margin: 15% auto;
+  width: 80%;
+}
+
+.input-container-edit input[type="text"] {
+  font-size: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #fac4af;
+  padding: 2% 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container-edit.active .label-edit {
+  top: -10%;
+  font-size: 100%;
+  color: #FF7E33;
+}
+
+.input-container-edit .label-edit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fac4af;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container-edit input[type="text"]:focus ~ .label-edit,
+.input-container-edit input[type="text"]:valid ~ .label-edit {
+  top: -50%;
+  font-size: 100%;
+  color: #FF7E33;
+}
+
+.input-container-edit .underline-edit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2%;
+  width: 100%;
+  background-color: #FF7E33;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container-edit input[type="text"]:focus ~ .underline-edit,
+.input-container-edit input[type="text"]:valid ~ .underline-edit {
+  transform: scaleX(1);
+}
+
+.form-control-edit {
+  font-size: 100%;
+  width: 100%;
+  border: 2px solid #fac4af;
+  padding: 2% 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.form-control-edit:hover {
+  border-color: #FF7E33;
+}
+
+.h3-edit {
+  display: flex;
+  justify-content: center;
+  color: #522A00;
+  font-family: "Expletus Sans", sans-serif;
+  margin-top: 10%;
+}
+
+.actions-edit {
+  display: flex;
+  justify-content: center;
+}
+
+.p-edit {
+  display: flex;
+  justify-content: center;
+  color: #522A00;
+}
+
+.btn-cancel {
+  display: flex;
+  justify-content: center;
+  border: none;
+  color: #fff;
+  background-color: #B92736;
+  padding: 5%; 
+  margin-top: 10%;
+}
+/* END EDIT FORM */
+
+
+
+
+
+.admin-prof {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
 body.dyslexic {
   font-family: 'OpenDyslexic';
