@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :avatars, only: [:create]
   end
   
-  resources :admins, only: [:show, :index, :create, :edit, :destroy]
+  resources :admins, only: [:show, :index, :create, :edit, :update, :destroy]
 
  
 
