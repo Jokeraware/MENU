@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
      after_create :welcome_send
+     has_one_attached :avatar
 
 
      def welcome_send

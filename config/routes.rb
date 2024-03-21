@@ -5,8 +5,13 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   resources :restaurants
-  resources :users
-  resources :admins, only: [:new, :show, :create, :update, :edit, :destroy]
+
+  resources :users do 
+    resources :avatars, only: [:create]
+  end
+  
+  resources :admins, only: [:show, :index, :create, :edit, :destroy]
+
  
 
   get '/home', to: 'static_pages#home'
