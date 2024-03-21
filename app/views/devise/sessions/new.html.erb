@@ -9,9 +9,9 @@
       <span class="forgot-password"> <%= link_to 'Forgot Password ?', new_user_password_path %> </span>
       <%= f.submit "LOG IN", class: "login-button" %>
     </div>
-    <p class="p-log"> Don't have an account ? &nbsp <%= link_to 'SIGN UP', new_admin_registration_path %> </p>
+    <p class="p-log"> Don't have an account ? &nbsp <%= link_to 'SIGN UP', new_user_registration_path %> &nbsp as user</p>
 
-    <p class="p-log"> Or &nbsp <%= link_to 'SIGN UP', new_user_registration_path %> &nbsp as client</p>
+    <p class="p-log"> Or &nbsp <%= link_to 'SIGN UP', new_admin_registration_path %> &nbsp as admin</p>
   <% end %>
 </div>
 

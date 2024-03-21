@@ -10,58 +10,84 @@
       </li>
     </ul>
 
-    <div class="dropdown">
-      <% if admin_signed_in? %>
-        <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          ADMIN PROFILE
-        </a>
+   <% if user_signed_in? || admin_signed_in? %>
+        <div class="btn-group">
+          <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <% if current_admin %>
+              MY ADMIN PROFILE
+            <% elsif current_user %>
+             MY PROFILE
+            <% end %>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li class="nav-item">
+              <% if current_admin %>
+                <%= link_to "MY PROFILE", admin_path(current_admin), class: "navnav-out navbar-text" %>
+              <% elsif current_user %>
+                <%= link_to "MY PROFILE", user_path(current_user), class: "navnav-out navbar-text" %>
+              <% end %>
+            </li>
+
+            <li class="nav-item">
+              <% if current_admin %>
+                <%= link_to "EDIT INFOS", edit_admin_registration_path, class: "navnav-out navbar-text" %>
+              <% elsif current_user %>
+                <%= link_to "EDIT INFOS", edit_user_registration_path, class: "navnav-out navbar-text" %>
+              <% end %>
+            </li>
+
+            <li class="nav-item">
+              <% if current_admin %>
+                <%= link_to "LOG OUT", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+              <% elsif current_user %>
+                <%= link_to "LOG OUT", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+              <% end %>
+            </li>
+          </ul>
+      </div>
+
       <% else %>
-        <li class="nav-item">
-          <%= link_to "LOG IN ADMIN", new_admin_session_path , class: "navnav navbar-text navbar-text-lg" %>
-        </li>
-      <% end %>
-          
-      <ul class="dropdown-menu">
-        <% if admin_signed_in? %>
-            <li class="nav-item">
-              <%= link_to "MY PROFILE", admin_session_index_path(current_user), class: "navnav-out navbar-text" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "EDIT INFOS", edit_admin_registration_path, class: "navnav-out navbar-text" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "LOG OUT", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
-            </li>
-          <% end %>
-      </ul>
-    </div>
+      
+     
+   
+        <ul>
+          <li class="nav-item">
+            <a class=" dropdown-toggle navnav nav-link navbar-text navbar-text-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              LOG IN
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <%= link_to "USER", new_user_session_path , class: "navnav navbar-text navbar-text-sm" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "ADMIN", new_admin_session_path , class: "navnav navbar-text navbar-text-sm" %>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+   
+    
+    
 
 
-    <div class="dropdown">
-      <% if user_signed_in? %>
-        <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          PROFILE
-        </a>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "LOG IN", new_user_session_path , class: "navnav navbar-text navbar-text-lg" %>
-        </li>
       <% end %>
-            
-      <ul class="dropdown-menu">
-        <% if user_signed_in? %>
-            <li class="nav-item">
-              <%= link_to "MY PROFILE", user_path(current_user), class: "navnav-out navbar-text" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "EDIT INFOS", edit_user_registration_path, class: "navnav-out navbar-text" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "LOG OUT", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
-            </li>
-          <% end %>
-      </ul>
-    </div>
+
+
+
+
+
+
+
+     
+
+        
+   
+
+      
+  
 
     <%= link_to image_tag("DYS.png", alt: "Activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "activerOpenDyslexic();" %>
 
