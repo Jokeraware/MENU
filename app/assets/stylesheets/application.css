@@ -758,8 +758,8 @@ a {
 /* La carte du Menu */
 .card-show {
   cursor: pointer;
-  width: 300px;
-  height: 350px;
+  width: 450px;
+  height: 550px;
   background: rgb(255, 255, 255);
   border-radius: 5px;
   border: 2px solid #AFDBF5;
@@ -775,7 +775,7 @@ a {
 
  .card-show:hover {
   box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
-  transform: scale(1.3); 
+  transform: scale(1.1); 
  ; 
  }
  .card-show img {
@@ -814,12 +814,11 @@ a {
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 1);
   padding: 20px;
-  max-width: 320px;
   margin-left: 750px; 
   margin-bottom: 200px;
-  margin-top: -100px; 
-  width: 90%; 
-  height: 50%; 
+  margin-top: -500px; 
+  width: 600px; 
+  height: 320px; 
 }
 
 
@@ -828,9 +827,9 @@ a {
 }
 
 .date-time {
-  color: rgba(7, 63, 216, 1);
-  font-size: 12px;
-  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  color: #522A00;
+  font-size: 30px;
 }
 
 .description {
@@ -855,9 +854,8 @@ a {
   font-weight: 400;
   text-align: center;
   position: absolute;
-  bottom: -60px; /* Ajustez cette valeur selon votre préférence */
+  bottom: -250px; /* Ajustez cette valeur selon votre préférence */
   left: 10%; 
- 
   border: 1px solid transparent;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
