@@ -301,6 +301,19 @@ h1 {
   justify-content: center;
 }
 
+.links-to {
+  display: flex;
+  justify-content: center;
+  margin-right: 0;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 33%;
+}
+
 .foot-link {
   color: #522A00;
 }
@@ -313,9 +326,12 @@ h1 {
 
 .copyright-p{
   padding: 0;
-  width: 100%;
+  margin: 0;
 }
 
+.copyright-section {
+  padding: 0;
+}
 .copyright-thp {
   font-size: small;
   color: #522A00;
@@ -622,6 +638,13 @@ h1 {
 
 
 /* START BOUTON DYSLEXIE */ 
+#toggle-opendys {
+  display: flex;
+  justify-content: end;
+  margin-top: 0;
+  margin-right: 10%;
+}
+
 #toggle-opendys:hover {
   opacity: 0.2; 
   transform: translateY(-0.1em);

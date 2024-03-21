@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :restaurants
   resources :users
-  resources :admins, only: [:show, :index, :create, :edit, :destroy]
+  resources :admins, only: [:new, :show, :create, :update, :edit, :destroy]
  
 
   get '/home', to: 'static_pages#home'
