@@ -1,7 +1,7 @@
-<div class="container">
-  <header class="d-flex justify-content-between py-3">
-    <ul class="nav">
-      <li class="nav-item"><%= link_to "RESTAURANTS", restaurants_path, class: "navnav nav-link navbar-text navbar-text-lg" %></li>
+<div class="container navbar-container">
+  <div class="header-nav">
+    <ul class="nav nav-title">
+      <li class="nav-item "><%= link_to "RESTAURANTS", restaurants_path, class: "navnav nav-link navbar-text navbar-text-lg" %></li>
     </ul>
    
     <ul class="nav">
@@ -10,9 +10,9 @@
       </li>
     </ul>
 
-    <div class="dropdown">
+    <div class="dropdown navnav nav-title">
       <% if user_signed_in? %>
-        <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           PROFILE
         </a>
       <% else %>
@@ -35,5 +35,5 @@
           <% end %>
       </ul>
     </div>
-  </header>
+  </div>
 </div>

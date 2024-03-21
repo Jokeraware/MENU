@@ -1,7 +1,6 @@
 <div class="coontainer">
-  <div class="heading">
-    LOG IN
-  </div>
+  <h2>LOG IN</h2>
+  
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form">
       <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>

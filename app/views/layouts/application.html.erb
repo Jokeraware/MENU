@@ -19,6 +19,10 @@
 
   <body>
     <%= render 'home/navbar' %>
+    
+    <div class="btn-opendys">
+      <%= link_to image_tag("DYS.png", alt: "Activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "activerOpenDyslexic();" %>
+    </div>
 
     <%= yield %>
     
