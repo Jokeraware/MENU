@@ -66,8 +66,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_221252) do
   create_table "restaurants", force: :cascade do |t|
     t.string "restaurant_name"
     t.bigint "city_id"
+    t.bigint "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_restaurants_on_admin_id"
     t.index ["city_id"], name: "index_restaurants_on_city_id"
   end
 
