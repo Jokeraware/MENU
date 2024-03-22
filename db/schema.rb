@@ -45,6 +45,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_221252) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.bigint "city_id"
+    t.bigint "restaurant_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -52,9 +54,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_221252) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "city"
+    t.index ["city_id"], name: "index_admins_on_city_id"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+    t.index ["restaurant_id"], name: "index_admins_on_restaurant_id"
   end
 
   create_table "cities", force: :cascade do |t|
@@ -66,24 +69,23 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_221252) do
   create_table "restaurants", force: :cascade do |t|
     t.string "restaurant_name"
     t.bigint "city_id"
-    t.bigint "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["admin_id"], name: "index_restaurants_on_admin_id"
     t.index ["city_id"], name: "index_restaurants_on_city_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "city"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.bigint "city_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

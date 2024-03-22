@@ -11,6 +11,8 @@ class User < ApplicationRecord
          validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "Please enter a valid email adress" }
 
      after_create :welcome_send
+
+     belongs_to :city
      has_one_attached :avatar
 
 
