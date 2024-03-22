@@ -3,11 +3,11 @@
 <p class="p-resto"> Come and discover your favorites restaurants updated menus ! Thanks to Menu, you will know what is going on in the kitchen !</p>
 
 <div class="row-resto">
-  <% @restaurant.each do |restaurant| %>
+  <% @restaurants.each do |restaurant| %>
     <div class="col-index-resto">
       <div class="card-resto">
         <div class="first-content">
-          <h2 class="resto-title"><%= @restaurant_name %></h2>
+          <h1 class="h1-resto"><%= restaurant.restaurant_name %></h1>
         </div>
         <div class="second-content">
           <%= link_to restaurant do %>

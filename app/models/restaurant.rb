@@ -1,6 +1,6 @@
 class Restaurant < ApplicationRecord
-    belongs_to :city, optional: true
-    belongs_to :admin, optional: true
+    belongs_to :city
+    belongs_to :admin, class_name: "User"
 
     validates :restaurant_name, presence: true
   end 
