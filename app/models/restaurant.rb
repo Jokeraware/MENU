@@ -4,7 +4,7 @@ class Restaurant < ApplicationRecord
 
     validates :restaurant_name, presence: true
     #validates :city_id, presence: true
-    validates :admin_id, presence: true
+    #validates :admin_id, presence: true
 
     has_one_attached :image
   end

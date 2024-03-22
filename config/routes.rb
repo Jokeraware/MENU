@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   
   resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] 
 
+  resources :cities
  
 
   get '/home', to: 'static_pages#home'
