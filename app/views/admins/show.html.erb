@@ -18,11 +18,7 @@
             <div class="underline"></div>
         </div>
 
-        <div class="input-container-profile <%= 'active' if @admin.city.present? %>">
-            <label for="input" class="label-profile">City</label>
-            <input type="text" id="input" required="" readonly value="<%= @admin.city %>">
-            <div class="underline"></div>
-        </div>
+     
 
         <div class="input-container-profile <%= 'active' if @admin.email.present? %>">
             <label for="input" class="label-profile">Email</label>
@@ -42,21 +38,6 @@
 
 <h3 class="h3-edit">YOUR ACTUAL MENU</h3>
 
-<div class="row-resto">
-  <% @restaurants.each do |restaurant| %>
-    <div class="col-index-resto">
-      <div class="card-resto">
-        <div class="first-content">
-   
-        </div>
-        <div class="second-content">
-          <%= link_to restaurant do %>
-            <%= image_tag "Aca2.jpeg", class: "card-restoo-img-top", alt: "Restaurant Image" %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
+
 
 

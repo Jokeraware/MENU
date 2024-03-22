@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   resources :restaurants do 
-    resources :images, only: [:create]
+    resources :images
   end
 
   resources :users do 

@@ -9,7 +9,7 @@
   <%end%>
 </div>
 
-<% if current_admin && current_session %>
+<% if current_admin && @restaurant.admin %>
   <div class="upload2">
     <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
       <%= file_field_tag :image %>
