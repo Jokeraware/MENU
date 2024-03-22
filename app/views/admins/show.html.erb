@@ -41,20 +41,22 @@
 
 
 <h3 class="h3-edit">YOUR ACTUAL MENU</h3>
-<div class="upload">
-  <%if @admin.image.attached?%>
-    <%= image_tag @admin.image, alt: 'image', class:"image_tag_upld" %>
-  <%else%>
-    <p class="p-contact"> NO MENU YET  </p>
-  <%end%>
-</div>
 
-<div class="upload2">
-  <%= form_tag admin_images_path(@admin), multipart: true do %>
-    <%= file_field_tag :image %>
-    <%= submit_tag "UPLOAD" %>
+<div class="row-resto">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-index-resto">
+      <div class="card-resto">
+        <div class="first-content">
+   
+        </div>
+        <div class="second-content">
+          <%= link_to restaurant do %>
+            <%= image_tag "Aca2.jpeg", class: "card-restoo-img-top", alt: "Restaurant Image" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
-
 
 

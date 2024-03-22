@@ -1,10 +1,22 @@
-<h1 class="h1-resto"><%= @restaurant_name %></h1>
+<h1 class="h1-resto"><%= @restaurant.restaurant_name %></h1>
 
-<div class="card-show">
-  <%= link_to "javascript:void(0)", class: "image-container" do %>
-    <%= image_tag "CardRest1.webp", class: "card-resto-img thumbnail", alt: "Restaurant Image" %>
-  <% end %>
+
+<div class="upload">
+  <%if @restaurant.image.attached?%>
+    <%= image_tag @restaurant.image, alt: 'image', class:"image_tag_upld" %>
+  <%else%>
+    <p class="p-contact"> NO MENU YET </p>
+  <%end%>
 </div>
+
+<% if current_admin && current_session %>
+  <div class="upload2">
+    <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
+      <%= file_field_tag :image %>
+      <%= submit_tag "UPLOAD" %>
+    <% end %>
+  </div>
+<% end %>
 
 
 <div class="card-describe">

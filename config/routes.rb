@@ -4,15 +4,15 @@ Rails.application.routes.draw do
   devise_for :users
   root 'static_pages#home'
 
-  resources :restaurants
+  resources :restaurants do 
+    resources :images, only: [:create]
+  end
 
   resources :users do 
     resources :avatars, only: [:create]
   end
   
-  resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] do 
-    resources :images, only: [:create]
-  end
+  resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] 
 
  
 

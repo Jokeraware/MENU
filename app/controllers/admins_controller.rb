@@ -6,6 +6,7 @@ class AdminsController < ApplicationController
 
   def show
     @admin = current_admin
+    @restaurants = @current_admin
   end
 
   def edit
