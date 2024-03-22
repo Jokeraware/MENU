@@ -1,6 +1,8 @@
 class Restaurant < ApplicationRecord
     belongs_to :city
-    belongs_to :admin, class_name: "User"
+    belongs_to :admin
 
     validates :restaurant_name, presence: true
-  end 
+    validates :city_id, presence: true
+    validates :admin_id, presence: true
+  end
