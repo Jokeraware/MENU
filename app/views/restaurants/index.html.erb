@@ -7,9 +7,6 @@
     <div class="col-index-resto">
       <div class="card-resto">
         <div class="first-content">
-          <%= link_to restaurant do %>
-            <%= image_tag "Aca.jpeg", class: "card-resto-img-top", alt: "Restaurant Image" %>
-          <% end %>
           <h2 class="resto-title"><%= @restaurant_name %></h2>
         </div>
         <div class="second-content">
@@ -21,23 +18,3 @@
     </div>
   <% end %>
 </div>
-
-<% if current_admin && current_admin %>
-<br>
-<br>
-<center><h1>JOIN THE ADVENTURE AND PUT YOUR OWN RESTAURANT !<h1></center>
-  <%= form_with(model: @restaurants, local: true) do |form| %>
-    <div class="FormulaireAdmin">
-    <div class="form-group-admn">
-      <%= form.label :name %>
-      <%= form.text_field :name, class: "form-control" %>
-        </div>
-    <div class="form-group-admn">
-      <%= form.label :city %>
-      <%= form.text_field :city, class: "form-control" %>
-      <%= form.submit "Créer un nouveau restaurant", class: "btn-admn" %>
-    </div>
-    </div>
-    
-  <% end %>
-<% end %>

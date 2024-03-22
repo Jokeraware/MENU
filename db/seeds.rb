@@ -23,12 +23,7 @@ all_cities.each do |city|
   City.create(city_name: city)
 end
 
-6.times do 
-  Restaurant.create(
-    restaurant_name: Faker::Restaurant.name,
-    city: City.all.sample
-  )
-end
+
 
 
 
