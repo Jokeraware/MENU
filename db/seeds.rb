@@ -1,6 +1,10 @@
 require 'faker'
 
 
+Restaurant.destroy_all
+City.destroy_all
+User.destroy_all
+
 
 all_cities = ["Marseille", "Toulouse", "Paris"]
 
@@ -23,7 +27,13 @@ all_cities.each do |city|
   City.create(city_name: city)
 end
 
-
+all_restaurants = ["Japonais", "Marocain", "Méditerranéen", "Thailandais"]
+6.times do 
+  Restaurant.create(
+    restaurant_name: all_restaurants.sample,
+    city: City.all.sample
+  )
+end
 
 
 

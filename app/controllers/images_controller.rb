@@ -1,7 +1,7 @@
 class ImagesController < ApplicationController
   def create
-    @admin = Admin.find(params[:admin_id])
-    @admin.image.attach(params[:image])
-    redirect_to(admin_path(@admin))
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @restaurant.image.attach(params[:image])
+    redirect_to restaurant_path(params[:restaurant_id])
   end
 end
