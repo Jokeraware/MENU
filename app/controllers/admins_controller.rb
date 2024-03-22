@@ -1,6 +1,7 @@
 class AdminsController < ApplicationController
   def new
     @admin = Admin.new
+    @restaurant = Restaurant.new
   end
 
   def show
