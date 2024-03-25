@@ -838,6 +838,7 @@ h2{
   height: auto;
   margin-top: 8%;
   margin-left: 4%;
+  margin-bottom: -26%;
 }
 @media screen and (max-width: 1000px) {
   .upload,
@@ -849,6 +850,10 @@ h2{
 /* End Menu */ 
 
 /* CHAMP Upload du Menu */
+.leformulaire { 
+margin-bottom: -50%;
+
+}
 
 input[type="file"] {
   border: 1px solid  #AFDBF5;
@@ -856,7 +861,8 @@ input[type="file"] {
   width: 200px;
   border-radius: 8%;
   margin-left: 50%;
-  margin-top: 6%;
+  margin-top: 40%;
+  margin-bottom: -10%;
 
 }
 
@@ -868,7 +874,7 @@ input[type="submit"] {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 10px;
-  margin-left: 2%;
+  margin-left: 1%;
 }
 
 /* FIN CHAMP Upload */
