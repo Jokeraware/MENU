@@ -14,10 +14,6 @@ a {
   src: url('/assets/OpenDyslexicAlta-Regular.otf');
 } 
 
-body.opendys, h1.opendys, h2.opendys {
-  font-family: 'OpenDyslexic';
-}
-
 h1 {
   font-family: "Expletus Sans", sans-serif;
   color: #522A00;
