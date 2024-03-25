@@ -1,5 +1,5 @@
 class Restaurant < ApplicationRecord
-    #belongs_to :city
+    # belongs_to :city
     belongs_to :admin
 
     validates :restaurant_name, presence: true

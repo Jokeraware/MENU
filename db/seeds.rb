@@ -29,8 +29,7 @@ end
 all_restaurants = ["Japonais", "Marocain", "Méditerranéen", "Thailandais"]
 6.times do 
   Restaurant.create(
-    restaurant_name: all_restaurants.sample,
-    city: City.all.sample
+    restaurant_name: all_restaurants.sample
   )
 end
 
