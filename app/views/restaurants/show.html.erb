@@ -17,10 +17,16 @@
   <p class="p-contact"> NO MENU YET </p>
 <% end %>
 
-<% if current_admin && @restaurant.admin %>
-  <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
-    <%= file_field_tag :image %>
-    <%= submit_tag "UPLOAD" %>
+<% if current_admin == @restaurant.admin %>
+  <div class="upload2">
+    <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
+      <%= file_field_tag :image %>
+      <%= submit_tag "UPLOAD" %>
+    <% end %>
+  </div>
+
+  <%= form_with(model: [:id, @restaurant], local: true, url: restaurant_path, method: "delete") do |form| %>
+    <%= form.submit "Delete", class: "btn btn-success mt-3" %>
   <% end %>
 <% end %>
 
