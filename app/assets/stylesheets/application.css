@@ -829,90 +829,79 @@ h2{
 
 /* PAGE SHOW DU RESTO */ 
 /* Menu */
-.card-show {
-  cursor: pointer;
-  width: 30%;
-  background: rgb(255, 255, 255);
-  border-radius: 5px;
-  border: 2px solid #AFDBF5;
-  transition: all .2s;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  margin-left: 5%; 
-  margin-top: 5%;
- }
-
- .thumbnail {
-  width: 100%; 
-  cursor: pointer;
+.image_tag_upld {
+  max-width: 40%;
+  height: auto;
+  margin-top: 8%;
+  margin-left: 4%;
+}
+@media screen and (max-width: 1000px) {
+  .upload,
+  .upload2 {
+    width: 100%;
+  }
 }
 
- .card-show:hover {
-  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
-  transform: scale(1.1); 
- }
-
- .card-show img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
- }
-
- .en-grand {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 50%; 
-  max-height: 100%;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.en-grand img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 /* End Menu */ 
 
-/* Start description card */
- .card-describe {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 1%;
-  margin-left: 750px; 
-  margin-bottom: 200px;
-  margin-top: -500px; 
-  width: 600px; 
-  height: 320px; 
+/* CHAMP Upload du Menu */
+
+input[type="file"] {
+  border: 1px solid  #AFDBF5;
+  padding: 8px;
+  width: 200px;
+  border-radius: 8%;
+  margin-left: 50%;
+  margin-top: 6%;
+
 }
+
+/* Styling du submit_tag */
+input[type="submit"] {
+  background-color: #f16203;
+  color: #fff; 
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 2%;
+}
+
+/* FIN CHAMP Upload */
+
+/* Start description card */
 
 .infos {
   margin-top: 1rem;
 }
 
 .date-time {
-  color: #FF7E33;
+  color: #f36817;
   font-size: 200%;
+  margin-left: 65% ; 
+  margin-bottom: 30%;
+  margin-top: -40%; 
+  width: 30%; 
+  height: 32%; 
 }
 
 .description {
   margin-top: 0.4rem;
   line-height: 1.625;
   color: #522A00;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 3%;
+  margin-left: 65% ; 
+  margin-bottom: 30%;
+  margin-top: -26%; 
+  width: 32%; 
+  height: 40%; 
 }
 
-.author {
-  margin-top: 1.3rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #522A00;
-}
+
 /* End description card */
 
 /* Start Reservation button */ 
@@ -927,6 +916,7 @@ h2{
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
+  margin-top: -25%;
 }
 
 .btnnn-primary {
@@ -1057,33 +1047,10 @@ h2{
   margin-top: 5%;
   margin-bottom: 5%;
 }
-
-.upload {
-  margin-left: 25%;
-  margin-bottom: 10%;
-  margin-top: 5%;
-  border: solid 1px #FF7E33;
-  border-radius: 10%;
-  width: 50%;
-}
-
 .upload2 {
   margin-left: 35%;
   margin-bottom: 10%;
 }
-
-.image_tag_upld {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover;
-
-  border-radius: 10%;
-}
-
-
-
-
-
 
 
 .FormulaireAdmin { 
