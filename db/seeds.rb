@@ -1,9 +1,9 @@
 require 'faker'
 
 
-Restaurant.destroy_all
-City.destroy_all
-User.destroy_all
+#Restaurant.destroy_all
+#City.destroy_all
+#User.destroy_all
 
 
 all_cities = ["Marseille", "Toulouse", "Paris"]
@@ -17,7 +17,6 @@ all_cities = ["Marseille", "Toulouse", "Paris"]
     User.create(
       first_name: first_name,
       last_name: last_name,
-      city: city,
       email: email,
       password: 'password')
   end
