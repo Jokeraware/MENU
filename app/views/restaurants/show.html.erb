@@ -1,40 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+  
+  </title>
+  
+
+</head>
+<body>
+
 <h1 class="h1-resto"><%= @restaurant.restaurant_name %></h1>
 
-
-<div class="upload">
-  <%if @restaurant.image.attached?%>
-    <%= image_tag @restaurant.image, alt: 'image', class:"image_tag_upld" %>
-  <%else%>
-    <p class="p-contact"> NO MENU YET </p>
-  <%end%>
-</div>
-
-<% if current_admin && @restaurant.admin %>
-  <div class="upload2">
-    <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
-      <%= file_field_tag :image %>
-      <%= submit_tag "UPLOAD" %>
-    <% end %>
-  </div>
+<% if @restaurant.image.attached? %>
+  <%= image_tag @restaurant.image, alt: 'image', class:"image_tag_upld" %>
+<% else %>
+  <p class="p-contact"> NO MENU YET </p>
 <% end %>
 
+<% if current_admin && @restaurant.admin %>
+  <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
+    <%= file_field_tag :image %>
+    <%= submit_tag "UPLOAD" %>
+  <% end %>
+<% end %>
 
-<div class="card-describe">
-    <div class="infos">
-      <p class="date-time">
-        CHEZ ACÀ PIGALLE
-      </p>
-      <p class="description">
-       Bienvenue chez "Casa de Sabor" ! Plongez dans une expérience culinaire authentique où les saveurs du Mexique vous transportent instantanément. 
-       Dégustez nos délicieux tacos, enchiladas et fajitas, 
-       accompagnés de margaritas rafraîchissantes. Notre ambiance vibrante et nos plats savoureux vous promettent une soirée inoubliable.
-       Venez découvrir la vraie essence du Mexique chez nous !
-      </p>
-  </div>
+<div class="infos">
+  <p class="date-time">
+    <%= @restaurant.restaurant_name %>
+  </p>
+  <p class="description">
+    Bienvenue chez "Casa de Sabor" ! Plongez dans une expérience culinaire authentique où les saveurs du Mexique vous transportent instantanément. Dégustez nos délicieux tacos, enchiladas et fajitas, accompagnés de margaritas rafraîchissantes. Notre ambiance vibrante et nos plats savoureux vous promettent une soirée inoubliable. Venez découvrir la vraie essence du Mexique chez nous !
+  </p>
+</div>
 
-  <div class="author">
-    — L équipe du Restaurant
-  </div>
- </div>
 
- <button type="button" class="btnnn btnnn-primary btnnn-lg">BOOK TABLE</button>
+
+<button type="button" class="btnnn btnnn-primary btnnn-lg">BOOK TABLE</button>
+
+</body>
+</html>
