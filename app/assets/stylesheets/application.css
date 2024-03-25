@@ -573,6 +573,11 @@ h2{
 
 
 /* START FORM SIGN UP */
+.h2-sign {
+  display: flex;
+  justify-content: center;
+}
+
 .ffield {
   width: 100%;
   background: transparent;

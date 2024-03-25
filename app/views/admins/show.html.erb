@@ -1,24 +1,10 @@
-<h1 class="h1-resto"> WELCOME TO YOUR PROFILE <%= current_admin.first_name %> </h1>
+<h1 class="h1-resto"> WELCOME TO YOUR PROFILE </h1>
 
 <div class="admin-prof">
       <div class="profile-card">
         <div class="photo-profil">
             <%= image_tag "Anelise.avif" , alt: "Photo de profil" %>
         </div>
-
-        <div class="input-container-profile <%= 'active' if @admin.first_name.present? %>">
-            <label for="input" class="label-profile">First name</label>
-            <input type="text" id="input" required="" readonly value="<%= @admin.first_name %>">
-            <div class="underline"></div>
-        </div>
-
-        <div class="input-container-profile <%= 'active' if @admin.last_name.present? %>">
-            <label for="input" class="label-profile">Last name</label>
-            <input type="text" id="input" required="" readonly value="<%= @admin.last_name %>">
-            <div class="underline"></div>
-        </div>
-
-     
 
         <div class="input-container-profile <%= 'active' if @admin.email.present? %>">
             <label for="input" class="label-profile">Email</label>
@@ -27,7 +13,7 @@
         </div>
 
         <div class="btn-edit-container">
-          <%= link_to 'Edit profile' , edit_admin_path, class:"btn btn-edit" %>
+          <%= link_to 'Edit profile' , edit_admin_registration_path, class:"btn btn-edit" %>
         </div>
       </div>
   </div>

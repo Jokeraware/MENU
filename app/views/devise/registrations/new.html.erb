@@ -1,18 +1,9 @@
 <div class="coontainer">
-  <h2>SIGN UP</h2>
+  <h2 class="h2-sign">SIGN UP</h2>
   
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="ffield">
-      <%= f.text_field :first_name, class: "input", placeholder: "First name", required: true %>
-    </div>
-
-    <div class="ffield">
-      <%= f.text_field :last_name, class: "input", placeholder: "Last name", required: true %>
-    </div>
-
-  
     <div class="ffield">
       <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>
     </div>
