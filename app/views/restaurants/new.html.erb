@@ -1,24 +1,21 @@
-FORMULAIRE ADD RESTAURANT
-
+<h1 class="h1-resto">FORMULAIRE D'AJOUT DE RESTAURANT</h1>
 
 <%= form_with model: @restaurant, url: restaurants_path, method: "post" do |form| %>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
 
   <div class="form-group mb-3 mt-3 col-sm">
-    <%= form.label :restaurant_name, 'Restaurant Name' %>
+    <%= form.label :restaurant_name, 'Nom du restaurant' %>
     <%= form.text_field :restaurant_name, class:"form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :city_id, "City" %>
-    <%= form.collection_select :city_id, City.all, :id, :city_name, prompt: "Select your city" %>
+    <%= form.label :city_id, "Ville" %>
+    <%= form.collection_select :city_id, City.all, :id, :city_name, prompt: "Choisis ta ville" %>
   </div>
-
-  
 
 
   <div class="actions text-center">
-    <%= form.submit "Add", class:"btn btn-success mt-3"%>
+    <%= form.submit "Ajouter", class:"btn btn-success mt-3"%>
   </div>
 <% end %>

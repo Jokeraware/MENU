@@ -5,12 +5,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+    validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "Entrez une adresse email valide." }
 
-         validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "Please enter a valid email adress" }
+     has_one_attached :avatar
+     has_many :comments
+     has_many :reservations
 
      after_create :welcome_send
-     has_one_attached :avatar
-     has_many :favorites, dependent: :destroy
 
      def welcome_send
        UserMailer.welcome_email(self).deliver_now

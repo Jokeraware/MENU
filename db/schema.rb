@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_26_131915) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +50,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
@@ -58,6 +60,27 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
     t.string "city_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "body"
+    t.bigint "restaurant_id", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_comments_on_restaurant_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.datetime "date"
+    t.time "time"
+    t.bigint "restaurant_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -75,6 +98,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
     t.bigint "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "reservation_limit"
     t.index ["admin_id"], name: "index_restaurants_on_admin_id"
   end
 
@@ -94,6 +118,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "restaurants"
+  add_foreign_key "reservations", "restaurants"
+  add_foreign_key "reservations", "users"
   add_foreign_key "favorites", "restaurants"
   add_foreign_key "favorites", "users"
 end

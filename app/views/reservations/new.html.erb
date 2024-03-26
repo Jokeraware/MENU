@@ -1,0 +1,11 @@
+<%= form_with(model: @reservation, url: restaurant_reservations_path(@restaurant), method: :post) do |form| %>
+  <%= form.label :date %>
+  <%= form.date_field :date, as: :date, value: @reservation.date.strftime("%d/%m/%Y") %>
+
+  <%= form.label :time %>
+  <%= form.time_field :time, as: :time, value: @reservation.time.strftime("%H:%M") %>
+
+  <%= form.hidden_field :restaurant_id, value: @restaurant.id %>
+
+  <%= form.submit "RÉSERVER" %>
+<% end %>

@@ -1,4 +1,4 @@
-<h1 class="h1-resto"> WELCOME TO YOUR PROFILE </h1>
+<h1 class="h1-resto"> BIENVENUE DANS VOTRE ESPACE PROFESSIONNEL </h1>
 
 <div class="admin-prof">
       <div class="profile-card">
@@ -13,17 +13,21 @@
         </div>
 
         <div class="btn-edit-container">
-          <%= link_to 'Edit profile' , edit_admin_registration_path, class:"btn btn-edit" %>
+          <%= link_to 'Editer profil' , edit_admin_registration_path, class:"btn btn-edit" %>
         </div>
       </div>
   </div>
 </div>
 
-<%= link_to 'MY DASHBOARD', admins_path %>
-
-
-<h3 class="h3-edit">YOUR ACTUAL MENU</h3>
-
-
-
-
+<div class="col-sm-12 col-12 col-md-4">
+  <a href="<%= new_restaurant_path %>" class="card-clic">
+    <div class="card border-secondary mb-4 card-index">
+      <div class="card-body">
+        <i class="far fa-plus-square text-center mt-3 mr-2 card-img-top" style="font-size: 100px; color: black"></i>
+      </div>
+      <div class="card-footer text-center">
+        <%= link_to "AJOUTER MON RESTAURANT", new_restaurant_path, class:"btn btn-success-dark mx-1 my-1" %>
+      </div>
+    </div>
+  </a>
+</div>

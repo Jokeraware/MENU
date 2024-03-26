@@ -12,10 +12,6 @@ a {
 @font-face {
   font-family: "OpenDyslexic";
   src: url('/assets/OpenDyslexicAlta-Regular.otf');
-} 
-
-body.opendys, h1.opendys, h2.opendys {
-  font-family: 'OpenDyslexic';
 }
 
 h1 {
@@ -23,7 +19,7 @@ h1 {
   color: #522A00;
 }
 
-h2{
+h2 {
   color: #522A00;
 }
 
@@ -648,7 +644,6 @@ h2{
 /* END BOUTON DYSLEXIE */
 
 
-
 /* START INDEX RESTAURANTS */
 .card-resto:hover {
   border-radius: 25px;
@@ -831,127 +826,74 @@ h2{
 /* END PAGE PROFIL USER */
 
 
-/* PAGE SHOW DU RESTO */ 
-/* Menu */
-.card-show {
-  cursor: pointer;
-  width: 30%;
-  background: rgb(255, 255, 255);
-  border-radius: 5px;
-  border: 2px solid #AFDBF5;
-  transition: all .2s;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  margin-left: 5%; 
+/* START PAGE SHOW DU RESTO */
+.show-content {
+  display: flex;
   margin-top: 5%;
- }
-
- .thumbnail {
-  width: 100%; 
-  cursor: pointer;
 }
 
- .card-show:hover {
-  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
-  transform: scale(1.1); 
- }
-
- .card-show img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
- }
-
- .en-grand {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 50%; 
-  max-height: 100%;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menu-img {
+  margin-left: 5%;
+  width: 50%;
 }
 
-.en-grand img {
+.upload-img {
+  margin-top: 5%;
+}
+
+.image_tag_upld {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-/* End Menu */ 
-
-/* Start description card */
- .card-describe {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 1%;
-  margin-left: 750px; 
-  margin-bottom: 200px;
-  margin-top: -500px; 
-  width: 600px; 
-  height: 320px; 
 }
 
-.infos {
-  margin-top: 1rem;
-}
-
-.date-time {
-  color: #FF7E33;
-  font-size: 200%;
-}
-
-.description {
-  margin-top: 0.4rem;
-  line-height: 1.625;
-  color: #522A00;
-}
-
-.author {
-  margin-top: 1.3rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #522A00;
-}
-/* End description card */
-
-/* Start Reservation button */ 
-.btnnn {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  position: absolute;
-  left: 14%; 
-  border: 1px solid transparent;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: 0.3rem;
-}
-
-.btnnn-primary {
+.btn-del-show {
+  background-color: #B92736;
   color: #fff;
+  border: none;
+}
+
+.btn-del-show:hover {
+  background-color: #b92736d0;
+  color: #fff;
+}
+
+.infos-resto {
+  align-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 7%;
+  padding: 4%;
+  background-color: #fff;
+  height: 50%;
+  width: 50%;
+}
+
+.btn-book-show {
   background-color: #AFDBF5;
-  border-color: #AFDBF5;
-}
-
-.btnnn-primary:hover {
   color: #fff;
-  background-color: #afdbf5c5;
-  border-color: #AFDBF5C5;
+  border: none;
 }
-/* End Reservation button */ 
 
-/* Start comments */
+.btn-book-show:hover {
+  background-color: #afdbf5de;
+  color: #fff;
+}
 
+.btn-up-show {
+  background-color: none;
+  color: #522A00;
+  border-color: #FF7E33;
+}
 
+.btn-up-show:hover {
+  background-color: #ff7e33dc;
+  color: #fff;
+}
 
-
-/* End comments */
+.show-comments {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
 /* END SHOW DU RESTO */ 
 
 
@@ -1061,33 +1003,10 @@ h2{
   margin-top: 5%;
   margin-bottom: 5%;
 }
-
-.upload {
-  margin-left: 25%;
-  margin-bottom: 10%;
-  margin-top: 5%;
-  border: solid 1px #FF7E33;
-  border-radius: 10%;
-  width: 50%;
-}
-
 .upload2 {
   margin-left: 35%;
   margin-bottom: 10%;
 }
-
-.image_tag_upld {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover;
-
-  border-radius: 10%;
-}
-
-
-
-
-
 
 
 .FormulaireAdmin { 
@@ -1100,3 +1019,26 @@ h2{
   margin-left: 25%;
   margin-top: 7%;
 }
+/* END PROFIL ADMIN */
+
+
+/* START BUTTON HIDE-SHOW PWD */
+.pass_show{
+  position: relative
+} 
+
+.pass_show .ptxt { 
+  position: absolute; 
+  top: 50%; 
+  right: 10px; 
+  z-index: 1; 
+  color: #f36c01; 
+  margin-top: -10px; 
+  cursor: pointer; 
+  transition: .3s ease all; 
+} 
+
+.pass_show .ptxt:hover{
+  color: #333333;
+} 
+/* END BUTTON HIDE-SHOW PWD */

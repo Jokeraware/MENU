@@ -1,0 +1,9 @@
+<%= form_with(model: [restaurant, restaurant.comments.build]) do |form| %>
+
+  <div class="mb-3">
+    <%= form.label :body, "Commentaire", class: "form-label" %>
+    <%= form.text_area :body, class: "form-control" %>
+  </div>
+
+  <%= form.submit class: "btn btn-primary" %>
+<% end %>
