@@ -14,8 +14,6 @@ a {
   src: url('/assets/OpenDyslexicAlta-Regular.otf');
 }
 
-
-
 h1 {
   font-family: "Expletus Sans", sans-serif;
   color: #522A00;
@@ -828,7 +826,7 @@ h2 {
 /* END PAGE PROFIL USER */
 
 
-/* PAGE SHOW DU RESTO */
+/* START PAGE SHOW DU RESTO */
 .show-content {
   display: flex;
   margin-top: 5%;
@@ -1021,6 +1019,7 @@ h2 {
   margin-left: 25%;
   margin-top: 7%;
 }
+/* END PROFIL ADMIN */
 
 
 /* START BUTTON HIDE-SHOW PWD */
@@ -1042,4 +1041,4 @@ h2 {
 .pass_show .ptxt:hover{
   color: #333333;
 } 
-  /* END BUTTON HIDE-SHOW PWD */
+/* END BUTTON HIDE-SHOW PWD */
