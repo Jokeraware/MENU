@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :users do 
     resources :avatars, only: [:create]
   end
+
+  resources :favorites, only: [:create , :destroy]
   
   resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] 
 
