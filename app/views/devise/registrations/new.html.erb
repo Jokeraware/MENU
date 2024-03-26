@@ -1,5 +1,5 @@
 <div class="coontainer">
-  <h2 class="h2-sign">SIGN UP</h2>
+  <h2 class="h2-sign">INSCRIPTION</h2>
   
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -9,17 +9,17 @@
     </div>
 
     <div class="ffield">
-      <%= f.password_field :password, class: "input", placeholder: "New Password", autocomplete: "new-password" %>
+      <%= f.password_field :password, class: "input", placeholder: "Mot de passe", autocomplete: "Mot de passe" %>
     </div>
 
     <div class="ffield">
-      <%= f.password_field :password_confirmation, class: "input", placeholder: "Confirm Password", autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, class: "input", placeholder: "Confirmez votre mdp", autocomplete: "Confirmez votre mdp" %>
     </div>
 
     <div class="acctions">
-      <%= f.submit "SIGN UP" %>
+      <%= f.submit "S'INSCRIRE" %>
     </div>
-    <span class="p-log"> <%= link_to 'LOG IN', new_user_session_path %> &nbsp as user</span>
-    <span class="p-log"> <%= link_to 'LOG IN', new_admin_session_path %> &nbsp as admin</span>
+    <span class="p-log"> <%= link_to 'SE CONNECTER', new_user_session_path %> &nbsp Comme client</span>
+    <span class="p-log"> <%= link_to 'SE CONNECTER', new_admin_session_path %> &nbsp Comme Professionnel</span>
   <% end %>
 </div>

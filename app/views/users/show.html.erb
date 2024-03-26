@@ -5,7 +5,7 @@
 <%if @user.avatar.attached?%>
   <%= image_tag @user.avatar, alt: 'avatar' %>
 <%else%>
-  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+
 <%end%>
 
 <h3>Changer d'avatar ?</h3>
@@ -14,7 +14,7 @@
   <%= submit_tag "mettre à jour" %>
 <% end %>
 
-<h1 class="h1-resto">Welcome to your profile <%= current_user.first_name %></h1>
+<h1 class="h1-resto">Bienvenue dans votre espace <%= current_user.first_name %></h1>
 
 <div class="box_profil">
     <div class="profile-card">

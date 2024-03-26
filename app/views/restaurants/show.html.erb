@@ -14,7 +14,7 @@
 <% if @restaurant.image.attached? %>
   <%= image_tag @restaurant.image, alt: 'image', class:"image_tag_upld" %>
 <% else %>
-  <p class="p-contact"> NO MENU YET </p>
+  <p class="p-contact"> Vous n avez pas encore de Menu </p>
 <% end %>
 
 <% if current_admin == @restaurant.admin %>
@@ -26,7 +26,7 @@
   </div>
 
   <%= form_with(model: [:id, @restaurant], local: true, url: restaurant_path, method: "delete") do |form| %>
-    <%= form.submit "Delete", class: "btn btn-success mt-3" %>
+    <%= form.submit "Supprimer", class: "btn btn-success mt-3" %>
   <% end %>
 <% end %>
 
@@ -41,7 +41,7 @@
 
 
 
-<button type="button" class="btnnn btnnn-primary btnnn-lg">BOOK TABLE</button>
+<button type="button" class="btnnn btnnn-primary btnnn-lg">RÉSERVEZ UNE TABLE !</button>
 
 </body>
 </html>

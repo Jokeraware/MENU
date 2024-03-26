@@ -6,19 +6,19 @@ FORMULAIRE ADD RESTAURANT
 
 
   <div class="form-group mb-3 mt-3 col-sm">
-    <%= form.label :restaurant_name, 'Restaurant Name' %>
+    <%= form.label :restaurant_name, 'Nom du Restaurant' %>
     <%= form.text_field :restaurant_name, class:"form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :city_id, "City" %>
-    <%= form.collection_select :city_id, City.all, :id, :city_name, prompt: "Select your city" %>
+    <%= form.label :city_id, "Ville" %>
+    <%= form.collection_select :city_id, City.all, :id, :city_name, prompt: "Choisisez votre ville" %>
   </div>
 
   
 
 
   <div class="actions text-center">
-    <%= form.submit "Add", class:"btn btn-success mt-3"%>
+    <%= form.submit "Ajoutez votre Restaurant", class:"btn btn-success mt-3"%>
   </div>
 <% end %>

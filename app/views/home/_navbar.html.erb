@@ -14,18 +14,18 @@
         <div class="btn-group">
           <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <% if current_admin %>
-              MY ADMIN PROFILE
+              MON PROFIL PROFESSIONNEL
             <% elsif current_user %>
-             MY PROFILE
+             MON ESPACE
             <% end %>
           </a>
 
           <ul class="dropdown-menu">
             <li class="nav-item">
               <% if current_admin %>
-                <%= link_to "MY PROFILE", admin_path(current_admin), class: "navnav-out navbar-text" %>
+                <%= link_to "MON ESPACE", admin_path(current_admin), class: "navnav-out navbar-text" %>
               <% elsif current_user %>
-                <%= link_to "MY PROFILE", user_path(current_user), class: "navnav-out navbar-text" %>
+                <%= link_to "MON ESPACE", user_path(current_user), class: "navnav-out navbar-text" %>
               <% end %>
             </li>
 
@@ -39,9 +39,9 @@
 
             <li class="nav-item">
               <% if current_admin %>
-                <%= button_to "LOG OUT", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+                <%= button_to "SE DÉCONNECTER", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
               <% elsif current_user %>
-                <%= button_to "LOG OUT", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+                <%= button_to "SE DÉCONNECTER", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
               <% end %>
             </li>
           </ul>
@@ -54,15 +54,15 @@
         <ul>
           <li class="nav-item">
             <a class=" dropdown-toggle navnav nav-link navbar-text navbar-text-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              LOG IN
+              CONNEXION
             </a>
 
             <ul class="dropdown-menu">
               <li class="nav-item">
-                <%= link_to "USER", new_user_session_path , class: "navnav navbar-text navbar-text-sm" %>
+                <%= link_to "CLIENT", new_user_session_path , class: "navnav navbar-text navbar-text-sm" %>
               </li>
               <li class="nav-item">
-                <%= link_to "ADMIN", new_admin_session_path , class: "navnav navbar-text navbar-text-sm" %>
+                <%= link_to "PRO", new_admin_session_path , class: "navnav navbar-text navbar-text-sm" %>
               </li>
             </ul>
           </li>
