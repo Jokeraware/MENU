@@ -8,12 +8,12 @@
       <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>
     </div>
 
-    <div class="ffield">
-      <%= f.password_field :password, class: "input", type: "password", placeholder: "New Password", autocomplete: "new-password", id:"password" %>
+    <div class="ffield pass_show">
+      <%= f.password_field :password, class: "form-control", type: "password", placeholder: "New Password", autocomplete: "new-password" %>
     </div>
 
-    <div class="ffield">
-      <%= f.password_field :password_confirmation, class: "input", type: "password", placeholder: "Confirm Password", autocomplete: "new-password", id:"password" %>
+    <div class="ffield pass_show">
+      <%= f.password_field :password_confirmation, class: "form-control", type: "password", placeholder: "Confirm Password", autocomplete: "new-password" %>
     </div>
 
     <div class="acctions">
@@ -23,3 +23,5 @@
     <span class="p-log"> <%= link_to 'LOG IN', new_admin_session_path %> &nbsp as admin</span>
   <% end %>
 </div>
+
+<script src="hide-password.js"></script>

@@ -11,9 +11,27 @@ function applyFontPreference() {
   }
 }
 
+function applyH1FontPreference() {
+  var isDyslexic = localStorage.getItem("opendys");
+  var h1Elements = document.querySelector("h1");
+
+  if (isDyslexic === "true") {
+    h1Elements.style.setProperty(
+      "font-family",
+      "OpenDyslexic",
+      "important"
+      );
+  } else {
+    h1Elements.style.removeProperty("font-family");
+  }
+}
+
+
+
 window.onload = function () {
   // Apply font preference on page load
   applyFontPreference();
+  applyH1FontPreference();
 
   // Add event listener to the button
   document
@@ -28,5 +46,6 @@ window.onload = function () {
 
       // Apply updated font preference
       applyFontPreference();
+      applyH1FontPreference();
     });
 };

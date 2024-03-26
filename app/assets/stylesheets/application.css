@@ -12,14 +12,16 @@ a {
 @font-face {
   font-family: "OpenDyslexic";
   src: url('/assets/OpenDyslexicAlta-Regular.otf');
-} 
+}
+
+
 
 h1 {
   font-family: "Expletus Sans", sans-serif;
   color: #522A00;
 }
 
-h2{
+h2 {
   color: #522A00;
 }
 
@@ -1063,3 +1065,25 @@ input[type="submit"] {
   margin-left: 25%;
   margin-top: 7%;
 }
+
+
+/* START BUTTON HIDE-SHOW PWD */
+.pass_show{
+  position: relative
+} 
+
+.pass_show .ptxt { 
+  position: absolute; 
+  top: 50%; 
+  right: 10px; 
+  z-index: 1; 
+  color: #f36c01; 
+  margin-top: -10px; 
+  cursor: pointer; 
+  transition: .3s ease all; 
+} 
+
+.pass_show .ptxt:hover{
+  color: #333333;
+} 
+  /* END BUTTON HIDE-SHOW PWD */
