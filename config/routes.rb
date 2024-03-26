@@ -1,22 +1,20 @@
 Rails.application.routes.draw do
-
   devise_for :admins
   devise_for :users
   root 'static_pages#home'
 
   resources :restaurants do 
     resources :images
+    resources :comments
   end
 
   resources :users do 
     resources :avatars, only: [:create]
   end
-  
-  resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] 
 
+  resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] 
   resources :cities
  
-
   get '/home', to: 'static_pages#home'
   get '/concept', to: 'static_pages#concept'
   get '/team', to: 'static_pages#team'
