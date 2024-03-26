@@ -16,7 +16,7 @@ class AdminsController < ApplicationController
   
       respond_to do |format|
         if @admin.save
-          format.html { redirect_to admin_url(@admin), notice: "User was successfully created." }
+          format.html { redirect_to admin_url(@admin), notice: "Le compte professionnel a été créé." }
           format.json { render :show, status: :created, location: @admin }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -28,7 +28,7 @@ class AdminsController < ApplicationController
     def update
       @admin = Admin.find(params[:id])
       if @admin.update(admin_params)
-        flash[:notice] = "Your account was successfully updated."
+        flash[:notice] = "Le compte a bien été mis à jour."
         redirect_to admin_path(current_admin)
       else
         render :edit

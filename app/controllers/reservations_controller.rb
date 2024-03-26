@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
 
     if @reservation.save
-      redirect_to @restaurant, notice: 'Reservation was successfully created.'
+      redirect_to @restaurant, notice: 'La réservation a été prise en compte.'
     else
       render 'restaurants/show'
     end
@@ -33,5 +33,5 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:date, :time, :restaurant_id, :user_id)
   end
-end
+  end
   
