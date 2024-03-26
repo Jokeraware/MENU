@@ -12,6 +12,12 @@ Rails.application.routes.draw do
     resources :avatars, only: [:create]
   end
 
+ 
+resources :restaurants do
+  resources :reservations, only: [:new, :create, :show] 
+end
+
+
   resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] 
   resources :cities
  
