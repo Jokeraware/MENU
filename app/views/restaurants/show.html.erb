@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>
-  
-  </title>
-  
+  <head>
+    <title>
+    </title>
+  </head>
 
-</head>
-<body>
+  <body>
+    <h1 class="h1-resto"><%= @restaurant.restaurant_name %></h1>
 
-<h1 class="h1-resto"><%= @restaurant.restaurant_name %></h1>
+    <div class="show-content">
+      <section class="menu-img">
+        <% if @restaurant.image.attached? %>
+          <%= image_tag @restaurant.image, alt: 'image', class:"image_tag_upld" %>
+        <% else %>
+          <p class="p-contact"> NO MENU YET </p>
+        <% end %>
 
-<% if @restaurant.image.attached? %>
-  <%= image_tag @restaurant.image, alt: 'image', class:"image_tag_upld" %>
-<% else %>
-  <p class="p-contact"> NO MENU YET </p>
-<% end %>
+        <div class="upload-img">
+          <% if current_admin == @restaurant.admin %>
+              <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
+                <%= file_field_tag :image, class:"btn mt-3 btn-up-show" %>
+                <%= submit_tag "UPLOAD", class:"btn mt-3 btn-up-show" %>
+              <% end %>
 
-<% if current_admin == @restaurant.admin %>
-  <div class="upload2">
-    <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
-      <%= file_field_tag :image %>
-      <%= submit_tag "UPLOAD" %>
-    <% end %>
-  </div>
+              <%= form_with(model: [:id, @restaurant], local: true, url: restaurant_path, method: "delete") do |form| %>
+                <%= form.submit "Delete", class: "btn mt-3 btn-del-show" %>
+              <% end %>
+          <% end %>
+        </div>
+      </section>
 
-  <%= form_with(model: [:id, @restaurant], local: true, url: restaurant_path, method: "delete") do |form| %>
-    <%= form.submit "Delete", class: "btn btn-success mt-3" %>
-  <% end %>
-<% end %>
+      <section class="infos-resto">
+        <p class="description">
+          Bienvenue chez <%= @restaurant.restaurant_name %> ! Plongez dans une expérience culinaire authentique où les saveurs du Mexique vous transportent instantanément. Dégustez nos délicieux tacos, enchiladas et fajitas, accompagnés de margaritas rafraîchissantes. Notre ambiance vibrante et nos plats savoureux vous promettent une soirée inoubliable. Venez découvrir la vraie essence du Mexique chez nous !
+        </p>
+        <button type="button" class="btn btn-book-show">BOOK TABLE</button>
+      </section>
+    </div>
 
-<div class="infos">
-  <p class="date-time">
-    <%= @restaurant.restaurant_name %>
-  </p>
-  <p class="description">
-    Bienvenue chez "Casa de Sabor" ! Plongez dans une expérience culinaire authentique où les saveurs du Mexique vous transportent instantanément. Dégustez nos délicieux tacos, enchiladas et fajitas, accompagnés de margaritas rafraîchissantes. Notre ambiance vibrante et nos plats savoureux vous promettent une soirée inoubliable. Venez découvrir la vraie essence du Mexique chez nous !
-  </p>
-</div>
+      <section class="show-comments">
+        <h2>Commentaires</h2>
+          <% @comment.each do |comment| %>
+            <div>
+              <p><%= comment.body %></p>
+              <% if current_user == comment.user %>
+                <%= button_to "Destroy this comment", restaurant_comment_path(@restaurant, comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
+              <% end %>
+            </div>
+          <% end %>
 
+        <% if current_user %>
+          <h2>Ajoute un nouveau commentaire</h2>
+          <%= render partial: "comments/form", locals: { restaurant: @restaurant } %>
+        <% end %>
+      </section>
 
-
-<button type="button" class="btnnn btnnn-primary btnnn-lg">BOOK TABLE</button>
-
-</body>
+  </body>
 </html>
