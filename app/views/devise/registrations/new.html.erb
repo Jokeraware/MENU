@@ -1,5 +1,5 @@
 <div class="coontainer">
-  <h2 class="h2-sign">SIGN UP</h2>
+  <h2 class="h2-sign">S'INSCRIRE'</h2>
   
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -17,10 +17,10 @@
     </div>
 
     <div class="acctions">
-      <%= f.submit "SIGN UP" %>
+      <%= f.submit "S'INSCRIRE" %>
     </div>
-    <span class="p-log"> <%= link_to 'LOG IN', new_user_session_path %> &nbsp as user</span>
-    <span class="p-log"> <%= link_to 'LOG IN', new_admin_session_path %> &nbsp as admin</span>
+    <span class="p-log"> <%= link_to 'SE CONNECTER', new_user_session_path %> &nbsp comme client</span>
+    <span class="p-log"> <%= link_to 'SE CONNECTER', new_admin_session_path %> &nbsp comme restaurateur</span>
   <% end %>
 </div>
 

@@ -4,12 +4,12 @@ class CommentsController < ApplicationController
 
   def create
     restaurant = Restaurant.find(params[:restaurant_id])
-    # .build Construire une nouvelle instance comment associé au gossip
-    # .merge Ajoute ou remplace valeur user dans comment_params par current_user
+    # .build Create a new instance comment associated to restaurant
+    # .merge Add or replace user value in comment_params by current_user
     @comment = restaurant.comments.build(comment_params.merge(user: current_user))
     
     if @comment.save
-      redirect_to restaurant_path(@restaurant), notice: "Comment was successfully created."
+      redirect_to restaurant_path(@restaurant), notice: "Le commentaire a été ajouté."
     else
       @body = params[:body]
       redirect_to restaurant_path(@restaurant)
@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
 
-    redirect_to restaurant_path(@restaurant), notice: "Comment was successfully destroyed."
+    redirect_to restaurant_path(@restaurant), notice: "Le commentaire a été supprimé."
   end
 
   private

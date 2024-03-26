@@ -1,6 +1,3 @@
-<h1>Page Profil</h1>
-
-
 <h3>Avatar actuel</h3>
 <%if @user.avatar.attached?%>
   <%= image_tag @user.avatar, alt: 'avatar' %>
@@ -14,7 +11,7 @@
   <%= submit_tag "mettre à jour" %>
 <% end %>
 
-<h1 class="h1-resto">Welcome to your profile <%= current_user.first_name %></h1>
+<h1 class="h1-resto">BIENVENUE DANS VOTRE ESPACE CLIENT</h1>
 
 <div class="box_profil">
     <div class="profile-card">
@@ -28,24 +25,22 @@
             <div class="underline"></div>
         </div>
         <div class="btn-edit-container">
-            <%= link_to 'Edit profile' , edit_user_registration_path, class:"btn btn-edit" %>
+            <%= link_to 'Editer profil' , edit_user_registration_path, class:"btn btn-edit" %>
         </div>
     </div>
        
       <div class="box_favoris">
-        <h1>Restaurant Favoris</h1>
+        <h1>Restaurants favoris</h1>
       </div>
 </div>
 
-<h1 class="h1-resto">Your reservations</h1>
+<h1 class="h1-resto">Vos réservations</h1>
 <% if @reservations.any? %>
   <ul>
     <% @reservations.each do |reservation| %>
-      <li><%= reservation.date %> - <%= reservation.time %> - <%= reservation.restaurant.restaurant_name %></li>
-      <!-- Ajoutez d'autres informations sur la réservation si nécessaire -->
+      <li><%= reservation.restaurant.restaurant_name %> - <%= reservation.date.strftime("%d/%m/%Y") %> - <%= reservation.time.strftime("%H:%M") %></li>
     <% end %>
   </ul>
 <% else %>
-  <p>No reservations found.</p>
+  <p>Aucune réservation en cours.</p>
 <% end %>
-

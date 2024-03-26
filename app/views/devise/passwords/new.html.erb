@@ -1,20 +1,21 @@
 <div class="coontainer">
-  <h2 class="h2-sign">FORGOT PASSWORD</h2>
+  <h2 class="h2-sign">MOT DE PASSE OUBLIÉ</h2>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="ffield">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", placeholder: "Your email address" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input", placeholder: "Votre adresse email" %>
     </div>
 
     <div class="actions-pass">
-      <%= f.submit "Send me reset password instructions", class: "pass-button" %>
+      <%= f.submit "Envoyer les instructions", class: "pass-button" %>
     </div>
   <% end %>
-  <p class="p-log"> Don't have an account ? &nbsp <%= link_to 'SIGN UP', new_user_registration_path %> &nbsp as user</p>
 
-  <p class="p-log"> Or &nbsp <%= link_to 'SIGN UP', new_admin_registration_path %> &nbsp as admin</p>
+<p class="p-log"> Pas encore de compte ? &nbsp <%= link_to "S'INSCRIRE", new_user_registration_path %> &nbsp comme client</p>
+
+<p class="p-log"> Ou &nbsp <%= link_to "S'INSCRIRE", new_admin_registration_path %> &nbsp comme restaurateur</p>
 
 </div>
 
