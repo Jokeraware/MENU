@@ -1,50 +1,38 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user, only: [:new, :edit, :create, :update]
-
-  def new
-    @comment = Comment.new
-  end
-
-  def show
-    @current_user = user
-  end
+  before_action :set_restaurant, only: %i[create destroy]
+  before_action :set_comment, only: %i[destroy]
 
   def create
-    restaurant = Restaurant.find(params[:id])
-    @comment = Comment.new(content: params[:content], restaurant: @restaurant)
+    restaurant = Restaurant.find(params[:restaurant_id])
+    # .build Construire une nouvelle instance comment associé au gossip
+    # .merge Ajoute ou remplace valeur user dans comment_params par current_user
+    @comment = restaurant.comments.build(comment_params.merge(user: current_user))
+    
     if @comment.save
-      redirect_to root_path
+      redirect_to restaurant_path(@restaurant), notice: "Comment was successfully created."
     else
-      render :restaurants
-  end 
-
-  def edit 
-    @comment = Comment.find(params[:id])
-  end
-
-  def update
-    @comment = Comment.find(params[:id])
-    if @comment.update(content: params[:content])
-      redirect_to root_path
-    else
-      render :edit
+      @body = params[:body]
+      redirect_to restaurant_path(@restaurant)
     end
   end
 
-  def destroy 
-    @comment = Comment.find(params[:id])
-    Comment.delete(@comment)
-    return redirect_to root_path
+  def destroy
+    @comment.destroy
+
+    redirect_to restaurant_path(@restaurant), notice: "Comment was successfully destroyed."
   end
 
   private
-  def authenticate_user
-    unless current_user
-      redirect_to new_user_session_path
-    end
+
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
-  def comment
-    @comment = Comment.find(params[:id])
+  def set_comment
+    @comment = @restaurant.comments.find(params[:id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:body)
   end
 end

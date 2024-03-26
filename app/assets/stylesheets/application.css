@@ -838,10 +838,15 @@ h2{
 
 .menu-img {
   margin-left: 5%;
+  width: 50%;
 }
 
 .upload-img {
   margin-top: 5%;
+}
+
+.image_tag_upld {
+  width: 100%;
 }
 
 .btn-del-show {
@@ -863,6 +868,7 @@ h2{
   padding: 4%;
   background-color: #fff;
   height: 50%;
+  width: 50%;
 }
 
 .btn-book-show {

@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   resources :restaurants do 
     resources :images
+    resources :comments
   end
 
   resources :users do 
     resources :avatars, only: [:create]
-    resources :comments
   end
 
   resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] 
