@@ -41,7 +41,7 @@
 <% if @reservations.any? %>
   <ul>
     <% @reservations.each do |reservation| %>
-      <li><%= reservation.date %> - <%= reservation.time %> - <%= reservation.restaurant.restaurant_name %></li>
+      <li><%= reservation.date.strftime("%d/%m/%Y") %> - <%= reservation.time.strftime("%H:%M") %> - <%= reservation.restaurant.restaurant_name %></li>
       <!-- Ajoutez d'autres informations sur la réservation si nécessaire -->
     <% end %>
   </ul>
