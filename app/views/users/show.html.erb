@@ -37,15 +37,14 @@
       </div>
 </div>
 
-<h1 class="h1-resto">Your reservations</h1>
+<h3 class="h3-edit">TES RÉSERVATIONS</h3>
 <% if @reservations.any? %>
   <ul>
     <% @reservations.each do |reservation| %>
-      <li><%= reservation.date %> - <%= reservation.time %> - <%= reservation.restaurant.restaurant_name %></li>
-      <!-- Ajoutez d'autres informations sur la réservation si nécessaire -->
+      <li> <%= reservation.restaurant.restaurant_name %> : <%= reservation.date.strftime("%d/%m/%Y") %> - <%= reservation.time.strftime("%H:%M") %> </li>
     <% end %>
   </ul>
 <% else %>
-  <p>No reservations found.</p>
+  <p> Aucunes réservations </p>
 <% end %>
 
