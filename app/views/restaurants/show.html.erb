@@ -40,3 +40,8 @@
  <button type="button" class="btnnn btnnn-primary btnnn-lg">BOOK TABLE</button>
 
   <%= button_to "favorite", favorites_path, params: {favorite: {restaurant_id: @restaurant.id}}, method: :post %>
+
+
+  <%= button_to "delete", favorite_path(@restaurant), method: :delete %>
+
+  <%= @restaurant.favorites.count %>
