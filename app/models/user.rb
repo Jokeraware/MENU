@@ -10,7 +10,7 @@ class User < ApplicationRecord
      after_create :welcome_send
      has_one_attached :avatar
      has_many :comments
-
+     has_many :reservations
 
      def welcome_send
        UserMailer.welcome_email(self).deliver_now
