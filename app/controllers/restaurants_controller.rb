@@ -31,14 +31,17 @@ class RestaurantsController < ApplicationController
     @restaurant.delete
     redirect_to root_path
   end
+
   def update
     @restaurant = Restaurant.find(params[:id])
     if @restaurant.update(restaurant_params)
-      redirect_to @restaurant, notice: 'Restaurant was successfully updated.'
+      redirect_to @restaurant, notice: 'Le restaurant a été mis à jour.'
     else
       render :edit
     end
   end
+
+  
   private
   def restaurant_params
     params.require(:restaurant).permit(:restaurant_name, :reservation_limit)

@@ -1,5 +1,5 @@
 <div class="coontainer">
-  <h2 class="h2-sign">LOG IN</h2>
+  <h2 class="h2-sign">SE CONNECTER</h2>
  
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form">
@@ -8,10 +8,12 @@
       <span class="forgot-password"> <%= link_to 'Forgot Password ?', new_user_password_path %> </span>
       <%= f.submit "LOG IN", class: "login-button" %>
     </div>
-    <p class="p-log"> Don't have an account ? &nbsp <%= link_to 'SIGN UP', new_user_registration_path %> &nbsp as user</p>
 
-    <p class="p-log"> Or &nbsp <%= link_to 'SIGN UP', new_admin_registration_path %> &nbsp as admin</p>
+    <p class="p-log"> Pas encore de compte ? &nbsp <%= link_to "S'INSCRIRE", new_user_registration_path %> &nbsp comme client</p>
+
+    <p class="p-log"> Ou &nbsp <%= link_to "S'INSCRIRE", new_admin_registration_path %> &nbsp comme restaurateur</p>
   <% end %>
 </div>
 
 <script src="hide-password.js"></script>
+

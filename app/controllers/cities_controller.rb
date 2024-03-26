@@ -6,7 +6,7 @@ class CitiesController < ApplicationController
   def create
     @city = City.new(city_params)
     if @city.save
-      redirect_to root_path, notice: "La ville a été créé avec succès."
+      redirect_to root_path, notice: "La ville a été créée avec succès."
     else
       render :new
     end

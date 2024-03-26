@@ -1,5 +1,7 @@
-<h1 class="h1-resto">WHERE DO YOU WANNA EAT TODAY ?</h1>
-<p class="p-resto"> Come and discover your favorites restaurants updated menus ! Thanks to Menu, you will know what is going on in the kitchen !</p>
+<% content_for :title, "Liste des restaurants" %>
+
+<h1 class="h1-resto">QU'EST-CE QU'ON MANGE AUJOURD'HUI ?</h1>
+<p class="p-resto"> Venez et découvrez les menus à jour de vos restaurants préférés ! Grâce à Menu, vous saurez toujours ce qu'il se passe en cuisine !</p>
 
 <div class="row-resto">
   <% @restaurant.each do |restaurant| %>
@@ -10,7 +12,7 @@
         </div>
         <div class="second-content">
           <%= link_to restaurant do %>
-            <%= image_tag "Aca2.jpeg", class: "card-restoo-img-top", alt: "Restaurant Image" %>
+            <%= image_tag "Aca2.jpeg", class: "card-restoo-img-top", alt: "Image de fond d'une carte restaurant" %>
           <% end %>
         </div>
       </div>
