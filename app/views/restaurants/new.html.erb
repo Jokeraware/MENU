@@ -1,6 +1,6 @@
 <h1 class="h1-resto">FORMULAIRE D'AJOUT DE RESTAURANT</h1>
 
-<%= form_with model: @restaurant, url: restaurants_path, method: "post" do |form| %>
+<%= form_with model: @restaurant, url: restaurants_path, method: "post", html: {multipart: true} do |form| %>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
   <div class="form-group mb-3 mt-3 col-sm">
@@ -13,6 +13,10 @@
     <%= form.collection_select :city_id, City.all, :id, :city_name, prompt: "Choisis ta ville" %>
   </div>
 
+  <div class="form-group mb-3 mt-3 col-sm">
+    <%= form.label :image, 'Photo du restaurant' %>
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
 
   <div class="actions text-center">
     <%= form.submit "Ajouter", class:"btn btn-success mt-3"%>
