@@ -7,16 +7,16 @@ class FavoritesController < ApplicationController
 
     def destroy
       @favorite = current_user.favorites.find_by(id: params[:id])
-      if @favorite.nil?
-        flash[:alert] = 'Like not found.'
-      else
+      if @favorite
         @favorite.destroy
         flash[:notice] = 'Like destroyed successfully.'
+      else
+        flash[:alert] = 'Like not found.'
       end
       redirect_back(fallback_location: root_path)
     end
-      
 
+    
     
 
     private

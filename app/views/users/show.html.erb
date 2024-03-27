@@ -31,6 +31,16 @@
        
       <div class="box_favoris">
         <h1>Restaurants favoris</h1>
+
+        <% if @user.favorites.present? %>
+          <% @user.favorites.each do |favorite| %>
+              <%= favorite.restaurant.restaurant_name %>
+          <% end %>
+        <% else %>
+          <p>Vous n'avez pas encore ajouté de restaurants à vos favoris.</p>
+        <% end %>
+        
+
       </div>
 </div>
 
