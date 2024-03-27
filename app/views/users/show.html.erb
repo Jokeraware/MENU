@@ -35,6 +35,7 @@
       <% if @user.favorites.present? %>
         <% @user.favorites.each do |favorite| %>
             <%= favorite.restaurant.restaurant_name %>
+            <%= button_to "Supprimer", favorite_path(favorite), method: :delete %>
         <% end %>
       <% else %>
         <p>Vous n'avez pas encore ajouté de restaurants à vos favoris.</p>

@@ -10,15 +10,14 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    @restaurant = Restaurant.find(params[:id])
-    @favorite = current_user.favorites.find_by(restaurant_id: @restaurant.id)
+    @favorite = current_user.favorites.find_by(id: params[:id])
     if @favorite
       @favorite.destroy
       flash[:notice] = "Le restaurant n'est plus dans les favoris."
     else
       flash[:alert] = "Erreur, le restaurant n'a pas été supprimé des favoris."
     end
-      redirect_to @restaurant
+      redirect_to user_path
   end
 
     
