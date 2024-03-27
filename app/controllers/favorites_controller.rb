@@ -2,9 +2,9 @@ class FavoritesController < ApplicationController
   def create
     @favorite = current_user.favorites.new(favorite_params)
       if @favorite.save
-        flash[:notice] = 'Restaurant added to favorites successfully.'
+        flash[:notice] = 'Le restaurant est ajouté aux favoris'
       else
-        flash[:alert] = 'Failed to add restaurant to favorites.'
+        flash[:alert] = "Erreur, le restaurant n'a pas été ajouté aux favoris"
       end
       redirect_to @favorite.restaurant
   end
@@ -14,9 +14,9 @@ class FavoritesController < ApplicationController
     @favorite = current_user.favorites.find_by(restaurant_id: @restaurant.id)
     if @favorite
       @favorite.destroy
-      flash[:notice] = 'Restaurant removed from favorites successfully.'
+      flash[:notice] = "Le restaurant n'est plus dans les favoris."
     else
-      flash[:alert] = 'Failed to remove restaurant from favorites.'
+      flash[:alert] = "Erreur, le restaurant n'a pas été supprimé des favoris."
     end
       redirect_to @restaurant
   end
