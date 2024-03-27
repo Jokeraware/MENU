@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bbd9542c48.js" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= javascript_include_tag 'opendys' %>
@@ -22,7 +22,7 @@
     <p class="alert"><%= alert %></p>
 
     <%= render 'home/navbar' %>
-    <%= link_to image_tag("DYS.png", alt: "Bouton pour activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "activerOpenDyslexic();" %>
+    <%= link_to image_tag("DYS.png", alt: "Bouton pour activer OpenDyslexic", style: "width: 60px; height: 60px;"), "#", id: "toggle-opendys", onclick: "toggleOpenDyslexic();" %>
 
 
     <%= yield %>

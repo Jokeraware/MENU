@@ -3,8 +3,14 @@
 <h1 class="h1-resto">QU'EST-CE QU'ON MANGE AUJOURD'HUI ?</h1>
 <p class="p-resto"> Venez et découvrez les menus à jour de vos restaurants préférés ! Grâce à Menu, vous saurez toujours ce qu'il se passe en cuisine !</p>
 
+<%= form_tag restaurants_path, method: :get do %>
+  <%= label_tag :city, "Filtrer par ville:" %>
+  <%= select_tag :city, options_for_select([["Choisis ta ville", ""]] + City.pluck(:city_name), params[:city]) %> <%# .pluck return all the value of column city_name from table city%>
+  <%= submit_tag "Filtrer" %>
+<% end %>
+
 <div class="row-resto">
-  <% @restaurant.each do |restaurant| %>
+  <% @restaurants.each do |restaurant| %>
     <div class="col-index-resto">
       <div class="card-resto">
         <div class="first-content">

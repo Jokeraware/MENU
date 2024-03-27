@@ -2,7 +2,10 @@ class RestaurantsController < ApplicationController
   before_action :authorize_admin, only: [:destroy]
 
   def index
-    @restaurant = Restaurant.all
+    @restaurants = Restaurant.all
+    # .joins joins restaurant to city
+    # .where find all restaurants associated to a city_name = params[:city](value in filter)
+    @restaurants = @restaurants.joins(:city).where(cities: { city_name: params[:city] }) if params[:city].present?
   end
 
   def show
@@ -44,7 +47,7 @@ class RestaurantsController < ApplicationController
   
   private
   def restaurant_params
-    params.require(:restaurant).permit(:restaurant_name, :reservation_limit)
+    params.require(:restaurant).permit(:restaurant_name, :city_id , :image)
   end
 
   def authorize_admin
