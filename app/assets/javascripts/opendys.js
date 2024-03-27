@@ -26,6 +26,19 @@ function applyH1FontPreference() {
   }
 }
 
+function toggleOpenDyslexic() {
+  // Toggle font preference
+  var isDyslexic = localStorage.getItem("opendys");
+  localStorage.setItem(
+    "opendys",
+    isDyslexic !== "true" ? "true" : "false",
+  );
+
+  // Apply updated font preference
+  applyFontPreference();
+  applyH1FontPreference();
+}
+
 
 
 window.onload = function () {
@@ -36,16 +49,5 @@ window.onload = function () {
   // Add event listener to the button
   document
     .getElementById("toggle-opendys")
-    .addEventListener("click", function () {
-      // Toggle font preference
-      var isDyslexic = localStorage.getItem("opendys");
-      localStorage.setItem(
-        "opendys",
-        isDyslexic !== "true" ? "true" : "false",
-      );
-
-      // Apply updated font preference
-      applyFontPreference();
-      applyH1FontPreference();
-    });
+    .addEventListener("click", toggleOpenDyslexic);
 };
