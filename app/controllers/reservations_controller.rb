@@ -24,6 +24,12 @@ class ReservationsController < ApplicationController
 
   private
 
+  def require_login
+    unless current_user
+      redirect_to new_user_session_path
+    end
+  end
+
   def reservation_params
     params.require(:reservation).permit(:date, :time, :restaurant_id, :user_id)
   end
