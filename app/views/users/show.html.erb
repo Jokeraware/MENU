@@ -47,9 +47,11 @@
 <% if @reservations.any? %>
   <ul>
     <% @reservations.each do |reservation| %>
-      <li><%= reservation.restaurant.restaurant_name %> - <%= reservation.date.strftime("%d/%m/%Y") %> - <%= reservation.time.strftime("%H:%M") %></li>
+      <li> Vous avez réservé chez <%= reservation.restaurant.restaurant_name %>, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %> </li>
+      <%= link_to "Delete", @reservation_path, method: :delete, class: "btn btn-danger" %>
     <% end %>
   </ul>
 <% else %>
-  <p>Aucune réservation en cours.</p>
+  <p>Aucune réservation en cours</p>
 <% end %>
+
