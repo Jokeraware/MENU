@@ -23,6 +23,10 @@ h2 {
   color: #522A00;
 }
 
+html {
+  width: 100% !important; 
+}
+
 
 /* START HERO */
 .lead {
@@ -349,20 +353,10 @@ h2 {
 
 /* START PAGE CONTACT US */
 .box_orange{
+  display: flex;
   border: 2px solid #FF7E33;
   border-radius: 15px;
-  display: flex;
-  width: 80%;
-  margin: 10%;
-  gap: 28%;
-}
-
-.box_input {
-  width: 40%;
-  padding: 2%;
-  border: 2px solid #AFDBF5;
-  border-radius: 15px;
-  margin: 2%;
+  width: 95%;
 }
 
 .h1-contact {
@@ -374,12 +368,9 @@ h2 {
   color: #522A00;
 }
 
-.form-label {
-  color: #fac4af;
-}
-
-.form-label:hover {
-  color: #FF7E33;
+.p-contact2 {
+  font-size: 110%;
+  color: #522A00;
 }
 
 .fa-building {
@@ -394,90 +385,6 @@ h2 {
   color: #FF7E33;
 }
 
-.input-container {
-  position: relative;
-  margin: 15% auto;
-  width: 80%;
-}
-
-.input-container input[type="text"] {
-  font-size: 100%;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #fac4af;
-  padding: 2% 0;
-  background-color: transparent;
-  outline: none;
-}
-
-.input-container.active .label {
-  top: -10%;
-  font-size: 100%;
-  color: #FF7E33;
-}
-
-.input-container .label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #fac4af;
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
-.input-container input[type="text"]:focus ~ .label,
-.input-container input[type="text"]:valid ~ .label {
-  top: -50%;
-  font-size: 100%;
-  color: #FF7E33;
-}
-
-.input-container .underline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2%;
-  width: 100%;
-  background-color: #FF7E33;
-  transform: scaleX(0);
-  transition: all 0.3s ease;
-}
-
-.input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline,
-.input-container input[type="email"]:focus ~ .underline,
-.input-container input[type="email"]:valid ~ .underline {
-  transform: scaleX(1);
-}
-
-.form-control {
-  font-size: 100%;
-  width: 100%;
-  border: 2px solid #fac4af;
-  padding: 2% 0;
-  background-color: transparent;
-  outline: none;
-}
-
-.form-control:hover {
-  border-color: #FF7E33;
-}
-
-.left_bloc{
-  margin-top: 7%;
-  margin-left: 7%;
-}
-
-.btn-contact {
-  background-color: #AFDBF5;
-  border-color: #AFDBF5;
-  color: white; 
-  font-size: 80%;
-  padding: 5% 15%; 
-  border-radius: 15px;
-  margin-left: 30%;
-}
-
 #input-b {
   border : none;
   background-color: transparent;
@@ -485,6 +392,80 @@ h2 {
 
 #input-b:focus {
   outline: none;
+}
+
+.contact-form {
+  background-color: #fac4af30;
+  border-radius: 5%;
+  border: solid 1px;
+  border-color: #FF7E33;
+}
+
+.contact-form label {
+  color: #522A00;
+}
+
+.contact-form .heading {
+  font-size: 150%;
+  color: #522A00;
+  margin-bottom: 10%;
+  font-weight: bold;
+  display: block;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 10%;
+}
+
+.contact-form {
+  padding-bottom: 0;
+}
+
+textarea {
+  resize: none;
+  height: 50%;
+  width: 100%;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 3%;
+  border: solid 1px;
+  border-color: #FF7E33;
+  border-radius: 5px;
+  margin-bottom: 10%;
+  background-color: transparent;
+  color: #522A00;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #FF7E33;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #AFDBF5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5% 10%;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.heading {
+  font-family: "Expletus Sans", sans-serif;
 }
 /* END PAGE CONTACT US */
 

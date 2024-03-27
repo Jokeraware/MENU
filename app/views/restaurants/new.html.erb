@@ -3,7 +3,6 @@
 <%= form_with model: @restaurant, url: restaurants_path, method: "post" do |form| %>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-
   <div class="form-group mb-3 mt-3 col-sm">
     <%= form.label :restaurant_name, 'Nom du restaurant' %>
     <%= form.text_field :restaurant_name, class:"form-control" %>
