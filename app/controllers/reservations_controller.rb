@@ -1,5 +1,9 @@
 class ReservationsController < ApplicationController
-  before_action :require_login, only: [:new, :create]
+  before_action :require_login, only: [:new, :create, :destroy]
+
+  def index
+    @reservations = Reservations.all
+  end
 
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
@@ -22,6 +26,12 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
+  def destroy
+    if @reservation.delete
+      flash[:notice] = "La réservation a été supprimée"
+    end
+  end
+
   private
 
   def reservation_params
@@ -33,5 +43,4 @@ class ReservationsController < ApplicationController
       redirect_to new_user_session_path
     end
   end
-  end
-  
+end

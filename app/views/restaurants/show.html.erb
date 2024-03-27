@@ -29,6 +29,11 @@
 
     <%= form_with(model: [@restaurant, @reservation], url: restaurant_reservations_path(@restaurant), method: :post) do |form| %>
       <div class="field">
+        <%= form.label "Nombre de personnes" %>
+        <%= form.number_field :number, min: 1, max: 10, class: "form-control" %>
+      </div>
+      
+      <div class="field">
         <%= form.label :date %>
         <%= form.date_field :date, class: "form-control" %>
       </div>
@@ -38,7 +43,6 @@
         <%= form.time_field :time, class: "form-control" %>
       </div>
     
-
       <%= form.submit "RÉSERVER UNE TABLE", class: "btn btn-book-show" %>
     <% end %>
     
