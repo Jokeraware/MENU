@@ -68,5 +68,7 @@
   </section>
 
 
-  <%= button_to "Favoris", favorites_path, params: {favorite: {restaurant_id: @restaurant.id}}, method: :post %>
-  <%= @restaurant.favorites.count %>
+  <% if current_user %>
+    <%= button_to "Favoris", favorites_path, params: {favorite: {restaurant_id: @restaurant.id}}, method: :post %>
+    <%= @restaurant.favorites.count %>
+  <% end %>
