@@ -17,6 +17,7 @@ resources :restaurants do
   resources :reservations
 end
 
+resources :favorites, only: [:create , :destroy]
 
   resources :admins, only: [:show, :index, :create, :edit, :update, :destroy] 
   resources :cities
