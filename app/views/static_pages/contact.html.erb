@@ -6,32 +6,28 @@
   </head>
 
   <body>
-    <div class="box_orange">
-      <section class="left_bloc">
-        <h1 class="h1-contact"> NOUS CONTACTER </h1>
-        <p class="p-contact"> Vous avez une question ?</p>
-        <p class="p-contact"> Vous trouverez toutes nos informations de contact ci-dessous !</p>
-        <p class="p-contact"> Sinon, veuillez compléter le formulaire.</p>
-        <p class="p-contact"> <i class="fa-regular fa-building"></i> Adresse fictive </p>
-        <p class="p-contact"> <i class="fa-solid fa-phone"></i> +33 4 95 27 19 07 </p>
-        <p class="p-contact"> <i class="fa-solid fa-envelope"></i> menu@example.com </p>
-      </section>
-
-      <div class="box_input">
-        <div class="input-container">
-          <input type="email" id="input-b" required="">
-          <label for="input" class="label">Email</label>
-          <div class="underline"></div>
+    <div class="d-flex justify-content-center my-4">
+      <div class="box_orange justify-content-around align-items-center flex-wrap p-2">
+        <div class="">
+          <h1 class="h1-contact"> NOUS CONTACTER </h1>
+          <p class="p-contact"> Vous avez une question ?</p>
+          <p class="p-contact"> Vous trouverez toutes nos informations de contact ci-dessous !</p>
+          <p class="p-contact"> Sinon, veuillez compléter le formulaire.</p>
+          <p class="p-contact"> <i class="fa-regular fa-building"></i> Adresse fictive </p>
+          <p class="p-contact"> <i class="fa-solid fa-phone"></i> +33 4 95 27 19 07 </p>
+          <p class="p-contact"> <i class="fa-solid fa-envelope"></i> menu@example.com </p>
         </div>
-
-        <div class="input-container">
-          <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      
+        <div class="contact-form d-flex flex-column justify-content-center align-items-center p-4">
+          <span class="heading">Contact Us</span>
+            <form class="contact-foorm">
+              <label for="email", class="p-contact2">Email</label>
+              <input type="email" id="email" name="email" required="">
+              <label for="message", class="p-contact2">Message</label>
+              <textarea id="message" name="message" required=""></textarea>
+              <button type="submit">Submit</button>
+            </form>
         </div>
-
-        <button class="btn-contact">
-          ENVOYER
-        </button>
       </div>
     </div>
   </body>
