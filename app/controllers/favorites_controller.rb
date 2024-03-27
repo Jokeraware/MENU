@@ -6,7 +6,7 @@ class FavoritesController < ApplicationController
     end
 
     def destroy
-      @favorite = current_user.favorites.find_by(restaurant_id: favorite_params)
+      @favorite = current_user.favorites.find_by(id: params[:id])
       if @favorite.nil?
         flash[:alert] = 'Like not found.'
       else
@@ -15,6 +15,9 @@ class FavoritesController < ApplicationController
       end
       redirect_back(fallback_location: root_path)
     end
+      
+
+    
 
     private
 
