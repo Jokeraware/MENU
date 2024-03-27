@@ -10,6 +10,7 @@ class User < ApplicationRecord
      has_one_attached :avatar
      has_many :comments
      has_many :reservations
+     has_many :favorites
 
      after_create :welcome_send
 

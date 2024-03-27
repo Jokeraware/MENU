@@ -38,10 +38,14 @@
         <%= form.time_field :time, class: "form-control" %>
       </div>
     
-
       <%= form.submit "RÉSERVER UNE TABLE", class: "btn btn-book-show" %>
     <% end %>
-    
+
+    <% if current_user%>
+      <p class="p-2"> <%= @restaurant.favorites.count %>  <i class="fas fa-star"></i></p>
+      <%= button_to 'Ajouter aux favoris', restaurant_favorites_path(@restaurant), method: :post, class:"btn btn-outline-info btn-sm" %>
+    <%end%>
+
   </section>
 </div>
 
