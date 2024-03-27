@@ -165,6 +165,14 @@ h2 {
   background-color: initial !important;
   color: #B92736;
 }
+@media (max-width: 768px) {
+  .navnav-out.navbar-text {
+    font-size: 14px; /* Ajuster la taille du texte pour les boutons */
+  }
+  .navnav.navbar-text {
+    font-size: 14px; /* Ajuster la taille du texte pour les liens */
+  }
+}
 
 /* Start dropdown menu */
 .dropdown-menu {

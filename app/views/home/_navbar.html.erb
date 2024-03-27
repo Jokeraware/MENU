@@ -10,48 +10,47 @@
       </li>
     </ul>
     
-   <% if user_signed_in? || admin_signed_in? %>
-        <div class="btn-group">
-          <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <% if user_signed_in? || admin_signed_in? %>
+      <div class="btn-group">
+        <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <% if current_admin %>
+            MON ESPACE PRO
+          <% elsif current_user %>
+            MON PROFIL
+          <% end %>
+        </a>
+
+        <ul class="dropdown-menu">
+          <li class="nav-item">
             <% if current_admin %>
-              MON ESPACE PRO
+              <%= link_to "MON ESPACE PRO", admin_path(current_admin), class: "navnav-out navbar-text" %>
             <% elsif current_user %>
-              MON PROFIL
+              <%= link_to "MON PROFIL", user_path(current_user), class: "navnav-out navbar-text" %>
             <% end %>
-          </a>
+          </li>
 
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <% if current_admin %>
-                <%= link_to "MON ESPACE PRO", admin_path(current_admin), class: "navnav-out navbar-text" %>
-              <% elsif current_user %>
-                <%= link_to "MON PROFIL", user_path(current_user), class: "navnav-out navbar-text" %>
-              <% end %>
-            </li>
+          <li class="nav-item">
+            <% if current_admin %>
+              <%= link_to "ÉDITER INFOS", edit_admin_registration_path, class: "navnav-out navbar-text" %>
+            <% elsif current_user %>
+              <%= link_to "ÉDITER INFOS", edit_user_registration_path, class: "navnav-out navbar-text" %>
+            <% end %>
+          </li>
 
-            <li class="nav-item">
-              <% if current_admin %>
-                <%= link_to "ÉDITER INFOS", edit_admin_registration_path, class: "navnav-out navbar-text" %>
-              <% elsif current_user %>
-                <%= link_to "ÉDITER INFOS", edit_user_registration_path, class: "navnav-out navbar-text" %>
-              <% end %>
-            </li>
-
-            <li class="nav-item">
-              <% if current_admin %>
-                <%= button_to "DÉCONNEXION", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
-              <% elsif current_user %>
-                <%= button_to "DÉCONNEXION", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
-              <% end %>
-            </li>
-          </ul>
+          <li class="nav-item">
+            <% if current_admin %>
+              <%= button_to "DÉCONNEXION", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+            <% elsif current_user %>
+              <%= button_to "DÉCONNEXION", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+            <% end %>
+          </li>
+        </ul>
       </div>
 
     <% else %>
-      
-      <ul>
+      <ul class="nav">
         <li class="nav-item">
-          <a class=" dropdown-toggle navnav nav-link navbar-text navbar-text-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="dropdown-toggle navnav nav-link navbar-text navbar-text-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             SE CONNECTER
           </a>
 
@@ -65,7 +64,6 @@
           </ul>
         </li>
       </ul>
-
     <% end %>
   </header>
 </div>
