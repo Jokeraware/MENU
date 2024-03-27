@@ -71,6 +71,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_111447) do
   end
 
   create_table "reservations", force: :cascade do |t|
+    t.integer "number"
     t.datetime "date"
     t.time "time"
     t.bigint "restaurant_id", null: false
