@@ -9,7 +9,7 @@ class CitiesController < ApplicationController
       redirect_to root_path, notice: "La ville a été créée avec succès."
     else
       render :new
-    end
+    end 
   end
 
   private

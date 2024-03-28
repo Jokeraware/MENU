@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :require_login, only: [:new, :create, :destroy]
+  before_action :require_login, only: [:new, :create]
 
   def index
     @reservations = Reservations.all
@@ -26,9 +26,15 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
-  def destroy
-    if @reservation.delete
-      flash[:notice] = "La réservation a été supprimée"
+
+    def destroy
+    # search for specifically "id"
+    @reservation = Reservation.find_by(id: params[:id])
+    if @reservation
+      @reservation.destroy
+      redirect_to root_path, notice: "La réservation a été supprimée avec succès!"
+    else
+      redirect_to root_path, alert: "La réservation que vous essayez de supprimer n'existe pas ou vous n'êtes pas autorisé à la supprimer."
     end
   end
 
@@ -41,7 +47,7 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:date, :time, :restaurant_id, :user_id)
+    params.require(:reservation).permit(:number, :date, :time, :restaurant_id, :user_id)
   end
 
   def require_login
