@@ -50,7 +50,8 @@
   <ul>
     <% @reservations.each do |reservation| %>
       <li> Vous avez réservé chez <%= reservation.restaurant.restaurant_name %> pour <%= reservation.number %> personnes, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %> </li>
-      <%= link_to "Delete", @reservation_path, method: :delete, class: "btn btn-danger" %>
+      <%= button_to "Supprimer", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cette réservation ?" }, class: "btn btn-danger" %>
+
     <% end %>
   </ul>
 <% else %>
