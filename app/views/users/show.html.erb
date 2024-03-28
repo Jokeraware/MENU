@@ -1,22 +1,11 @@
-<h3>Avatar actuel</h3>
-<%if @user.avatar.attached?%>
-  <%= image_tag @user.avatar, alt: 'avatar' %>
-<%else%>
-  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
-<%end%>
-
-<h3>Changer d avatar ?</h3>
-<%= form_tag user_avatars_path(@user), multipart: true do %>
-  <%= file_field_tag :avatar %>
-  <%= submit_tag "mettre à jour" %>
-<% end %>
+<% content_for :title, "Espace client" %>
 
 <h1 class="h1-resto">BIENVENUE DANS VOTRE ESPACE CLIENT</h1>
 
 <div class="box_profil">
     <div class="profile-card">
         <div class="photo-profil">
-            <%= image_tag "Anelise.avif" , alt: "Photo de profil" %>
+            <%= image_tag "profil.png" , alt: "Photo de profil" %>   
         </div>
 
         <div class="input-container-profile <%= 'active' if @user.email.present? %>">
@@ -47,7 +36,7 @@
 <% if @reservations.any? %>
   <ul>
     <% @reservations.each do |reservation| %>
-      <li> Vous avez réservé chez <%= reservation.restaurant.restaurant_name %>, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %> </li>
+      <li> Vous avez réservé chez <%= reservation.restaurant.restaurant_name %> pour <%= reservation.number %> personnes, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %> </li>
       <%= button_to "Supprimer", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cette réservation ?" }, class: "btn btn-danger" %>
 
     <% end %>
@@ -55,4 +44,14 @@
 <% else %>
   <p>Aucune réservation en cours</p>
 <% end %>
+
+<div class="btt">
+  <a href="#">
+    <button class="button-btt">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+      </svg>
+    </button>
+  </a>
+</div>
 

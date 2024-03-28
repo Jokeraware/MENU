@@ -24,8 +24,75 @@ h2 {
 }
 
 html {
-  width: 100% !important; 
+  width: 100% !important;
+  scroll-behavior: smooth;
 }
+
+/* START BOUTON BACK TO TOP */
+.btt {
+display: flex;
+justify-content: end;
+margin-right: 3%;
+}
+
+.button-btt {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fac4af;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px #f36c01;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: #f36c01;
+}
+
+.button-btt:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #f36c01;
+  align-items: center;
+}
+
+.button-btt:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button-btt::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Retour en haut";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button-btt:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+/* END BOUTON BACK TO TOP */
 
 
 /* START HERO */
@@ -157,7 +224,7 @@ html {
   font-size: 200%; 
   color: #B92736;
   position: relative;
-  top: 10px;
+  top: 12px;
 }
 
 .navnav:hover {
@@ -180,13 +247,23 @@ html {
 
 /* Start dropdown menu */
 .dropdown-menu {
-  background-color: #fac4af21;
-  border-color: #522A00;
+  background-color: transparent;
+  border-color: #f36c01;
 }
 
 .nav-item {
   display: flex;
   justify-content: center;
+}
+
+.btn-logout {
+  border: none;
+  background-color: transparent;
+}
+
+.navnav-hover:hover {
+  background-color: initial !important;
+  color: #f36c01;
 }
 /* End dropdown menu */
 /* END NAVBAR */
@@ -535,7 +612,7 @@ textarea {
   margin: 20px auto;
   border-color: #AFDBF5;
   transition: all 0.2s ease-in-out;
-  border-radius: 10%;
+  border-radius: 5px;
 }
 
 .form .login-button:hover {
@@ -551,7 +628,6 @@ textarea {
 .agreement a {
   text-decoration: none;
   font-size: 9px;
-
   color: #522A00;
 }
 /* END FORM LOGIN */ 
@@ -587,13 +663,12 @@ textarea {
   width: 40%;
   background-color: #AFDBF5;
   color: white;
-  padding: 10px 30px; 
+  padding: 3% 5%; 
   margin: 20px auto;
   border-color: #AFDBF5;
   transition: all 0.2s ease-in-out;
-  border-radius: 10%;
+  border-radius: 5px;
 }
-
 
 .link-log {
   display: flex;
@@ -634,97 +709,114 @@ textarea {
 
 
 /* START INDEX RESTAURANTS */
-.card-resto:hover {
-  border-radius: 25px;
-  cursor: pointer;
-  transform: scale(1.0);
-  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-  background:transparent;
+.text-filter {
+  color: #522A00;
 }
 
-.first-content {
-  height: 100%;
-  width: 100%;
-  transition: all 0.4s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  border-radius: 15px;
-  background-color: #B92736;
-}
-
-.resto-title {
-  text-align: center;
-  color: #fff;
-  font-size: 200%;
-  z-index: 1;
-}
-
-.card-resto:hover .first-content {
-  height: 0%;
-  opacity: 0;
-}
-
-.second-content {
-  height: 0%;
-  width: 100%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  transition: all 0.4s;
-  transform: rotate(90deg) scale(-1);
-}
-
-.card-resto:hover .second-content {
-  opacity: 1;
-  height: 100%;
-  font-size: 1.8rem;
-  transform: rotate(0deg);
+#select-filter {
+  border-color: #f36c01;
+  background-color: transparent;
 }
 
 .row-resto {
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
+
+.project-info {
+  padding: 100px 40px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; 
-  margin-left: 8%;
-  margin-top: 10%;
-}
-
-.col-index-resto {
-  flex: 0 0 30%; 
-  margin-bottom: 5%; 
-}
-
-.card-resto-img-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(1.3px); 
-}
-
-.card-resto {
+  flex-direction: column;
+  gap: 20px;
   position: relative;
-  width: 100%;
-  max-width: 70%; 
-  height: 300px; 
-  overflow: hidden; 
-  border-radius: 25%;
-  border: 2px solid #AFDBF5;
+  top: -50px;
 }
 
-.card-restoo-img-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.project-title {
+  font-weight: 500;
+  font-size: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #522A00;
+}
+
+.lighter {
+  font-size: 0.9em;
+  color: #522A00;
+  text-align: justify;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  width: 300px;
+  max-height: 330px;
+  border-color: #f36e01;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media (max-width: 893px) {
+  .card {
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin-bottom: 20%;
+    margin-top: 5%;
+  }
+}
+
+.card-img-resto {
+  position: relative;
+  top: -20px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-img-resto a,
+.card-img-resto img {
+  height: 150px;
+  width: 90%;
   object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-imgs {
+  transition: all 0.5s;
+}
+
+.button-card {
+  width: 100%;
+  margin-top: 8%;
+  background-image: linear-gradient(to right bottom, #f36c01, #f36e01d5, #f36e01a7, #f36e0175, #f36e0123);
+  background-size: 200% 200%;
+  border: none;
+  padding: 4% 8%;
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.1s ease-in;
+}
+
+.button-card:active {
+  transform: translateY(3px);
+}
+
+.button-card:hover {
+  animation: gradient 0.8s ease-in 1;
 }
 
 .h1-resto {
@@ -816,14 +908,12 @@ textarea {
 
 
 /* START PAGE SHOW DU RESTO */
-.show-content {
-  display: flex;
-  margin-top: 5%;
+.menu-img {
+  width: 30%;
 }
 
-.menu-img {
-  margin-left: 5%;
-  width: 50%;
+.infos-resto {
+  width: 25%;
 }
 
 .upload-img {
@@ -845,21 +935,11 @@ textarea {
   color: #fff;
 }
 
-.infos-resto {
-  align-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 7%;
-  padding: 4%;
-  background-color: #fff;
-  height: 50%;
-  width: 50%;
-}
-
 .btn-book-show {
   background-color: #AFDBF5;
   color: #fff;
   border: none;
+
 }
 
 .btn-book-show:hover {
@@ -878,11 +958,44 @@ textarea {
   color: #fff;
 }
 
-.show-comments {
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-bottom: 5%;
+.card-infos {
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
 }
+
+.card-infos:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__exit {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card-5 {
+  background: radial-gradient(#f36e01db, #fac4af);
+}
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
 /* END SHOW DU RESTO */ 
 
 
@@ -944,7 +1057,8 @@ textarea {
 .form-control-edit {
   font-size: 100%;
   width: 100%;
-  border: 2px solid #fac4af;
+  border: 1px solid #fac4af;
+  border-radius: 5px;
   padding: 2% 0;
   background-color: transparent;
   outline: none;
@@ -975,12 +1089,33 @@ textarea {
 
 .btn-cancel {
   display: flex;
-  justify-content: center;
   border: none;
   color: #fff;
   background-color: #B92736;
   padding: 5%; 
   margin-top: 10%;
+}
+
+.btn-cancel:hover {
+  color: #fff;
+  background-color: #B92736;
+}
+
+.btn-back {
+  display: flex;
+  justify-content: center;
+  border: solid #AFDBF5 1px;
+  color: #522A00;
+  padding: 4% 5%; 
+  margin-top: 10%; 
+}
+
+.btn-back:hover {
+  border: solid #AFDBF5 1px;
+}
+
+.text-edit {
+  color: #522A00;
 }
 /* END EDIT FORM */
 
@@ -992,23 +1127,89 @@ textarea {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.upload2 {
-  margin-left: 35%;
-  margin-bottom: 10%;
+
+.ag-courses_item {
+  margin: auto;
+  overflow: hidden;
 }
 
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #fac4af;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
 
-.FormulaireAdmin { 
-  width: 50%; 
-  padding: 10px; 
-  font-size: 16px; 
-  border: 4px solid #AFDBF5;
-  border-radius: 5px; 
-  margin-bottom: 10%;
-  margin-left: 25%;
-  margin-top: 7%;
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  color: #121212;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.ag-courses-item_title {
+  min-height: 57px;
+  margin-top: 5%;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_date-box {
+  font-size: 18px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_bg {
+  height: 130px;
+  width: 100px;
+  background-color: #f36c01;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 /* END PROFIL ADMIN */
+
+/* START FORM AJOUT RESTAURANT */
+.form-add-resto {
+  border: solid 1px;
+  border-color: #f36c01;
+  border-radius: 10px;
+}
+
+.form-control-add-resto {
+  font-size: 100%;
+  width: 100%;
+  border: 1px solid #fac4af;
+  border-radius: 5px;
+  padding: 1%;
+  background-color: transparent;
+  outline: none;
+}
+
+.btn-add-resto {
+  background-color: #f36c01;
+  border: none;
+}
+
+.btn-add-resto:hover {
+  background-color: #f36e01da;
+  border: none;
+}
+/* END FORM AJOUT RESTAURANT */
 
 
 /* START BUTTON HIDE-SHOW PWD */
@@ -1031,3 +1232,40 @@ textarea {
   color: #333333;
 } 
 /* END BUTTON HIDE-SHOW PWD */
+
+/* START COMMENTS*/
+.btn-add-comment {
+  background-color: #AFDBF5;
+  border: none;
+}
+
+.btn-add-comment:hover {
+  border: none;
+  background-color: #afdbf5d9;
+}
+
+.form-control-comment {
+  border-color: #f36c01;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #522A00;
+}
+
+.comment-user {
+  border: solid 1px;
+  border-color: #f36c01;
+  border-radius: 5px;
+}
+/* END COMMENTS */
+
+/* START FAVORITES */
+.btn-add-fav {
+  background-color: #AFDBF5;
+  color: #fff;
+}
+
+.btn-add-fav:hover {
+  background-color: #afdbf5de;
+  color: #fff;
+}
+/* END FAVORITES */

@@ -20,9 +20,7 @@ class FavoritesController < ApplicationController
       redirect_to user_path
   end
 
-    
   private
-
   def favorite_params
       params.require(:favorite).permit(:restaurant_id)
   end

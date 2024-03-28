@@ -1,9 +1,11 @@
+<% content_for :title, "Espace professionel" %>
+
 <h1 class="h1-resto"> BIENVENUE DANS VOTRE ESPACE PROFESSIONNEL </h1>
 
 <div class="admin-prof">
       <div class="profile-card">
         <div class="photo-profil">
-            <%= image_tag "Anelise.avif" , alt: "Photo de profil" %>
+          <%= image_tag "profil.png" , alt: "Photo de profil" %> 
         </div>
 
         <div class="input-container-profile <%= 'active' if @admin.email.present? %>">
@@ -19,15 +21,14 @@
   </div>
 </div>
 
-<div class="col-sm-12 col-12 col-md-4">
-  <a href="<%= new_restaurant_path %>" class="card-clic">
-    <div class="card border-secondary mb-4 card-index">
-      <div class="card-body">
-        <i class="far fa-plus-square text-center mt-3 mr-2 card-img-top" style="font-size: 100px; color: black"></i>
-      </div>
-      <div class="card-footer text-center">
-        <%= link_to "AJOUTER MON RESTAURANT", new_restaurant_path, class:"btn btn-success-dark mx-1 my-1" %>
-      </div>
+<div class="ag-courses_item d-flex justify-content-center">
+  <a class="ag-courses-item_link" href="<%= new_restaurant_path %>">
+    <div class="ag-courses-item_bg"></div>
+    <div class="ag-courses-item_title">
+      AJOUTER MON RESTAURANT
+    </div>
+    <div class="ag-courses-item_date-box">
+      <i class="far fa-plus-square text-center mr-2 card-img-top" style="font-size: 50px; color: #f36c01"></i>
     </div>
   </a>
 </div>
@@ -38,3 +39,19 @@
   <p>Réservation par <%= reservation.user.email %> pour <%= reservation.number %> personnes, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %></p>
   <%= button_to "Supprimer", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cette réservation ?" }, class: "btn btn-danger" %>
 <% end %>
+
+
+
+
+
+
+
+<div class="btt">
+  <a href="#">
+    <button class="button-btt">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+      </svg>
+    </button>
+  </a>
+</div>
