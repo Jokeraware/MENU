@@ -1,6 +1,4 @@
 class FavoritesController < ApplicationController
-  before_action :require_login, only: [:create, :destroy]
-
   def create
     @favorite = current_user.favorites.new(favorite_params)
       if @favorite.save

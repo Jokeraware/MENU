@@ -2,28 +2,30 @@
 
 <h1 class="h1-resto">FORMULAIRE DE CRÉATION DE RESTAURANT</h1>
 
-<%= form_with model: @restaurant, url: restaurants_path, method: "post", html: {multipart: true} do |form| %>
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<div class="form-add-resto my-5 mx-5 p-4">
+  <%= form_with model: @restaurant, url: restaurants_path, method: "post", html: {multipart: true} do |form| %>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <div class="form-group mb-3 mt-3 col-sm">
-    <%= form.label :restaurant_name, 'Nom du restaurant' %>
-    <%= form.text_field :restaurant_name, class:"form-control" %>
-  </div>
+    <div class="form-group mb-3 mt-3 col-sm">
+      <%= form.label :restaurant_name, 'Nom du restaurant', class: "text-edit" %>
+      <%= form.text_field :restaurant_name, class:"form-control-add-resto" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :city_id, "Ville" %>
-    <%= form.collection_select :city_id, City.all, :id, :city_name, prompt: "Choisis ta ville" %>
-  </div>
+    <div class="field">
+      <%= form.label :city_id, "Ville", class: "text-edit" %>
+      <%= form.collection_select :city_id, City.all, :id, :city_name, prompt: "Choisis ta ville", class:"text-edit" %>
+    </div>
 
-  <div class="form-group mb-3 mt-3 col-sm">
-    <%= form.label :image, 'Photo du restaurant' %>
-    <%= form.file_field :image, class: "form-control" %>
-  </div>
+    <div class="form-group mb-3 mt-3 col-sm">
+      <%= form.label :image, 'Photo', class: "text-edit" %>
+      <%= form.file_field :image, class:"form-control-add-resto text-edit" %>
+    </div>
 
-  <div class="actions text-center">
-    <%= form.submit "Ajouter", class:"btn btn-success mt-3"%>
-  </div>
-<% end %>
+    <div class="actions text-center">
+      <%= form.submit "Ajouter", class:"btn btn-success mt-3 btn-add-resto"%>
+    </div>
+  <% end %>
+</div>
 
 
 <div class="btt">

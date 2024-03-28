@@ -3,78 +3,83 @@
 <h1 class="h1-resto"><%= @restaurant.restaurant_name %></h1>
 <p class="p-resto"><%= @restaurant.city.city_name %></p>
 
-<div class="show-content">
-  <section class="menu-img">
+<div class="show-content d-flex justify-content-around flex-wrap">
+  <section class="menu-img flex mx-4 my-4">
     <% if @restaurant.image.attached? %>
       <%= image_tag @restaurant.image, alt: 'Photo du menu du restaurant', class:"image_tag_upld" %>
     <% else %>
       <p class="p-contact"> PAS ENCORE DE MENU </p>
     <% end %>
+  </section>
 
-    <div class="upload-img">
-      <% if current_admin == @restaurant.admin %>
-          <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
-            <%= file_field_tag :image, class:"btn mt-3 btn-up-show" %>
-            <%= submit_tag "TÉLÉCHARGER", class:"btn mt-3 btn-up-show" %>
-          <% end %>
+  <section class="infos-resto flex mx-4 my-4"">
+    <div class="card-infos card-5 p-3">
+      <p class="card__exit">※</p>
+      <div class="text-edit mb-4">
+        Bienvenue chez <strong> <%= @restaurant.restaurant_name %> </strong> !
+        Vous trouvez ci-contre notre menu à jour.
+      </div>
 
-          <%= form_with(model: [:id, @restaurant], local: true, url: restaurant_path, method: "delete") do |form| %>
-            <%= form.submit "Supprimer", class: "btn mt-3 btn-del-show" %>
+      <% if current_user %>
+        <div class="form-resa mt-4">
+          <%= form_with(model: [@restaurant, @reservation], url: restaurant_reservations_path(@restaurant), method: :post) do |form| %>
+            <div class="field">
+              <%= form.label "Nombre de personnes", class:"text-edit" %>
+              <%= form.number_field :number, min: 1, max: 10, class: "form-control-edit text-edit" %>
+            </div>
+            
+            <div class="field">
+              <%= form.label :date, class:"text-edit mt-2" %>
+              <%= form.date_field :date, class: "form-control-edit text-edit" %>
+            </div>
+          
+            <div class="field mt-2">
+              <%= form.label "Horaire", class:"text-edit" %>
+              <%= form.time_field :time, class: "form-control-edit text-edit" %>
+            </div>
+          
+            <%= form.submit "RÉSERVER UNE TABLE", class: "btn btn-book-show mt-4" %>
           <% end %>
+        </div>
       <% end %>
     </div>
   </section>
-
-  <section class="infos-resto">
-    <p class="description">
-      Bienvenue chez <%= @restaurant.restaurant_name %> ! Plongez dans une expérience culinaire authentique où les saveurs du Mexique vous transportent instantanément. Dégustez nos délicieux tacos, enchiladas et fajitas, accompagnés de margaritas rafraîchissantes. Notre ambiance vibrante et nos plats savoureux vous promettent une soirée inoubliable. Venez découvrir la vraie essence du Mexique chez nous !
-    </p>
-
-    <%= form_with(model: [@restaurant, @reservation], url: restaurant_reservations_path(@restaurant), method: :post) do |form| %>
-      <div class="field">
-        <%= form.label "Nombre de personnes" %>
-        <%= form.number_field :number, min: 1, max: 10, class: "form-control" %>
-      </div>
-      
-      <div class="field">
-        <%= form.label :date %>
-        <%= form.date_field :date, class: "form-control" %>
-      </div>
-    
-      <div class="field">
-        <%= form.label "Horaire" %>
-        <%= form.time_field :time, class: "form-control" %>
-      </div>
-    
-      <%= form.submit "RÉSERVER UNE TABLE", class: "btn btn-book-show" %>
-    <% end %>
-    
-  </section>
 </div>
 
-  <section class="show-comments">
+  <div class="upload-img mx-4">
+    <% if current_admin == @restaurant.admin %>
+      <%= form_tag restaurant_images_path(@restaurant), multipart: true do %>
+        <%= file_field_tag :image, class:"btn mt-3 btn-up-show" %>
+        <%= submit_tag "TÉLÉCHARGER", class:"btn mt-3 btn-up-show" %>
+      <% end %>
+
+      <%= form_with(model: [:id, @restaurant], local: true, url: restaurant_path, method: "delete") do |form| %>
+        <%= form.submit "Supprimer le restaurant", class: "btn mt-3 btn-del-show" %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <% if current_user %>
+    <div class="fav-box mx-5">
+      <%= button_to "Ajouter aux favoris", favorites_path, params: {favorite: {restaurant_id: @restaurant.id}}, method: :post, class:"btn btn-add-fav" %>
+    </div>
+  <% end %>
+
+  <section class="mt-5 mx-4">
     <h2>Commentaires</h2>
       <% @comment.each do |comment| %>
-        <div>
-          <p><%= comment.body %></p>
+        <div class="comment-user p-2 mb-2">
+          <p class="text-edit"> <%= comment.user.email %> : " <%= comment.body %> " </p>
           <% if current_user == comment.user %>
-            <%= button_to "Supprimer ce commentaire", restaurant_comment_path(@restaurant, comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
+            <%= button_to "Supprimer", restaurant_comment_path(@restaurant, comment), method: :delete, class: "btn btn-cancel p-2 mt-0 mb-2", form: { data: { turbo_confirm: "Are you sure?" } } %>
           <% end %>
         </div>
       <% end %>
 
     <% if current_user %>
-      <h2>Ajoute un nouveau commentaire</h2>
       <%= render partial: "comments/form", locals: { restaurant: @restaurant } %>
     <% end %>
   </section>
-
-
-  <% if current_user %>
-    <%= button_to "Favoris", favorites_path, params: {favorite: {restaurant_id: @restaurant.id}}, method: :post %>
-    <%= @restaurant.favorites.count %>
-  <% end %>
-
 
   <div class="btt">
     <a href="#">

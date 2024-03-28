@@ -16,32 +16,32 @@
           <% if current_admin %>
             MON ESPACE PRO
           <% elsif current_user %>
-            MON PROFIL
+            MON ESPACE CLIENT
           <% end %>
         </a>
 
         <ul class="dropdown-menu">
           <li class="nav-item">
             <% if current_admin %>
-              <%= link_to "MON ESPACE PRO", admin_path(current_admin), class: "navnav-out navbar-text" %>
+              <%= link_to "MON ESPACE PRO", admin_path(current_admin), class: "navnav-hover navbar-text" %>
             <% elsif current_user %>
-              <%= link_to "MON PROFIL", user_path(current_user), class: "navnav-out navbar-text" %>
+              <%= link_to "MON ESPACE CLIENT", user_path(current_user), class: "navnav-hover navbar-text" %>
             <% end %>
           </li>
 
           <li class="nav-item">
             <% if current_admin %>
-              <%= link_to "ÉDITER INFOS", edit_admin_registration_path, class: "navnav-out navbar-text" %>
+              <%= link_to "ÉDITER INFOS", edit_admin_registration_path, class: "navnav-hover navbar-text" %>
             <% elsif current_user %>
-              <%= link_to "ÉDITER INFOS", edit_user_registration_path, class: "navnav-out navbar-text" %>
+              <%= link_to "ÉDITER INFOS", edit_user_registration_path, class: "navnav-hover navbar-text" %>
             <% end %>
           </li>
 
           <li class="nav-item">
             <% if current_admin %>
-              <%= button_to "DÉCONNEXION", destroy_admin_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+              <%= button_to "DÉCONNEXION", destroy_admin_session_path, class: "navnav-out navbar-text btn-logout", method: :delete, data: {turbo_method: :delete} %>
             <% elsif current_user %>
-              <%= button_to "DÉCONNEXION", destroy_user_session_path, class: "navnav-out navbar-text", method: :delete, data: {turbo_method: :delete} %>
+              <%= button_to "DÉCONNEXION", destroy_user_session_path, class: "navnav-out navbar-text btn-logout", method: :delete, data: {turbo_method: :delete} %>
             <% end %>
           </li>
         </ul>
@@ -56,10 +56,10 @@
 
           <ul class="dropdown-menu">
             <li class="nav-item">
-              <%= link_to "CLIENT", new_user_session_path , class: "navnav navbar-text navbar-text-sm" %>
+              <%= link_to "CLIENT", new_user_session_path , class: "navnav-hover navbar-text navbar-text-sm" %>
             </li>
             <li class="nav-item">
-              <%= link_to "PROFESSIONNEL", new_admin_session_path , class: "navnav navbar-text navbar-text-sm" %>
+              <%= link_to "PROFESSIONNEL", new_admin_session_path , class: "navnav-hover navbar-text navbar-text-sm" %>
             </li>
           </ul>
         </li>

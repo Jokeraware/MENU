@@ -7,7 +7,7 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="ffield">
-      <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>
+      <%= f.email_field :email, class: "form-control", placeholder: "Email", required: true %>
     </div>
 
     <div class="ffield pass_show">
@@ -15,7 +15,7 @@
     </div>
 
     <div class="ffield pass_show">
-      <%= f.password_field :password_confirmation, class: "form-control", type: "password", placeholder: "Confirm Password", autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, class: "form-control text-sign", type: "password", placeholder: "Confirm Password", autocomplete: "new-password" %>
     </div>
 
     <div class="acctions">

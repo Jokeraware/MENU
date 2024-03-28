@@ -224,7 +224,7 @@ margin-right: 3%;
   font-size: 200%; 
   color: #B92736;
   position: relative;
-  top: 10px;
+  top: 12px;
 }
 
 .navnav:hover {
@@ -247,13 +247,23 @@ margin-right: 3%;
 
 /* Start dropdown menu */
 .dropdown-menu {
-  background-color: #fac4af21;
-  border-color: #522A00;
+  background-color: transparent;
+  border-color: #f36c01;
 }
 
 .nav-item {
   display: flex;
   justify-content: center;
+}
+
+.btn-logout {
+  border: none;
+  background-color: transparent;
+}
+
+.navnav-hover:hover {
+  background-color: initial !important;
+  color: #f36c01;
 }
 /* End dropdown menu */
 /* END NAVBAR */
@@ -602,7 +612,7 @@ textarea {
   margin: 20px auto;
   border-color: #AFDBF5;
   transition: all 0.2s ease-in-out;
-  border-radius: 10%;
+  border-radius: 5px;
 }
 
 .form .login-button:hover {
@@ -618,7 +628,6 @@ textarea {
 .agreement a {
   text-decoration: none;
   font-size: 9px;
-
   color: #522A00;
 }
 /* END FORM LOGIN */ 
@@ -654,13 +663,12 @@ textarea {
   width: 40%;
   background-color: #AFDBF5;
   color: white;
-  padding: 10px 30px; 
+  padding: 3% 5%; 
   margin: 20px auto;
   border-color: #AFDBF5;
   transition: all 0.2s ease-in-out;
-  border-radius: 10%;
+  border-radius: 5px;
 }
-
 
 .link-log {
   display: flex;
@@ -753,6 +761,19 @@ textarea {
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media (max-width: 893px) {
+  .card {
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin-bottom: 20%;
+    margin-top: 5%;
+  }
 }
 
 .card-img-resto {
@@ -887,14 +908,12 @@ textarea {
 
 
 /* START PAGE SHOW DU RESTO */
-.show-content {
-  display: flex;
-  margin-top: 5%;
+.menu-img {
+  width: 30%;
 }
 
-.menu-img {
-  margin-left: 5%;
-  width: 50%;
+.infos-resto {
+  width: 25%;
 }
 
 .upload-img {
@@ -916,21 +935,11 @@ textarea {
   color: #fff;
 }
 
-.infos-resto {
-  align-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 7%;
-  padding: 4%;
-  background-color: #fff;
-  height: 50%;
-  width: 50%;
-}
-
 .btn-book-show {
   background-color: #AFDBF5;
   color: #fff;
   border: none;
+
 }
 
 .btn-book-show:hover {
@@ -949,11 +958,44 @@ textarea {
   color: #fff;
 }
 
-.show-comments {
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-bottom: 5%;
+.card-infos {
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
 }
+
+.card-infos:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__exit {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card-5 {
+  background: radial-gradient(#f36e01db, #fac4af);
+}
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
 /* END SHOW DU RESTO */ 
 
 
@@ -1015,7 +1057,8 @@ textarea {
 .form-control-edit {
   font-size: 100%;
   width: 100%;
-  border: 2px solid #fac4af;
+  border: 1px solid #fac4af;
+  border-radius: 5px;
   padding: 2% 0;
   background-color: transparent;
   outline: none;
@@ -1046,12 +1089,33 @@ textarea {
 
 .btn-cancel {
   display: flex;
-  justify-content: center;
   border: none;
   color: #fff;
   background-color: #B92736;
   padding: 5%; 
   margin-top: 10%;
+}
+
+.btn-cancel:hover {
+  color: #fff;
+  background-color: #B92736;
+}
+
+.btn-back {
+  display: flex;
+  justify-content: center;
+  border: solid #AFDBF5 1px;
+  color: #522A00;
+  padding: 4% 5%; 
+  margin-top: 10%; 
+}
+
+.btn-back:hover {
+  border: solid #AFDBF5 1px;
+}
+
+.text-edit {
+  color: #522A00;
 }
 /* END EDIT FORM */
 
@@ -1119,6 +1183,34 @@ textarea {
 }
 /* END PROFIL ADMIN */
 
+/* START FORM AJOUT RESTAURANT */
+.form-add-resto {
+  border: solid 1px;
+  border-color: #f36c01;
+  border-radius: 10px;
+}
+
+.form-control-add-resto {
+  font-size: 100%;
+  width: 100%;
+  border: 1px solid #fac4af;
+  border-radius: 5px;
+  padding: 1%;
+  background-color: transparent;
+  outline: none;
+}
+
+.btn-add-resto {
+  background-color: #f36c01;
+  border: none;
+}
+
+.btn-add-resto:hover {
+  background-color: #f36e01da;
+  border: none;
+}
+/* END FORM AJOUT RESTAURANT */
+
 
 /* START BUTTON HIDE-SHOW PWD */
 .pass_show{
@@ -1140,3 +1232,40 @@ textarea {
   color: #333333;
 } 
 /* END BUTTON HIDE-SHOW PWD */
+
+/* START COMMENTS*/
+.btn-add-comment {
+  background-color: #AFDBF5;
+  border: none;
+}
+
+.btn-add-comment:hover {
+  border: none;
+  background-color: #afdbf5d9;
+}
+
+.form-control-comment {
+  border-color: #f36c01;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #522A00;
+}
+
+.comment-user {
+  border: solid 1px;
+  border-color: #f36c01;
+  border-radius: 5px;
+}
+/* END COMMENTS */
+
+/* START FAVORITES */
+.btn-add-fav {
+  background-color: #AFDBF5;
+  color: #fff;
+}
+
+.btn-add-fav:hover {
+  background-color: #afdbf5de;
+  color: #fff;
+}
+/* END FAVORITES */
