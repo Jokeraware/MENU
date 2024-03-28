@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
      has_one_attached :avatar
      has_many :comments
-     has_many :reservations
+     has_many :reservations, dependent: :destroy
      has_many :favorites, dependent: :destroy
      after_create :welcome_send
 

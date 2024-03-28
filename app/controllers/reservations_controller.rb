@@ -9,6 +9,10 @@ class ReservationsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = @restaurant.reservations.build
   end
+
+  def reservation_params
+    params.require(:reservation).permit(:number, :date, :time, :restaurant_id, :user_id)
+  end
   
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
@@ -27,10 +31,11 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
-    if @reservation.delete
-      flash[:notice] = "La réservation a été supprimée"
-    end
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to user_path(current_user), notice: "La réservation a été supprimée avec succès."
   end
+  
 
   private
 
