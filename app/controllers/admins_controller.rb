@@ -6,8 +6,6 @@ class AdminsController < ApplicationController
 
   def show
     @admin = current_admin
-    @restaurant = @admin.restaurants.find(params[:id])
-    @comment = @restaurant.comments
     @reservations = @admin.reservations #adminReservation
   end
 
