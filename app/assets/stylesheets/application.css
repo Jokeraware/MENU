@@ -701,97 +701,101 @@ textarea {
 
 
 /* START INDEX RESTAURANTS */
-.card-resto:hover {
-  border-radius: 25px;
-  cursor: pointer;
-  transform: scale(1.0);
-  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-  background:transparent;
+.text-filter {
+  color: #522A00;
 }
 
-.first-content {
-  height: 100%;
-  width: 100%;
-  transition: all 0.4s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  border-radius: 15px;
-  background-color: #B92736;
-}
-
-.resto-title {
-  text-align: center;
-  color: #fff;
-  font-size: 200%;
-  z-index: 1;
-}
-
-.card-resto:hover .first-content {
-  height: 0%;
-  opacity: 0;
-}
-
-.second-content {
-  height: 0%;
-  width: 100%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  transition: all 0.4s;
-  transform: rotate(90deg) scale(-1);
-}
-
-.card-resto:hover .second-content {
-  opacity: 1;
-  height: 100%;
-  font-size: 1.8rem;
-  transform: rotate(0deg);
+#select-filter {
+  border-color: #f36c01;
+  background-color: transparent;
 }
 
 .row-resto {
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
+
+.project-info {
+  padding: 100px 40px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; 
-  margin-left: 8%;
-  margin-top: 10%;
-}
-
-.col-index-resto {
-  flex: 0 0 30%; 
-  margin-bottom: 5%; 
-}
-
-.card-resto-img-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(1.3px); 
-}
-
-.card-resto {
+  flex-direction: column;
+  gap: 20px;
   position: relative;
-  width: 100%;
-  max-width: 70%; 
-  height: 300px; 
-  overflow: hidden; 
-  border-radius: 25%;
-  border: 2px solid #AFDBF5;
+  top: -50px;
 }
 
-.card-restoo-img-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.project-title {
+  font-weight: 500;
+  font-size: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #522A00;
+}
+
+.lighter {
+  font-size: 0.9em;
+  color: #522A00;
+  text-align: justify;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  width: 300px;
+  max-height: 330px;
+  border-color: #f36e01;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card-img-resto {
+  position: relative;
+  top: -20px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-img-resto a,
+.card-img-resto img {
+  height: 150px;
+  width: 90%;
   object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-imgs {
+  transition: all 0.5s;
+}
+
+.button-card {
+  width: 100%;
+  margin-top: 8%;
+  background-image: linear-gradient(to right bottom, #f36c01, #f36e01d5, #f36e01a7, #f36e0175, #f36e0123);
+  background-size: 200% 200%;
+  border: none;
+  padding: 4% 8%;
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.1s ease-in;
+}
+
+.button-card:active {
+  transform: translateY(3px);
+}
+
+.button-card:hover {
+  animation: gradient 0.8s ease-in 1;
 }
 
 .h1-resto {
@@ -1059,21 +1063,59 @@ textarea {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.upload2 {
-  margin-left: 35%;
-  margin-bottom: 10%;
+
+.ag-courses_item {
+  margin: auto;
+  overflow: hidden;
 }
 
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #fac4af;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
 
-.FormulaireAdmin { 
-  width: 50%; 
-  padding: 10px; 
-  font-size: 16px; 
-  border: 4px solid #AFDBF5;
-  border-radius: 5px; 
-  margin-bottom: 10%;
-  margin-left: 25%;
-  margin-top: 7%;
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  color: #121212;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.ag-courses-item_title {
+  min-height: 57px;
+  margin-top: 5%;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_date-box {
+  font-size: 18px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_bg {
+  height: 130px;
+  width: 100px;
+  background-color: #f36c01;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 /* END PROFIL ADMIN */
 
