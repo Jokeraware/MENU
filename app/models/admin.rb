@@ -4,7 +4,7 @@ class Admin < ApplicationRecord
 
          validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "Entrez une adresse email valide." }
         
-         has_many :restaurants #adminReservation
-         has_many :reservations, through: :restaurants #adminReservation
+         has_many :restaurants 
+         has_many :reservations, through: :restaurants 
          
 end

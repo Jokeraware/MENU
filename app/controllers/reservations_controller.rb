@@ -34,7 +34,7 @@ class ReservationsController < ApplicationController
       @reservation.destroy
       redirect_to root_path, notice: "La réservation a été supprimée avec succès!"
     else
-      redirect_to user_path, alert: "La réservation que vous essayez de supprimer n'existe pas ou vous n'êtes pas autorisé à la supprimer."
+      redirect_to root_path, alert: "La réservation que vous essayez de supprimer n'existe pas ou vous n'êtes pas autorisé à la supprimer."
     end
   end
 
