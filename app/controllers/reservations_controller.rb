@@ -9,10 +9,6 @@ class ReservationsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = @restaurant.reservations.build
   end
-
-  def reservation_params
-    params.require(:reservation).permit(:number, :date, :time, :restaurant_id, :user_id)
-  end
   
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
@@ -31,9 +27,14 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
-    @reservation = Reservation.find(params[:id])
-    @reservation.destroy
-    redirect_to user_path(current_user), notice: "La réservation a été supprimée avec succès."
+    # search for specifically "id"
+    @reservation = current_user.reservations.find_by(id: params[:id]) || current_admin.reservations.find_by(id: params[:id])
+    if @reservation
+      @reservation.destroy
+      redirect_to root_path, notice: "La réservation a été supprimée avec succès!"
+    else
+      redirect_to user_path, alert: "La réservation que vous essayez de supprimer n'existe pas ou vous n'êtes pas autorisé à la supprimer."
+    end
   end
   
 
@@ -46,7 +47,7 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:date, :time, :restaurant_id, :user_id)
+    params.require(:reservation).permit(:number, :date, :time, :restaurant_id, :user_id)
   end
 
   def require_login
