@@ -24,8 +24,75 @@ h2 {
 }
 
 html {
-  width: 100% !important; 
+  width: 100% !important;
+  scroll-behavior: smooth;
 }
+
+/* START BOUTON BACK TO TOP */
+.btt {
+display: flex;
+justify-content: end;
+margin-right: 3%;
+}
+
+.button-btt {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fac4af;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px #f36c01;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: #f36c01;
+}
+
+.button-btt:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #f36c01;
+  align-items: center;
+}
+
+.button-btt:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.button-btt::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Retour en haut";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.button-btt:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+/* END BOUTON BACK TO TOP */
 
 
 /* START HERO */

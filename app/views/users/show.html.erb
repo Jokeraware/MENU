@@ -1,3 +1,5 @@
+<% content_for :title, "Espace client" %>
+
 <h3>Avatar actuel</h3>
 <%if @user.avatar.attached?%>
   <%= image_tag @user.avatar, alt: 'avatar' %>
@@ -47,11 +49,21 @@
 <% if @reservations.any? %>
   <ul>
     <% @reservations.each do |reservation| %>
-      <li> Vous avez réservé chez <%= reservation.restaurant.restaurant_name %>, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %> </li>
+      <li> Vous avez réservé chez <%= reservation.restaurant.restaurant_name %> pour <%= reservation.number %> personnes, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %> </li>
       <%= link_to "Delete", @reservation_path, method: :delete, class: "btn btn-danger" %>
     <% end %>
   </ul>
 <% else %>
   <p>Aucune réservation en cours</p>
 <% end %>
+
+<div class="btt">
+  <a href="#">
+    <button class="button-btt">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+      </svg>
+    </button>
+  </a>
+</div>
 
